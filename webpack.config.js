@@ -7,13 +7,26 @@ var bannerPlugin = new webpack.BannerPlugin(
   {raw: true}
 )
 
-function getBaseConfig() {
+function getBaseConfig () {
   return {
     entry: {
-      app: path.resolve('./app.js')
+      app: path.resolve('./src/entry.js')
     },
     output: {
       path: 'dist',
+    },
+    resolve: {
+      extensions: ['', '.js', '.vue'],
+      fallback: [path.join(__dirname, './node_modules')],
+      alias: {
+        'assets': path.resolve(__dirname, './src/assets/'),
+        'components': path.resolve(__dirname, './src/components/'),
+        'api': path.resolve(__dirname, './src/api/'),
+        'router': path.resolve(__dirname, './src/router/'),
+        'store': path.resolve(__dirname, './src/store/'),
+        'views': path.resolve(__dirname, './src/views/'),
+        'utils': path.resolve(__dirname, './src/utils/')
+      }
     },
     module: {
       preLoaders: [

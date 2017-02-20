@@ -1,0 +1,31 @@
+/* 已适配 */
+
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div-top {
+  width: 100%;
+  height: 106px;
+  background: #efefef;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.div-top .key {
+  font-size: 48px;
+  color: #999999;
+  text-align: center;
+}
+
+.div-top .value {
+  font-size: 24px;
+  color: #999999;
+  text-align: left;
+}

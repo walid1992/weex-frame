@@ -12,7 +12,7 @@ module.exports = {
   globals: {
     'Vue': false
   },
-  extends: 'standard',
+  // extends: 'standard',
   plugins: [
     'html'
   ],
