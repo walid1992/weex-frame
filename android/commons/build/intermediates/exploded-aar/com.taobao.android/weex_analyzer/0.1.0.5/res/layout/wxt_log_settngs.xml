@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Log Console"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            />
+
+
+        <TextView
+            android:id="@+id/collapse"
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/wxt_collapse"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            />
+
+
+        <TextView
+            android:id="@+id/settings"
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/wxt_btn_bg"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/wxt_settings"
+            android:textColor="#000"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/settings"
+            android:background="@drawable/wxt_btn_bg"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/wxt_size"
+            android:textColor="#000"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/clear"
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/size"
+            android:background="@drawable/wxt_btn_bg"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/wxt_clear"
+            android:textColor="#000"
+            android:textSize="12sp"/>
+
+
+        <TextView
+            android:id="@+id/hold"
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/clear"
+            android:background="@drawable/wxt_btn_bg"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="hold"
+            android:textColor="#000"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/hold"
+            android:background="@drawable/wxt_btn_bg"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/wxt_close"
+            android:textColor="#000"
+            android:textSize="12sp"/>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/size_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8e000000"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RadioGroup
+            android:id="@+id/height_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp">
+
+
+            <RadioButton
+                android:id="@+id/height_small"
+                style="@style/WXTRadioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="small"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                />
+
+            <RadioButton
+                android:id="@+id/height_medium"
+                style="@style/WXTRadioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="medium"
+                android:textColor="#fff"
+
+                android:textSize="12sp"
+                />
+
+            <RadioButton
+                android:id="@+id/height_large"
+                style="@style/WXTRadioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="large"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setting_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8e000000"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="log level"
+            android:textColor="#fff"
+            android:textSize="13sp"/>
+
+        <RadioGroup
+            android:id="@+id/level_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp">
+
+            <RadioButton
+                android:id="@+id/level_v"
+                style="@style/WXTRadioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="V"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                />
+
+            <RadioButton
+                android:id="@+id/level_i"
+                style="@style/WXTRadioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="I"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                />
+
+            <RadioButton
+                android:id="@+id/level_d"
+                style="@style/WXTRadioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="D"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                />
+
+            <RadioButton
+                android:id="@+id/level_w"
+                style="@style/WXTRadioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="W"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                />
+
+            <RadioButton
+                android:id="@+id/level_e"
+                style="@style/WXTRadioButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="E"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                />
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#fff"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="log filter"
+            android:textColor="#fff"
+            android:textSize="13sp"/>
+
+        <RadioGroup
+            android:id="@+id/rule_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp">
+
+            <RadioButton
+                android:id="@+id/rule_all"
+                style="@style/WXTRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="all"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                />
+
+            <RadioButton
+                android:id="@+id/rule_callnative"
+                style="@style/WXTRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="10dp"
+                android:text="callNative"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                />
+
+
+            <RadioButton
+                android:id="@+id/rule_calljs"
+                style="@style/WXTRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="callJS"
+
+                android:textColor="#fff"
+                android:textSize="12sp"
+                />
+
+            <RadioButton
+                android:id="@+id/rule_jslog"
+                style="@style/WXTRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="js log"
+                android:textColor="#fff"
+
+                android:textSize="12sp"
+                />
+
+            <RadioButton
+                android:id="@+id/rule_exception"
+                style="@style/WXTRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="js exception"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                />
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#fff"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="search"
+            android:textColor="#fff"
+            android:textSize="13sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/text_cur_keyword"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/btn_input_keyword"
+                android:layout_marginTop="10dp"
+                android:text="@string/wxt_current_keyword"
+                android:textColor="#fff"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/btn_input_keyword"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/wxt_btn_bg"
+                android:gravity="center"
+                android:text="@string/wxt_input_keyword"
+                android:textColor="#000"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/btn_clear_keyword"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/wxt_btn_bg"
+                android:gravity="center"
+                android:text="@string/wxt_clear_keyword"
+                android:textColor="#000"
+                android:textSize="13sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

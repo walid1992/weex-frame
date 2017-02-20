@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wxt_average">communicateTime(average):%1$.2fms \ntotalTime(average):%2$.2fms \nnetworkTime(average):%3$.2fms</string>
+    <string name="wxt_clear">Clear</string>
+    <string name="wxt_clear_keyword">clear keyword</string>
+    <string name="wxt_close">Close</string>
+    <string name="wxt_closed">closed</string>
+    <string name="wxt_collapse">Collapse</string>
+    <string name="wxt_cpu">cpu statistics(current app,user+kernel)</string>
+    <string name="wxt_current_keyword">current keyword:</string>
+    <string name="wxt_current_keyword_format">current keyword:%s</string>
+    <string name="wxt_dev_tool">weex开发者选项</string>
+    <string name="wxt_explain_comm_time">communicateTime:jsframework执行createInstance时间</string>
+    <string name="wxt_explain_network_time">networkTime:js下载时间</string>
+    <string name="wxt_explain_scr_time">firstScreenRenderTime:首屏渲染时间(布局的高度大于weex容器的高度，不包括网络请求时间)</string>
+    <string name="wxt_explain_sdk_init">sdk init time:weex sdk初始化时间</string>
+    <string name="wxt_explain_total_time">totalTime:第一次同步全部渲染完成时间(不包括js下载时间与网络请求时间)</string>
+    <string name="wxt_explain_wx_sdk_ver">weex sdk version:weex sdk 版本</string>
+    <string name="wxt_fps">fps statistics</string>
+    <string name="wxt_history_perf_statistics">history performance statistics of current page</string>
+    <string name="wxt_input_keyword">input keyword</string>
+    <string name="wxt_memory">memory statistics</string>
+    <string name="wxt_opened">opened</string>
+    <string name="wxt_perf_statistics">weex performance statistics</string>
+    <string name="wxt_search">Search</string>
+    <string name="wxt_settings">Settings</string>
+    <string name="wxt_size">Size</string>
+    <string name="wxt_traffic">traffic statistics</string>
+    <style name="WXTCheckBox" parent="android:Widget.Holo.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/wxt_check_box_style</item>
+    </style>
+    <style name="WXTRadioButton" parent="android:Widget.Holo.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/wxt_radio_btn_style</item>
+    </style>
+</resources>

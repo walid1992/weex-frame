@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/option_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            tools:src="@drawable/wxt_icon_performance"/>
+
+        <TextView
+            android:id="@+id/option_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="dev option"
+            android:textColor="#000"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

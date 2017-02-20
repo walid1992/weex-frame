@@ -3,7 +3,6 @@
 <template src="./template.html"></template>
 
 <script>
-
   export default {
     data () {
       return {
@@ -14,7 +13,6 @@
     },
     methods: {
       toPush (event) {
-        console.log('toPush')
         this.$router.push('/404')
       }
     }

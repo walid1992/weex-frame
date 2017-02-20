@@ -21,14 +21,14 @@ import java.util.Map;
 public class WxIndexActivity extends WXBaseActivity {
 
     // http://192.168.51.175:8080/dist/app.weex.js
-    private static String INDEX_URL = "http://192.168.51.175:8080/dist/app.weex.js";
+    private static String INDEX_URL = "http://192.168.10.175:8080/dist/app.weex.js";
     private WXSDKInstance mWXSDKInstance;
     private FrameLayout mContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_weex);
+        setContentView(R.layout.act_wxindex);
         mContainer = (FrameLayout) findViewById(R.id.container);
         mWXSDKInstance = new WXSDKInstance(this);
         mWXSDKInstance.registerRenderListener(this);

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/overlay_view_content_view"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:background="#89000000"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+
+        <TextView
+            android:id="@+id/fps_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            tools:text="fps : ??"/>
+
+        <TextView
+            android:id="@+id/frame_skiped"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            tools:text="skipped frames : ??"/>
+
+        <TextView
+            android:id="@+id/memory_usage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            tools:text="memory : ??"/>
+    </LinearLayout>
+
+</FrameLayout>

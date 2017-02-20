@@ -6,7 +6,12 @@
 
 import App from './App'
 import router from './router'
+import globalConfig from './utils/globalConfig'
 
 export default new Vue(Vue.util.extend({el: '#root', router}, App))
 
+// 全局配置初始化
+Vue.use(globalConfig)
+
+// 设置默认路由
 router.push('/sy/launch')
