@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17E05FBB1DF96DD600607B9A /* HackerNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17E05FBB1DF96DD600607B9A /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E05FBF1DF96DD600607B9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17E05FC11DF96DD600607B9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		17E05FC21DF96DD600607B9A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -50,10 +50,10 @@
 		17E05FCA1DF96DD600607B9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17E05FCD1DF96DD600607B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17E05FCF1DF96DD600607B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17E05FD41DF96DD600607B9A /* HackerNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17E05FD41DF96DD600607B9A /* AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E05FD81DF96DD600607B9A /* HackerNewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HackerNewsTests.m; sourceTree = "<group>"; };
 		17E05FDA1DF96DD600607B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17E05FDF1DF96DD600607B9A /* HackerNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17E05FDF1DF96DD600607B9A /* AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E05FE31DF96DD600607B9A /* HackerNewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HackerNewsUITests.m; sourceTree = "<group>"; };
 		17E05FE51DF96DD600607B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E05FF11DF97B6D00607B9A /* AppDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefine.h; sourceTree = "<group>"; };
@@ -101,9 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				17E05FFC1DF981EC00607B9A /* assets */,
-				17E05FBD1DF96DD600607B9A /* HackerNews */,
-				17E05FD71DF96DD600607B9A /* HackerNewsTests */,
-				17E05FE21DF96DD600607B9A /* HackerNewsUITests */,
+				17E05FBD1DF96DD600607B9A /* App */,
+				17E05FD71DF96DD600607B9A /* AppTests */,
+				17E05FE21DF96DD600607B9A /* AppUITests */,
 				17E05FBC1DF96DD600607B9A /* Products */,
 				17E450AD3365FD33DB3DFBB6 /* Pods */,
 				A9ABFBB512E19F57AEF18269 /* Frameworks */,
@@ -113,14 +113,14 @@
 		17E05FBC1DF96DD600607B9A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				17E05FBB1DF96DD600607B9A /* HackerNews.app */,
-				17E05FD41DF96DD600607B9A /* HackerNewsTests.xctest */,
-				17E05FDF1DF96DD600607B9A /* HackerNewsUITests.xctest */,
+				17E05FBB1DF96DD600607B9A /* App.app */,
+				17E05FD41DF96DD600607B9A /* AppTests.xctest */,
+				17E05FDF1DF96DD600607B9A /* AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		17E05FBD1DF96DD600607B9A /* HackerNews */ = {
+		17E05FBD1DF96DD600607B9A /* App */ = {
 			isa = PBXGroup;
 			children = (
 				17E05FF21DF97C8200607B9A /* extend */,
@@ -135,6 +135,7 @@
 				17E05FBE1DF96DD600607B9A /* Supporting Files */,
 				17E05FF11DF97B6D00607B9A /* AppDefine.h */,
 			);
+			name = App;
 			path = HackerNews;
 			sourceTree = "<group>";
 		};
@@ -146,21 +147,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		17E05FD71DF96DD600607B9A /* HackerNewsTests */ = {
+		17E05FD71DF96DD600607B9A /* AppTests */ = {
 			isa = PBXGroup;
 			children = (
 				17E05FD81DF96DD600607B9A /* HackerNewsTests.m */,
 				17E05FDA1DF96DD600607B9A /* Info.plist */,
 			);
+			name = AppTests;
 			path = HackerNewsTests;
 			sourceTree = "<group>";
 		};
-		17E05FE21DF96DD600607B9A /* HackerNewsUITests */ = {
+		17E05FE21DF96DD600607B9A /* AppUITests */ = {
 			isa = PBXGroup;
 			children = (
 				17E05FE31DF96DD600607B9A /* HackerNewsUITests.m */,
 				17E05FE51DF96DD600607B9A /* Info.plist */,
 			);
+			name = AppUITests;
 			path = HackerNewsUITests;
 			sourceTree = "<group>";
 		};
@@ -222,9 +225,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		17E05FBA1DF96DD600607B9A /* HackerNews */ = {
+		17E05FBA1DF96DD600607B9A /* App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 17E05FE81DF96DD600607B9A /* Build configuration list for PBXNativeTarget "HackerNews" */;
+			buildConfigurationList = 17E05FE81DF96DD600607B9A /* Build configuration list for PBXNativeTarget "App" */;
 			buildPhases = (
 				BD7AE412614B94FEDA664FA7 /* [CP] Check Pods Manifest.lock */,
 				17E05FB71DF96DD600607B9A /* Sources */,
@@ -237,14 +240,14 @@
 			);
 			dependencies = (
 			);
-			name = HackerNews;
+			name = App;
 			productName = HackerNews;
-			productReference = 17E05FBB1DF96DD600607B9A /* HackerNews.app */;
+			productReference = 17E05FBB1DF96DD600607B9A /* App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		17E05FD31DF96DD600607B9A /* HackerNewsTests */ = {
+		17E05FD31DF96DD600607B9A /* AppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 17E05FEB1DF96DD600607B9A /* Build configuration list for PBXNativeTarget "HackerNewsTests" */;
+			buildConfigurationList = 17E05FEB1DF96DD600607B9A /* Build configuration list for PBXNativeTarget "AppTests" */;
 			buildPhases = (
 				17E05FD01DF96DD600607B9A /* Sources */,
 				17E05FD11DF96DD600607B9A /* Frameworks */,
@@ -255,14 +258,14 @@
 			dependencies = (
 				17E05FD61DF96DD600607B9A /* PBXTargetDependency */,
 			);
-			name = HackerNewsTests;
+			name = AppTests;
 			productName = HackerNewsTests;
-			productReference = 17E05FD41DF96DD600607B9A /* HackerNewsTests.xctest */;
+			productReference = 17E05FD41DF96DD600607B9A /* AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		17E05FDE1DF96DD600607B9A /* HackerNewsUITests */ = {
+		17E05FDE1DF96DD600607B9A /* AppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 17E05FEE1DF96DD600607B9A /* Build configuration list for PBXNativeTarget "HackerNewsUITests" */;
+			buildConfigurationList = 17E05FEE1DF96DD600607B9A /* Build configuration list for PBXNativeTarget "AppUITests" */;
 			buildPhases = (
 				1E82B827700BB076D4D4331F /* [CP] Check Pods Manifest.lock */,
 				17E05FDB1DF96DD600607B9A /* Sources */,
@@ -276,9 +279,9 @@
 			dependencies = (
 				17E05FE11DF96DD600607B9A /* PBXTargetDependency */,
 			);
-			name = HackerNewsUITests;
+			name = AppUITests;
 			productName = HackerNewsUITests;
-			productReference = 17E05FDF1DF96DD600607B9A /* HackerNewsUITests.xctest */;
+			productReference = 17E05FDF1DF96DD600607B9A /* AppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -306,7 +309,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 17E05FB61DF96DD600607B9A /* Build configuration list for PBXProject "HackerNews" */;
+			buildConfigurationList = 17E05FB61DF96DD600607B9A /* Build configuration list for PBXProject "App" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -319,9 +322,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				17E05FBA1DF96DD600607B9A /* HackerNews */,
-				17E05FD31DF96DD600607B9A /* HackerNewsTests */,
-				17E05FDE1DF96DD600607B9A /* HackerNewsUITests */,
+				17E05FBA1DF96DD600607B9A /* App */,
+				17E05FD31DF96DD600607B9A /* AppTests */,
+				17E05FDE1DF96DD600607B9A /* AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -481,12 +484,12 @@
 /* Begin PBXTargetDependency section */
 		17E05FD61DF96DD600607B9A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 17E05FBA1DF96DD600607B9A /* HackerNews */;
+			target = 17E05FBA1DF96DD600607B9A /* App */;
 			targetProxy = 17E05FD51DF96DD600607B9A /* PBXContainerItemProxy */;
 		};
 		17E05FE11DF96DD600607B9A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 17E05FBA1DF96DD600607B9A /* HackerNews */;
+			target = 17E05FBA1DF96DD600607B9A /* App */;
 			targetProxy = 17E05FE01DF96DD600607B9A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -609,7 +612,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				INFOPLIST_FILE = HackerNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.examples.HackerNews;
+				PRODUCT_BUNDLE_IDENTIFIER = com.siyuan.weex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -622,7 +625,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				INFOPLIST_FILE = HackerNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.examples.HackerNews;
+				PRODUCT_BUNDLE_IDENTIFIER = com.siyuan.weex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -635,7 +638,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.examples.HackerNewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackerNews.app/HackerNews";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Debug;
 		};
@@ -647,7 +650,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.examples.HackerNewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackerNews.app/HackerNews";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Release;
 		};
@@ -678,7 +681,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		17E05FB61DF96DD600607B9A /* Build configuration list for PBXProject "HackerNews" */ = {
+		17E05FB61DF96DD600607B9A /* Build configuration list for PBXProject "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				17E05FE61DF96DD600607B9A /* Debug */,
@@ -687,7 +690,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		17E05FE81DF96DD600607B9A /* Build configuration list for PBXNativeTarget "HackerNews" */ = {
+		17E05FE81DF96DD600607B9A /* Build configuration list for PBXNativeTarget "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				17E05FE91DF96DD600607B9A /* Debug */,
@@ -696,7 +699,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		17E05FEB1DF96DD600607B9A /* Build configuration list for PBXNativeTarget "HackerNewsTests" */ = {
+		17E05FEB1DF96DD600607B9A /* Build configuration list for PBXNativeTarget "AppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				17E05FEC1DF96DD600607B9A /* Debug */,
@@ -705,7 +708,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		17E05FEE1DF96DD600607B9A /* Build configuration list for PBXNativeTarget "HackerNewsUITests" */ = {
+		17E05FEE1DF96DD600607B9A /* Build configuration list for PBXNativeTarget "AppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				17E05FEF1DF96DD600607B9A /* Debug */,
