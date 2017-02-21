@@ -1,0 +1,7 @@
+# dev 环境快速启动
+THIS_DIR=$(dirname "$0")
+pushd "$THIS_DIR"
+
+npm run serve & npm run dev
+
+popd
