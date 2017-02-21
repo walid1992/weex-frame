@@ -1,19 +1,50 @@
-var path = require('path')
-var webpack = require('webpack')
-var cssnext = require('postcss-cssnext')
+const path = require('path')
+const webpack = require('webpack')
+const cssnext = require('postcss-cssnext')
+const fs = require('fs')
 
-var bannerPlugin = new webpack.BannerPlugin(
+const bannerPlugin = new webpack.BannerPlugin(
   '// { "framework": "Vue" }\n',
   {raw: true}
 )
 
+const entry = {}
+
+function walk (dir) {
+  dir = dir || '.'
+  let directory = path.join(__dirname, './src', dir)
+  fs.readdirSync(directory)
+    .forEach(file => {
+      let fullpath = path.join(directory, file)
+      let stat = fs.statSync(fullpath)
+      let extname = path.extname(fullpath)
+      if (stat.isFile() && extname === '.vue') {
+        // let name = path.join('build', dir, path.basename(file, extname))
+        let name
+        if (dir === '.') {
+          name = path.join(path.basename(file, extname))
+        } else {
+          name = path.join(path.basename(dir, extname))
+        }
+        entry[name] = fullpath + '?entry=true'
+      } else if (stat.isDirectory() && file !== 'build') {
+        let subdir = path.join(dir, file)
+        walk(subdir)
+      }
+    })
+}
+
+walk()
+
 function getBaseConfig () {
   return {
-    entry: {
-      app: path.resolve('./src/entry.js')
-    },
+    // entry: {
+    //   app: path.resolve('./src/entry.js')
+    // },
+    entry: entry,
     output: {
       path: 'dist',
+      filename: '[name].js'
     },
     resolve: {
       extensions: ['', '.js', '.vue'],
@@ -63,11 +94,11 @@ function getBaseConfig () {
   }
 }
 
-var webConfig = getBaseConfig()
+const webConfig = getBaseConfig()
 webConfig.output.filename = '[name].web.js'
 webConfig.module.loaders[1].loaders.push('vue')
 
-var weexConfig = getBaseConfig()
+const weexConfig = getBaseConfig()
 weexConfig.output.filename = '[name].weex.js'
 weexConfig.module.loaders[1].loaders.push('weex')
 

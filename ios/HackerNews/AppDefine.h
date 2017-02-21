@@ -18,8 +18,8 @@
 #define DEMO_HOST CURRENT_IP
 #endif
 
-#define DEMO_URL(path) [NSString stringWithFormat:@"http://%@:8080/%s", DEMO_HOST, #path]
+#define DEMO_URL(path) [NSString stringWithFormat:@"http://%@:12580/%s", DEMO_HOST, #path]
 
-#define HOME_URL [NSString stringWithFormat:@"http://%@:8080/dist/app.weex.js", DEMO_HOST]
+#define HOME_URL [NSString stringWithFormat:@"http://%@:12580/dist/App.weex.js", DEMO_HOST]
 
 #endif /* AppDefine_h */

@@ -6,7 +6,7 @@
   export default {
     data () {
       return {
-        channel: this.$route.query.channel
+//        channel: this.$route.query.channel
       }
     },
     mounted () {

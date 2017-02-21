@@ -24,7 +24,7 @@
     
     //not necessary
     [WXAppConfiguration setAppGroup:@"Weex"];
-    [WXAppConfiguration setAppName:@"HackerNews"];
+    [WXAppConfiguration setAppName:@"WeexFrame"];
     [WXAppConfiguration setAppVersion:@"0.0.1"];
     
     //init SDK environment
