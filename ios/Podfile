@@ -8,10 +8,10 @@ def common
     pod 'SocketRocket', '0.4.2'
 end
 
-target 'HackerNews' do
+target 'App' do
     common
 end
 
-target 'HackerNewsUITests' do
+target 'AppUITests' do
     common
 end
