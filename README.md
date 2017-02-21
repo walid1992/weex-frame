@@ -11,8 +11,7 @@ npm install
 ## file structure
 
 * `src/*`: all source code
-* `app.js`: entrance of the Weex page
-* `build/*`: some build scripts
+* `App.js`: entrance of the Weex page
 * `dist/*`: where places generated code
 * `assets/*`: some assets for Web preview
 * `index.html`: a page with Web preview and qrcode of Weex js bundle
@@ -20,7 +19,12 @@ npm install
 * `.babelrc`: babel config (preset-2015 by default)
 * `.eslintrc`: eslint config (standard by default)
 
-## npm scripts
+## dev 快速启动脚本
+
+1. 进入项目根目录
+2. ./start
+
+## npm 指令
 
 ```bash
 # build both two js bundles for Weex and Web
