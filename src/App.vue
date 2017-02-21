@@ -18,7 +18,7 @@
 
 <script>
   let navigator = weex.requireModule('navigator')
-//  let modal = weex.requireModule('modal')
+  let modal = weex.requireModule('modal')
 
   export default {
     created () {
@@ -41,10 +41,10 @@
       },
       toPush () {
         navigator.push({
-          url: 'http://192.168.10.175:8080/3.3.weex.js',
+          url: 'http://dotwe.org/raw/dist/6fe11640e8d25f2f98176e9643c08687.bundle.js',
           animated: 'true'
         }, event => {
-//          modal.toast({message: 'callback: ' + event})
+          modal.toast({message: 'callback: ' + event})
         })
       }
     }
