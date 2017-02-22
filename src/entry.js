@@ -14,4 +14,4 @@ export default new Vue(Vue.util.extend({el: '#root', router}, App))
 Vue.use(globalConfig)
 
 // 设置默认路由
-router.push('/sy/launch')
+router.push('/sy/mine')

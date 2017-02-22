@@ -5,5 +5,6 @@
  */
 
 export default {
-  launch: 'launch'
+  launch: 'launch',
+  mine: 'mine'
 }

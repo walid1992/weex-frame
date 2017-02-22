@@ -1,3 +1,9 @@
+/**
+ * @author walid
+ * @date 2017/02/20
+ * @description 路由
+ */
+
 import Vue from 'vue'
 import Router from 'vue-router'
 import map from './map'

@@ -10,7 +10,8 @@ module.exports = {
     'sourceType': 'module'
   },
   globals: {
-    'Vue': false
+    'Vue': false,
+    'weex': false
   },
   // extends: 'standard',
   plugins: [

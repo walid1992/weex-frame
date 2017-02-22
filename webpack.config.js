@@ -8,11 +8,13 @@ const bannerPlugin = new webpack.BannerPlugin(
   {raw: true}
 )
 
-const entry = {}
+const entry = {
+  app: path.resolve('./src/entry.js')
+}
 
 function walk (dir) {
   dir = dir || '.'
-  let directory = path.join(__dirname, './src', dir)
+  let directory = path.join(__dirname, './src/views', dir)
   fs.readdirSync(directory)
     .forEach(file => {
       let fullpath = path.join(directory, file)
@@ -27,7 +29,7 @@ function walk (dir) {
           name = path.join(path.basename(dir, extname))
         }
         entry[name] = fullpath + '?entry=true'
-      } else if (stat.isDirectory() && file !== 'build') {
+      } else if (stat.isDirectory() && file !== 'components') {
         let subdir = path.join(dir, file)
         walk(subdir)
       }
@@ -52,6 +54,7 @@ function getBaseConfig () {
       alias: {
         'assets': path.resolve(__dirname, './src/assets/'),
         'components': path.resolve(__dirname, './src/components/'),
+        'constants': path.resolve(__dirname, './src/constants/'),
         'api': path.resolve(__dirname, './src/api/'),
         'router': path.resolve(__dirname, './src/router/'),
         'store': path.resolve(__dirname, './src/store/'),

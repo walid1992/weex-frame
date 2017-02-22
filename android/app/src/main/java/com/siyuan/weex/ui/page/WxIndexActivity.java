@@ -21,7 +21,7 @@ import java.util.Map;
 public class WxIndexActivity extends WXBaseActivity {
 
     // http://192.168.51.175:12580/dist/app.weex.js
-    private static String INDEX_URL = "http://192.168.10.175:12580/dist/App.weex.js";
+    private static String INDEX_URL = "http://192.168.10.175:12580/dist/app.weex.js";
     private WXSDKInstance mWXSDKInstance;
     private FrameLayout mContainer;
 
