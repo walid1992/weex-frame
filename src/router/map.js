@@ -6,9 +6,9 @@
 
 import name from './name'
 
-import p404 from 'views/404/app'
 import launch from 'views/launch/app'
 import mine from 'views/mine/app'
+import p404 from 'views/404/app'
 
 export default [
   {
@@ -17,7 +17,9 @@ export default [
     meta: {
       title: '水滴筹'
     },
-    component: launch
+    component: (resolve) => {
+      return launch
+    }
   },
   {
     path: '/sy/mine',
