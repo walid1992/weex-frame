@@ -9,12 +9,12 @@ const bannerPlugin = new webpack.BannerPlugin(
 )
 
 const entry = {
-  app: path.resolve('./src/entry.js')
+  entry: path.resolve('./src/entry.js')
 }
 
 function walk (dir) {
   dir = dir || '.'
-  let directory = path.join(__dirname, './src/views', dir)
+  let directory = path.join(__dirname, './src', dir)
   fs.readdirSync(directory)
     .forEach(file => {
       let fullpath = path.join(directory, file)

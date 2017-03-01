@@ -4,7 +4,7 @@
  * @description 程序入口
  */
 
-import App from './App'
+import App from './template'
 import router from './router'
 import globalConfig from './utils/globalConfig'
 
@@ -14,4 +14,4 @@ export default new Vue(Vue.util.extend({el: '#root', router}, App))
 Vue.use(globalConfig)
 
 // 设置默认路由
-router.push('/sy/mine')
+// router.push('/sy/mine')
