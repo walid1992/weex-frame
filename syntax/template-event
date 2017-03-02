@@ -1,3 +1,0 @@
-var App = require('../src/syntax/template-event.vue')
-App.el = '#root'
-new Vue(App)

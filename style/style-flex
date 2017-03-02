@@ -1,3 +1,0 @@
-var App = require('../src/style/style-flex.vue')
-App.el = '#root'
-new Vue(App)

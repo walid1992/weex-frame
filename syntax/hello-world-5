@@ -1,3 +1,0 @@
-var App = require('../src/syntax/hello-world-5.vue')
-App.el = '#root'
-new Vue(App)

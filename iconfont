@@ -1,3 +1,0 @@
-var App = require('src/iconfont.vue')
-App.el = '#root'
-new Vue(App)

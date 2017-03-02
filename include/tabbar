@@ -1,3 +1,0 @@
-var App = require('../src/include/tabbar.vue')
-App.el = '#root'
-new Vue(App)

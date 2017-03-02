@@ -1,3 +1,0 @@
-var App = require('../src/modules/instance-api.vue')
-App.el = '#root'
-new Vue(App)
