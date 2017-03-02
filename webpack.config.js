@@ -32,7 +32,8 @@ function walk (dir) {
       if (stat.isFile() && extname === '.vue') {
         let entryFile = path.join(entryDirectory, dir, path.basename(file, extname) + '.js')
         fs.outputFileSync(entryFile, getEntryFileContent(entryFile, fullpath))
-        let name = path.join('build', dir, path.basename(file, extname))
+        // let name = path.join('build', dir, path.basename(file, extname))
+        let name = path.join(dir, path.basename(file, extname))
         entry[name] = entryFile + '?entry=true'
         // && file !== 'components'
       } else if (stat.isDirectory()) {
@@ -51,8 +52,7 @@ function getBaseConfig () {
     // },
     entry: entry,
     output: {
-      path: 'dist',
-      filename: '[name].js'
+      path: 'dist'
     },
     resolve: {
       extensions: ['', '.js', '.vue'],
@@ -104,11 +104,11 @@ function getBaseConfig () {
 }
 
 const webConfig = getBaseConfig()
-webConfig.output.filename = '[name].web.js'
+webConfig.output.filename = 'web/[name].js'
 webConfig.module.loaders[1].loaders.push('vue')
 
 const weexConfig = getBaseConfig()
-weexConfig.output.filename = '[name].weex.js'
+weexConfig.output.filename = 'weex/[name].js'
 weexConfig.module.loaders[1].loaders.push('weex')
 
 module.exports = [webConfig, weexConfig]

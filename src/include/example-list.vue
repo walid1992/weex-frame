@@ -27,7 +27,7 @@
       for (let i in this.items) {
         let item = this.items[i]
         if (!item.url) {
-          item.url = base + item.name + '.web.js'
+          item.url = base + item.name + '.js'
         }
       }
     }

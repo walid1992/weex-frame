@@ -13,9 +13,9 @@ exports.getBaseURL = function (vm) {
     if (matches && matches.length >= 2) {
       host = matches[1]
     }
-    nativeBase = 'http://' + host + '/' + vm.dir
+    nativeBase = `http://${host}/${vm.dir}/weex/`
   }
-  let h5Base = './weex.html?page=./' + vm.dir + '/'
+  let h5Base = `./weex.html?page=./${vm.dir}/web/`
   // in Native
   let base = nativeBase
   if (typeof window === 'object') {
