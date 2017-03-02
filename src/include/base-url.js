@@ -15,7 +15,7 @@ exports.getBaseURL = function (vm) {
     }
     nativeBase = 'http://' + host + '/' + vm.dir
   }
-  let h5Base = './vue.html?page=./' + vm.dir
+  let h5Base = './weex.html?page=./' + vm.dir
   // in Native
   let base = nativeBase
   if (typeof window === 'object') {
