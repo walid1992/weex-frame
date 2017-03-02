@@ -9,17 +9,6 @@
 #ifndef AppDefine_h
 #define AppDefine_h
 
-
-#define CURRENT_IP @"192.168.0.116"
-
-#if TARGET_IPHONE_SIMULATOR
-#define DEMO_HOST @"127.0.0.1"
-#else
-#define DEMO_HOST CURRENT_IP
-#endif
-
-#define DEMO_URL(path) [NSString stringWithFormat:@"http://%@:12580/%s", DEMO_HOST, #path]
-
-#define HOME_URL [NSString stringWithFormat:@"http://%@:12580/dist/weex/root.js", DEMO_HOST]
+#define HOME_URL [NSString stringWithFormat:@"http://192.168.10.175:12580/dist/weex/root.js"]
 
 #endif /* AppDefine_h */

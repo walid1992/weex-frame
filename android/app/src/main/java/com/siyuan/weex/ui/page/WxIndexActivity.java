@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import com.siyuan.weex.R;
+import com.siyuan.weex.weex.constants.Constants;
 import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.common.WXRenderStrategy;
 
@@ -20,8 +21,6 @@ import java.util.Map;
 
 public class WxIndexActivity extends WXBaseActivity {
 
-    // http://192.168.51.175:12580/dist/app.weex.js
-    private static String INDEX_URL = "http://192.168.0.116:12580/dist/weex/root.js";
     private WXSDKInstance mWXSDKInstance;
     private FrameLayout mContainer;
 
@@ -33,8 +32,8 @@ public class WxIndexActivity extends WXBaseActivity {
         mWXSDKInstance = new WXSDKInstance(this);
         mWXSDKInstance.registerRenderListener(this);
         Map<String, Object> options = new HashMap<>();
-        options.put(WXSDKInstance.BUNDLE_URL, INDEX_URL);
-        mWXSDKInstance.renderByUrl("WxIndex", INDEX_URL, options, null, WXRenderStrategy.APPEND_ASYNC);
+        options.put(WXSDKInstance.BUNDLE_URL, Constants.INDEX_URL);
+        mWXSDKInstance.renderByUrl("WxIndex", Constants.INDEX_URL, options, null, WXRenderStrategy.APPEND_ASYNC);
     }
 
     @Override

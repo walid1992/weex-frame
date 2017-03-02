@@ -11,7 +11,8 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack --watch",
-    "serve": "node build/init.js && serve -p 12580",
+    "serve": "npm run init && serve -p 12580",
+    "init": "node build/init.js",
     "debug": "weex-devtool"
   },
   "dependencies": {
