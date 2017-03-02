@@ -8,7 +8,7 @@
 
 <script>
   module.exports = {
-    data: function () {
+    data () {
       return {
         config: ''
       }
@@ -16,10 +16,10 @@
     components: {
       panel: require('../include/panel.vue')
     },
-    created: function() {
-      var config = this.$getConfig();
-      console.log('config', JSON.stringify(config));
-      this.config = JSON.stringify(config, null, 2);
+    created: function () {
+      let config = this.$getConfig()
+      console.log('config', JSON.stringify(config))
+      this.config = JSON.stringify(config, null, 2)
     }
   }
 </script>

@@ -11,7 +11,7 @@
   module.exports = {
     props: {
       dir: {
-        default: 'examples'
+        default: 'dist'
       }, // examples, test ...
       items: {
         default: [

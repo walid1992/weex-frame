@@ -1,0 +1,3 @@
+var App = require('../../src/syntax/include/sub.vue')
+App.el = '#root'
+new Vue(App)

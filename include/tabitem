@@ -1,0 +1,3 @@
+var App = require('../src/include/tabitem.vue')
+App.el = '#root'
+new Vue(App)

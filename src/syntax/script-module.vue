@@ -10,11 +10,18 @@
 </template>
 
 <style>
-  .btn {font-size: 36px; text-align: center; color: white; background-color: gray; padding: 20px; border-radius: 5px;}
+  .btn {
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 5px;
+  }
 </style>
 
 <script>
-  var modal = weex.requireModule('modal')
+  let modal = weex.requireModule('modal')
   module.exports = {
     methods: {
       test: function () {

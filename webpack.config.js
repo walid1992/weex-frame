@@ -1,12 +1,20 @@
 const path = require('path')
 const webpack = require('webpack')
 const cssnext = require('postcss-cssnext')
-const fs = require('fs')
+// const fs = require('fs')
+const fs = require('fs-extra')
 
 const bannerPlugin = new webpack.BannerPlugin(
   '// { "framework": "Vue" }\n',
   {raw: true}
 )
+
+function getEntryFileContent (entryPath, vueFilePath) {
+  const relativePath = path.relative(path.join(entryPath, '../'), vueFilePath);
+  return 'var App = require(\'' + relativePath + '\')\n'
+    + 'App.el = \'#root\'\n'
+    + 'new Vue(App)\n'
+}
 
 const entry = {
   entry: path.resolve('./src/entry.js')
@@ -15,21 +23,19 @@ const entry = {
 function walk (dir) {
   dir = dir || '.'
   let directory = path.join(__dirname, './src', dir)
+  let entryDirectory = path.join(__dirname, './src/entry');
   fs.readdirSync(directory)
     .forEach(file => {
       let fullpath = path.join(directory, file)
       let stat = fs.statSync(fullpath)
       let extname = path.extname(fullpath)
       if (stat.isFile() && extname === '.vue') {
-        // let name = path.join('build', dir, path.basename(file, extname))
-        let name
-        if (dir === '.') {
-          name = path.join(path.basename(file, extname))
-        } else {
-          name = path.join(path.basename(dir, extname))
-        }
-        entry[name] = fullpath + '?entry=true'
-      } else if (stat.isDirectory() && file !== 'components') {
+        let entryFile = path.join(entryDirectory, dir, path.basename(file, extname) + '.js')
+        fs.outputFileSync(entryFile, getEntryFileContent(entryFile, fullpath))
+        let name = path.join('build', dir, path.basename(file, extname))
+        entry[name] = entryFile + '?entry=true'
+        // && file !== 'components'
+      } else if (stat.isDirectory()) {
         let subdir = path.join(dir, file)
         walk(subdir)
       }

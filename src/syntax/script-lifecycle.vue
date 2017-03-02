@@ -5,27 +5,29 @@
 </template>
 
 <style>
-  .title {font-size: 48px;}
+  .title {
+    font-size: 48px;
+  }
 </style>
 
 <script>
-  var initMessage
+  let initMessage = ''
   module.exports = {
-    data: function () {
+    data () {
       return {
         list: ['Lifecycle List']
       }
     },
-    init: function () {
+    init () {
       initMessage = 'component init: nothing more happen even the data initialization'
       console.log('init:', this.list)
     },
-    created: function () {
+    created () {
       this.list.push(initMessage)
       this.list.push('component created: data observed')
       console.log('created:', this.list)
     },
-    mounted: function () {
+    mounted () {
       this.list.push('component mounted: virtual dom generated')
       console.log('mounted:', this.list)
     }

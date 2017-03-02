@@ -2,12 +2,12 @@
   <div>
     <list class="list">
       <cell
-        v-for="(v,i) in rows"
-        append="tree"
-        :index="i"
-        class="row"
-        @appear="onappear"
-        @disappear="ondisappear">
+          v-for="(v,i) in rows"
+          append="tree"
+          :index="i"
+          class="row"
+          @appear="onappear"
+          @disappear="ondisappear">
         <div class="item">
           <text class="item-title">row {{v.id}}</text>
         </div>
@@ -19,27 +19,32 @@
 
 <style>
   .list {
-    height:850px
+    height: 850px
   }
+
   .count {
     font-size: 48px;
-    margin:10px;
+    margin: 10px;
   }
+
   .indicator {
     height: 40px;
     width: 40px;
-    color:#45b5f0;
+    color: #45b5f0;
   }
+
   .row {
     width: 750px;
   }
+
   .item {
     justify-content: center;
     border-bottom-width: 2px;
     border-bottom-color: #c0c0c0;
     height: 100px;
-    padding:20px;
+    padding: 20px;
   }
+
   .item-title {
   }
 </style>
@@ -47,38 +52,38 @@
 <script>
   module.exports = {
     methods: {
-      onappear: function (e) {
-        var appearId = this.rows[e.target.attr.index].id;
-        nativeLog('+++++', appearId);
-        var appearIds = this.appearIds;
-        appearIds.push(appearId);
-        this.getMinAndMaxIds(appearIds);
+      onappear (e) {
+        let appearId = this.rows[e.target.attr.index].id
+        nativeLog('+++++', appearId)
+        let appearIds = this.appearIds
+        appearIds.push(appearId)
+        this.getMinAndMaxIds(appearIds)
       },
-      ondisappear:function (e) {
-        var disAppearId = this.rows[e.target.attr.index].id;
-        nativeLog('+++++', disAppearId);
-        var appearIds = this.appearIds;
-        var index = appearIds.indexOf(disAppearId);
+      ondisappear (e) {
+        let disAppearId = this.rows[e.target.attr.index].id
+        nativeLog('+++++', disAppearId)
+        let appearIds = this.appearIds
+        let index = appearIds.indexOf(disAppearId)
         if (index > -1) {
-          appearIds.splice(index, 1);
+          appearIds.splice(index, 1)
         }
-        this.getMinAndMaxIds(appearIds);
+        this.getMinAndMaxIds(appearIds)
       },
-      getMinAndMaxIds:function (appearIds) {
-        appearIds.sort(function(a, b) {
-          return a - b;
-        });
-        this.appearIds = appearIds;
-        this.appearMax = appearIds[appearIds.length - 1];
-        this.appearMin = appearIds[0];
+      getMinAndMaxIds: function (appearIds) {
+        appearIds.sort(function (a, b) {
+          return a - b
+        })
+        this.appearIds = appearIds
+        this.appearMax = appearIds[appearIds.length - 1]
+        this.appearMin = appearIds[0]
       }
     },
     data: function () {
       return {
-        appearMin:1,
-        appearMax:1,
-        appearIds:[],
-        rows:[
+        appearMin: 1,
+        appearMax: 1,
+        appearIds: [],
+        rows: [
           {id: 1},
           {id: 2},
           {id: 3},

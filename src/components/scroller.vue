@@ -8,7 +8,7 @@
         <text class="item-title">row {{item.id}}</text>
       </div>
     </div>
-    <loading class="loading-view" :display="loading_display" onloading="onloading">
+    <loading class="loading-view" :display="loadingDisplay" onloading="onloading">
       <loading-indicator style="height: 60; width: 60"></loading-indicator>
     </loading>
   </scroller>
@@ -70,27 +70,27 @@
 </style>
 
 <script>
-  module.exports = {
+  export default {
     methods: {
-      onrefresh: function(e) {
-        var self = this;
-        self.refresh_display = 'show';
+      onrefresh (e) {
+        let self = this
+        self.refreshDisplay = 'show'
         setTimeout(function () {
-          self.refresh_display = 'hide';
+          self.refreshDisplay = 'hide'
         }, 1000)
       },
-      onloading: function(e) {
-        var self = this;
-        self.loading_display = 'show';
+      onloading (e) {
+        let self = this
+        self.loadingDisplay = 'show'
         setTimeout(function () {
-          self.loading_display = 'hide';
+          self.loadingDisplay = 'hide'
         }, 1000)
       }
     },
     data: function () {
       return {
-        refresh_display: 'hide',
-        loading_display: 'hide',
+        refreshDisplay: 'hide',
+        loadingDisplay: 'hide',
         sections: [
           {
             title: 'Header 1',
@@ -139,24 +139,24 @@
           {
             title: 'Header 5',
             items: [
-            {id: 23},
-            {id: 24},
-            {id: 25},
-            {id: 26},
-            {id: 27}
+              {id: 23},
+              {id: 24},
+              {id: 25},
+              {id: 26},
+              {id: 27}
             ]
           },
           {
             title: 'Header 6',
             items: [
-            {id: 28},
-            {id: 29},
-            {id: 30},
-            {id: 31},
-            {id: 32}
+              {id: 28},
+              {id: 29},
+              {id: 30},
+              {id: 31},
+              {id: 32}
             ]
           }
-          ]
+        ]
       }
     }
   }

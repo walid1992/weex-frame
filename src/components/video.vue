@@ -20,9 +20,9 @@
 </style>
 
 <script>
-  var modal = weex.requireModule('modal')
-  module.exports = {
-    data: function () {
+  let modal = weex.requireModule('modal')
+  export default {
+    data () {
       return {
         playStatus: 'play'
       }
@@ -56,5 +56,5 @@
         modal.toast({ 'message': 'video fail' })
       }
     }
-  };
+  }
 </script>

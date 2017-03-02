@@ -68,29 +68,28 @@
       tabitem: require('./tabitem.vue')
     },
     created: function () {
-      this.select(this.selectedIndex);
+      this.select(this.selectedIndex)
     },
     methods: {
-      tabItemOnClick: function (e) {
-        this.selectedIndex = e.index;
-        this.select(e.index);
-        this.$emit('tabBarOnClick', e);
+      tabItemOnClick (e) {
+        this.selectedIndex = e.index
+        this.select(e.index)
+        this.$emit('tabBarOnClick', e)
       },
-      select: function (index) {
+      select (index) {
         for (let i = 0; i < this.tabItems.length; i++) {
-          let tabItem = this.tabItems[i];
+          let tabItem = this.tabItems[i]
           if (i == index) {
-            tabItem.icon = tabItem.selectedImage;
-            tabItem.titleColor = this.selectedColor;
-            tabItem.visibility = 'visible';
-          }
-          else {
-            tabItem.icon = tabItem.image;
-            tabItem.titleColor = this.unselectedColor;
-            tabItem.visibility = 'hidden';
+            tabItem.icon = tabItem.selectedImage
+            tabItem.titleColor = this.selectedColor
+            tabItem.visibility = 'visible'
+          } else {
+            tabItem.icon = tabItem.image
+            tabItem.titleColor = this.unselectedColor
+            tabItem.visibility = 'hidden'
           }
         }
-      },
+      }
     }
   }
 </script>

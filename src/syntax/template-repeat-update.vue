@@ -14,9 +14,22 @@
 </template>
 
 <style>
-  .title {font-size: 48px;}
-  .subtitle {font-size: 36px;}
-  .btn {font-size: 36px; text-align: center; color: white; background-color: gray; padding: 20px; border-radius: 5px;}
+  .title {
+    font-size: 48px;
+  }
+
+  .subtitle {
+    font-size: 36px;
+  }
+
+  .btn {
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 5px;
+  }
 </style>
 
 <script>
@@ -43,8 +56,7 @@
       mutate: function (e) {
         if (this.list.length % 2) {
           this.list.push({key: 'x', text: 'bar'})
-        }
-        else {
+        } else {
           this.list.pop()
         }
         console.log('this.list', this.list)

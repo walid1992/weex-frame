@@ -1,0 +1,3 @@
+var App = require('../src/style/index.vue')
+App.el = '#root'
+new Vue(App)

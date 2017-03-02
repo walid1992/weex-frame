@@ -1,0 +1,3 @@
+var App = require('../src/modules/clipboard.vue')
+App.el = '#root'
+new Vue(App)

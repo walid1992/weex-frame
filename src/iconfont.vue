@@ -34,26 +34,26 @@
 </style>
 
 <script>
-  var domModule = weex.requireModule('dom');
+  let domModule = weex.requireModule('dom')
   module.exports = {
-    created: function() {
+    created () {
       //目前支持ttf、woff文件，不支持svg、eot类型
       domModule.addRule('font-face', {
-        'font-family': "iconfont1",
-        'src' : "url('iconfont.ttf')"
-      });
+        'font-family': 'iconfont1',
+        'src': url('iconfont.ttf')
+      })
       domModule.addRule('font-face', {
-        'font-family': "iconfont2",
-        'src': "url('http://at.alicdn.com/t/font_1469606063_76593.ttf')"
-      });
+        'font-family': 'iconfont2',
+        'src': url('http://at.alicdn.com/t/font_1469606063_76593.ttf')
+      })
       domModule.addRule('font-face', {
-        'font-family': "iconfont3",
-        'src': "url('http://at.alicdn.com/t/font_1469606522_9417143.woff')"
-      });
+        'font-family': 'iconfont3',
+        'src': url('http://at.alicdn.com/t/font_1469606522_9417143.woff')
+      })
       domModule.addRule('font-face', {
-        'font-family': "iconfont4",
-        'src': "url('file:///storage/emulated/0/Android/data/com.alibaba.weex/cache/http:__at.alicdn.com_t_font_1469606063_76593.ttf')"
-      });
+        'font-family': 'iconfont4',
+        'src': url('file:///storage/emulated/0/Android/data/com.alibaba.weex/cache/http:__at.alicdn.com_t_font_1469606063_76593.ttf')
+      })
     }
   }
 </script>

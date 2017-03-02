@@ -3,3 +3,4 @@ dist
 config.js
 *log
 .idea
+src/entry

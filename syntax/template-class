@@ -1,0 +1,3 @@
+var App = require('../src/syntax/template-class.vue')
+App.el = '#root'
+new Vue(App)

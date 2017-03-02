@@ -13,7 +13,7 @@
     },
     computed: {
       bgColor: function () {
-        return this.type == '1' ? '#7BA3A8' : '#BEAD92';
+        return this.type == '1' ? '#7BA3A8' : '#BEAD92'
       }
     }
   }

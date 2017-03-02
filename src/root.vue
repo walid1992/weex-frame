@@ -5,42 +5,40 @@
 <script>
   export default {
     data () {
+      let root = 'build'
       return {
         items: [
           // common
-          {name: '/hello-world', title: 'Hello World'},
-          {name: '/index', title: 'Common Style'},
-          {name: '/animation', title: 'Animation'},
+          {name: root + '/syntax/hello-world', title: 'Hello World'},
+          {name: root + '/style/index', title: 'Common Style'},
+          {name: root + '/animation', title: 'Animation'},
 
           // component
-          {name: '/text', title: 'Text'},
-          {name: '/image', title: 'Image'},
-          {name: '/input', title: 'Input'},
-          {name: '/scroller', title: 'Scroller'},
-          {name: '/list', title: 'List'},
-          {name: '/slider', title: 'Slider'},
-          {name: '/a', title: 'A'},
-          {name: '/video', title: 'Video'},
-          {name: '/countdown', title: 'Countdown'},
-          {name: '/marquee', title: 'Marquee'},
-          {name: '/web', title: 'Web'},
-          {name: '/navigator', title: 'Navigator'},
-          {name: '/tabbar', title: 'Tabbar'},
+          {name: root + '/components/text', title: 'Text'},
+          {name: root + '/components/image', title: 'Image'},
+          {name: root + '/components/input', title: 'Input'},
+          {name: root + '/components/scroller', title: 'Scroller'},
+          {name: root + '/components/list', title: 'List'},
+          {name: root + '/components/slider', title: 'Slider'},
+          {name: root + '/components/a', title: 'A'},
+          {name: root + '/components/video', title: 'Video'},
+          {name: root + '/components/countdown', title: 'Countdown'},
+          {name: root + '/components/marquee', title: 'Marquee'},
+          {name: root + '/components/web', title: 'Web'},
+          {name: root + '/components/navigator', title: 'Navigator'},
+          {name: root + '/components/tabbar', title: 'Tabbar'},
 
           // module
-          {name: '/instance-api', title: 'Instance API'},
-          {name: '/modal', title: 'Modal'},
-          {name: '/stream', title: 'Stream'},
-          {name: '/storage', title: 'Storage'},
+          {name: root + '/modules/instance-api', title: 'Instance API'},
+          {name: root + '/modules/modal', title: 'Modal'},
+          {name: root + '/modules/stream', title: 'Stream'},
+          {name: root + '/modules/storage', title: 'Storage'},
           // {name: 'module/clipboard', title: 'Clipboard'}, // 0.8 , developing
 
           // showcase
-          {name: '/progress', title: 'Progress Bar'},
-          {name: '/itemlist', title: 'List (Advanced)'},
-          {name: '/calculator', title: 'Calculator'},
-          {name: '/minesweeper', title: 'Minesweeper'},
-          {name: '/ui', title: 'UI Gallery'},
-          {name: '/dropdown/dropdown-demo', title: 'Dropdown'}
+          {name: root + '/showcase/progress', title: 'Progress Bar'},
+          {name: root + '/showcase/itemlist', title: 'List (Advanced)'},
+          {name: root + '/showcase/calculator', title: 'Calculator'}
         ]
       }
     },
