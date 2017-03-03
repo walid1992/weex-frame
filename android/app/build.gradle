@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion 24
@@ -9,7 +10,6 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -17,14 +17,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    testCompile 'junit:junit:4.12'
+
     compile 'com.android.support:recyclerview-v7:24.1.1'
     compile 'com.android.support:support-v4:24.1.1'
     compile 'com.android.support:appcompat-v7:24.1.1'
@@ -38,4 +39,19 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp:2.3.0'
     compile 'com.squareup.okhttp:okhttp-ws:2.3.0'
     compile 'com.squareup.okio:okio:1.0.1'
+
+    // rxlifecycle
+    compile 'com.trello:rxlifecycle:0.7.0'
+    // If you want to bind to Android-specific lifecycles
+    compile 'com.trello:rxlifecycle-android:0.7.0'
+    // If you want pre-written Activities and Fragments you can subclass as providers
+    compile 'com.trello:rxlifecycle-components:0.7.0'
+
+    // RxBinding start
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-support-v4:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-recyclerview-v7:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-design:0.4.0'
+    // RxBinding end
 }

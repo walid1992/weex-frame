@@ -567,7 +567,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 524C569D3E6AC74034584D2D /* Pods-WeexFrame.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WeexFrame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.siyuan.WeexFrame;
@@ -579,7 +578,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD481712905C568546AD8518 /* Pods-WeexFrame.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WeexFrame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.siyuan.WeexFrame;
@@ -654,6 +652,7 @@
 				0E93F46A1E691E3C009FFDEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E93F46B1E691E3C009FFDEC /* Build configuration list for PBXNativeTarget "WeexFrameTests" */ = {
 			isa = XCConfigurationList;
@@ -662,6 +661,7 @@
 				0E93F46D1E691E3C009FFDEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E93F46E1E691E3C009FFDEC /* Build configuration list for PBXNativeTarget "WeexFrameUITests" */ = {
 			isa = XCConfigurationList;
@@ -670,6 +670,7 @@
 				0E93F4701E691E3C009FFDEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
