@@ -29,7 +29,7 @@ fs.readFile(androidConfigFile, (err, data) => {
 })
 
 // iOS 主机地址操作
-let iOSConfigFile = path.join(__dirname, '../ios/HackerNews/AppDefine.h')
+let iOSConfigFile = path.join(__dirname, '../ios/WeexFrame/AppDefine.h')
 fs.readFile(iOSConfigFile, (err, data) => {
   if (err) {
     throw err
