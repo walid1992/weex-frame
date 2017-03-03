@@ -1,18 +1,18 @@
 //
-//  HackerNewsTests.m
-//  HackerNewsTests
+//  WeexFrameTests.m
+//  WeexFrameTests
 //
-//  Created by Hanks on 16/12/8.
-//  Copyright © 2016年 Weex. All rights reserved.
+//  Created by walid on 2017/3/3.
+//  Copyright © 2017年 weex. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface HackerNewsTests : XCTestCase
+@interface WeexFrameTests : XCTestCase
 
 @end
 
-@implementation HackerNewsTests
+@implementation WeexFrameTests
 
 - (void)setUp {
     [super setUp];

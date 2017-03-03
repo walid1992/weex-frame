@@ -8,10 +8,10 @@ def common
     pod 'SocketRocket', '0.4.2'
 end
 
-target 'App' do
+target 'WeexFrame' do
     common
 end
 
-target 'AppUITests' do
+target 'WeexFrameUITests' do
     common
 end
