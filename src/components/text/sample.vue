@@ -1,24 +1,42 @@
 <template>
   <div class="wrapper">
-    <text class="weex">Hello Weex !</text>
-    <text class="vue">Hello Vue !</text>
+    <text class="weex" @click="jumpA">Hello Weex !</text>
+    <text class="vue" @click="jumpList">Hello Vue !</text>
   </div>
 </template>
+
+<script>
+  import navigator from 'utils/modules/navigator'
+  import route from 'constants/route'
+
+  export default {
+    methods: {
+      jumpA (event) {
+        navigator.push(this, route.demoA)
+      },
+      jumpList (event) {
+        navigator.push(this, route.demoList)
+      }
+    }
+  }
+</script>
 
 <style scoped>
   .wrapper {
     flex-direction: column;
     justify-content: center;
   }
+
   .weex {
-   font-size: 60px;
-   text-align: center;
-   color: #1B90F7;
+    font-size: 60px;
+    text-align: center;
+    color: #1B90F7;
   }
+
   .vue {
-   font-size: 60px;
-   text-align: center;
-   margin-top: 30px;
-   color: #41B883;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 30px;
+    color: #41B883;
   }
 </style>
