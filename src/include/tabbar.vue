@@ -67,7 +67,7 @@
     components: {
       tabitem: require('./tabitem.vue')
     },
-    created: function () {
+    created () {
       this.select(this.selectedIndex)
     },
     methods: {
