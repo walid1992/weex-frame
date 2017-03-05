@@ -1,60 +1,55 @@
 <template>
-  <scroller>
-    <panel title='Clipboard' type='primary'>
-      <panel title='Copy to clipboard5'>
-        <text style='line-height: 40px; font-size: 28px'>{{textToCopy}}</text>
-        <button type='info' size='middle' value='Copy' @click.native='doCopy'></button>
-      </panel>
-
-      <panel title='Paste from clipboard'>
-        <text style='line-height: 40px; font-size: 28px'>{{textFromPaste}}</text>
-        <button type='info' size='middle' value='Paste' @click.native='doPaste'></button>
-      </panel>
-
-      <panel title='Result'>
-        <tip style='margin-bottom: 20px;' :value='tips'></tip>
-      </panel>
-
-    </panel>
-  </scroller>
+  <div>
+    <div class="div">
+      <text class="text" @click="onItemClick">{{message}}</text>
+    </div>
+    <div class="div">
+      <text class="text" @click="setContent">Click to copy: {{tobecopied}}</text>
+    </div>
+  </div>
 </template>
 
 <script>
-  let modal = weex.requireModule('modal')
-  let clipboard = weex.requireModule('clipboard')
-  module.exports = {
+  const clipboard = weex.requireModule('clipboard')
+
+  export default {
     data () {
       return {
-        textToCopy: '',
-        textFromPaste: '',
-        tips: ''
+        tobecopied: 'yay!',
+        message: 'nothing.'
       }
     },
-    components: {
-      panel: require('../include/panel.vue'),
-      tip: require('../include/tip.vue'),
-      button: require('../include/button.vue')
-    },
-    mounted () {
-      this.tips = '1. Just click COPY button. It will auto generate a string with random text, and copy to system clipboard. \n 2. do copy in another app, then come back and click PASTE button.'
-    },
+
     methods: {
-      doCopy () {
-        modal.toast({'message': 'doCopy!', duration: 0.5})
-        textToCopy = 'autoGenerateTextToCopy' + Math.random()
-        clipboard.setString(textToCopy)
-        this.textToCopy = textToCopy
-        this.tips = 'copy done. Now system clipboard has string of  + textToCopy + , try PASTE button, or paste in another app.'
+      setContent () {
+        clipboard.setString(this.tobecopied)
       },
-      doPaste () {
-        let me = this
-        modal.toast({'message': 'doPaste!', duration: 0.5})
-        clipboard.getString(function (ret) {
-          console.log('paste result is ' + JSON.stringify(ret))
-          me.textFromPaste = ret.data
-          me.tips = 'Paste done. Only support native(Android/iOS) NOW. according to security reason, paste in html5 is not supported.'
+      onItemClick () {
+        this.message = 'clicked! '
+        clipboard.getString(ret => {
+          this.message = 'text from clipboard:' + ret.data
         })
       }
     }
   }
 </script>
+
+<style scoped>
+  .div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 750px;
+    height: 90px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-color: #DDDDDD;
+  }
+  .text {
+    width: 750px;
+    height: 90px;
+  }
+</style>

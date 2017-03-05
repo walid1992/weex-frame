@@ -25,7 +25,7 @@
       return match && match[1]
     }
 
-    let page = getUrlParam('page') || './dist/web/root.js'
+    let page = getUrlParam('page') || './dist/web/entry.js'
     let bundle = document.createElement('script')
     bundle.src = page
     document.body.appendChild(bundle)
