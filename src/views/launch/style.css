@@ -1,0 +1,53 @@
+.root {
+  width: 750px;
+  height: 1334px;
+  background-color: #f8f8f8;
+}
+
+.div-header {
+  position: relative;
+  width: 750px;
+  height: 1334px;
+}
+
+.img-top {
+  width: 750px;
+  height: 1334px;
+}
+
+.div-content {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 750px;
+  height: 1334px;
+}
+
+.p-title {
+  margin-top: 300px;
+  color: #ffffff;
+  font-size: 72px;
+}
+
+.p-description {
+  margin-top: 40px;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.btn-action {
+  margin-top: 70px;
+  width: 367px;
+  height: 77px;
+  border-width: 3px;
+  border-color: #ffffff;
+  border-style: solid;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.17);
+  color: #ffffff;
+  text-align: center;
+  font-size: 36px;
+  line-height: 77px;
+}
