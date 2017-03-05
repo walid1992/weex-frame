@@ -50,7 +50,7 @@ module.exports = {
     // 控制逗号在行尾出现还是在行首出现
     'comma-style': [2, 'last'],
     // 圈复杂度
-    'complexity': [2, 9],
+    'complexity': [2, 20],
     // 以方括号取对象属性时，[ 后面和 ] 前面是否需要空格, 可选参数 never, always
     'computed-property-spacing': [2, 'never'],
     // TODO 关闭 强制方法必须返回值，TypeScript强类型，不配置
