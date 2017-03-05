@@ -1,0 +1,14 @@
+<div class="root">
+  <list class="list">
+    <cell class="cell" v-for="(item, index) in feeds" @click="toDetail(item.uuid)">
+      <div class="div-cell">
+        <text class="title">案例{{index + 1}}</text>
+        <image class="img-case" :src="item.coverImg"></image>
+        <div class="div-content">
+          <text class="p-title">{{item.title}}</text>
+          <text class="p-desc">{{item.description}}</text>
+        </div>
+      </div>
+    </cell>
+  </list>
+</div>

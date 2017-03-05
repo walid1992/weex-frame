@@ -1,80 +1,55 @@
 /**
- * Created by walid on 16/6/13.
- * params : {method:POST/GET,url:http://xxx,header:{key:value},
- *                 body:{key:value}}
+ * @author walid
+ * @date 2017/3/5
+ * @description API 封装工具类
  */
 
-let stream
-__weex_define__('@weex-temp/x', function (__weex_require__) {
-  stream = __weex_require__('@weex-module/stream')
-})
+import qs from 'qs'
+import {urlEncode} from 'utils/string'
+let stream = weex.requireModule('stream')
 
-let modal
-__weex_define__('@weex-temp/x', function (__weex_require__) {
-  modal = __weex_require__('@weex-module/modal')
-})
+// http base url
+const baseUrl = 'http://api.shuidichou.com/'
 
-let apiURL = {
-  baseXbUrl: 'http://api.hailedao.com',
-}
-
-function requestGet (url, callback) {
-  requestGetWithBody(url, null, callback)
-}
-
-function requestGetWithBody (url, body, callback) {
-
-  stream.fetch({
-    method: 'GET',
-    url: apiURL.baseXbUrl + url,
-    type: 'json',
-    body: body
-  }, function (ret) {
-    let resultObj = ret
-    nativeLog('resultObj  = ' + ret)
-    if (typeof resultObj == 'string') {
-      resultObj = JSON.parse(resultObj)
-    }
-    let serverResultData = resultObj.data
-    if (typeof serverResultData == 'string') {
-      serverResultData = JSON.parse(serverResultData)
-    }
-    nativeLog('serverResultData  = ' + serverResultData)
-    callback(serverResultData)
-  }, function (progress) {
-    nativeLog('get in progress:' + progress.length)
+function get (url, params) {
+  return new Promise((resolve, reject) => {
+    console.log('request:', `${baseUrl + url}?${qs.stringify(params)}`)
+    stream.fetch({
+      method: 'GET',
+      url: `${baseUrl + url}?${qs.stringify(params)}`,
+      type: 'json'
+    }, res => {
+      console.log('GET res :' + res)
+      if (res.ok) {
+        resolve(res.data)
+      } else {
+        reject(res.data)
+      }
+    }, progress => {
+      console.log('get in progress:' + progress.length)
+    })
   })
 }
 
-function requestPost (url, callback) {
-  requestPostWithBody(url, null, callback)
-}
-
-function requestPostWithBody (url, body, callback) {
-
-  stream.fetch({
-    method: 'POST',
-    url: apiURL.baseXbUrl + url,
-    type: 'json',
-    body: body
-  }, function (ret) {
-    let resultObj = ret
-    nativeLog('resultObj  = ' + ret)
-    if (typeof resultObj == 'string') {
-      resultObj = JSON.parse(resultObj)
-    }
-    let serverResultData = resultObj.data
-    if (typeof serverResultData == 'string') {
-      serverResultData = JSON.parse(serverResultData)
-    }
-    nativeLog('serverResultData  = ' + serverResultData)
-    callback(serverResultData)
-  }, function (progress) {
-    nativeLog('get in progress:' + progress.length)
+function post (url, body) {
+  return new Promise((resolve, reject) => {
+    stream.fetch({
+      method: 'POST',
+      url: baseUrl + url,
+      type: 'json',
+      body: body
+    }, res => {
+      if (res.ok && res.code == 0) {
+        resolve(res.res)
+      } else {
+        reject(res.res)
+      }
+    }, progress => {
+      console.log('get in progress:' + progress.length)
+    })
   })
 }
 
-exports.requestGet = requestGet
-exports.requestGetWithBody = requestGetWithBody
-exports.requestPost = requestPost
-exports.requestPostWithBody = requestPostWithBody
+export default {
+  get, post
+}
