@@ -1,0 +1,7 @@
+<div class='root'>
+  <div style='flex-direction: row;'>
+    <text class='btn-action' @click='loadUrl'>LoadURL</text>
+    <text class='btn-action' @click='reload'>reload</text>
+  </div>
+  <web class='web' ref='webview' :src='url' @pagestart='start' @pagefinish='finish'></web>
+</div>
