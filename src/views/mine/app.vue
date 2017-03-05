@@ -12,10 +12,10 @@
   export default {
     methods: {
       jumpA (event) {
-        navigator.pushByRoute(this, route.demoA)
+        navigator.push(this, route.demoA)
       },
       jumpList (event) {
-        navigator.pushByRoute(this, route.demoList)
+        navigator.push(this, route.demoList)
       }
     }
   }
