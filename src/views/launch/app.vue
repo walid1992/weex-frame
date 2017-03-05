@@ -4,6 +4,7 @@
 
 <script>
   import navigator from 'utils/modules/navigator'
+  import route from 'constants/route'
 
   export default {
     methods: {
