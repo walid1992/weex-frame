@@ -8,6 +8,7 @@ export default {
   demoA: 'demos/a-demo',
   demoList: 'demos/list-demo',
   home: 'views/home/app',
+  launch: 'views/launch/app',
   mine: 'views/mine/app',
   web: 'views/web/app'
 }

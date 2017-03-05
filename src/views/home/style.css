@@ -1,48 +1,48 @@
 .root {
-    width: 750px;
-    height: 1334px;
+  width: 750px;
+  height: 1334px;
 }
 
 .div-cell {
-    display: flex;
-    margin-top: 20px;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #dadada;
-    background-color: #ffffff;
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #dadada;
+  background-color: #ffffff;
 }
 
 .title {
-    font-size: 60px;
-    color: #333333;
-    line-height: 100px;
+  font-size: 60px;
+  color: #333333;
+  line-height: 100px;
 }
 
 .img-case {
-    width: 710px;
-    height: 300px;
+  width: 710px;
+  height: 300px;
 }
 
 .div-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 30px;
 }
 
 .p-title {
-    font-size: 36px;
-    text-align: left;
-    color: #333333;
-    line-height: 80px;
+  font-size: 36px;
+  text-align: left;
+  color: #333333;
+  line-height: 80px;
 }
 
 .p-desc {
-    font-size: 30px;
-    text-align: left;
-    color: #666666;
-    line-height: 40px;
+  font-size: 30px;
+  text-align: left;
+  color: #666666;
+  line-height: 40px;
 }
