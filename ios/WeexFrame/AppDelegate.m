@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "AppDefine.h"
 #import "ViewController.h"
+#import "WXEventModule.h"
 #import "WXImgLoaderDefaultImpl.h"
 
 #import <WeexSDK/WeexSDK.h>
@@ -28,12 +29,13 @@
     [WXAppConfiguration setAppVersion:@"0.0.1"];
     
     //init SDK environment
-    [WXSDKEngine initSDKEnviroment];
+    [WXSDKEngine initSDKEnvironment];
     
     //set log
     [WXLog setLogLevel:WXLogLevelLog];
     
-    [WXSDKEngine registerModule:@"event" withClass:NSClassFromString(@"WXEventModule")];
+    [WXSDKEngine registerModule:@"event" withClass:[WXEventModule class]];
+    [WXSDKEngine registerHandler:[WXEventModule new] withProtocol:@protocol(WXEventModuleProtocol)];
     [WXSDKEngine registerHandler:[WXImgLoaderDefaultImpl new] withProtocol:@protocol(WXImgLoaderProtocol)];
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
