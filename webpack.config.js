@@ -47,9 +47,6 @@ walk()
 
 function getBaseConfig () {
   return {
-    // entry: {
-    //   app: path.resolve('./src/entry.js')
-    // },
     entry: entry,
     output: {
       path: 'dist'
