@@ -28,7 +28,7 @@ function getBaseUrl (vm) {
   // // in Browser or WebView
   let inBrowserOrWebView = typeof window === 'object'
   // return inBrowserOrWebView ? h5Base : nativeBase
-  return inBrowserOrWebView ? './weex.html?page=./dist/web/' : 'http://192.168.10.175:12580/dist/weex/'
+  return inBrowserOrWebView ? './weex.html?page=./dist/web/' : 'http://192.168.51.175:12580/dist/weex/'
 }
 
 function pushByUrl (vm, url, params) {
