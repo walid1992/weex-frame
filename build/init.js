@@ -8,7 +8,7 @@ let fs = require('fs')
 let path = require('path')
 let ip = require('ip').address()
 
-fs.writeFileSync(path.resolve('config.js'), 'var CURRENT_IP = \'' + ip + '\'')
+fs.writeFileSync(path.resolve('config.js'), `export default \'${ip}\'`)
 
 // android 主机地址操作
 let androidConfigFile = path.join(__dirname, '../android/app/src/main/java/com/siyuan/weex/weex/constants/Constants.java')

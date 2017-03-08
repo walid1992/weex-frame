@@ -5,9 +5,11 @@
  */
 
 import qs from 'qs'
+import ip from 'config'
 let navigator = weex.requireModule('navigator')
 
-function getBaseUrl (vm) {
+
+function getBaseUrl(vm) {
   // let bundleUrl = vm.$getConfig().bundleUrl
   // let isAndroidAssets = bundleUrl.indexOf('your_current_IP') >= 0 || bundleUrl.indexOf('file://assets/') >= 0
   // let isiOSAssets = bundleUrl.indexOf('file:///') >= 0 && bundleUrl.indexOf('WeexFrame.app') > 0
@@ -28,10 +30,10 @@ function getBaseUrl (vm) {
   // // in Browser or WebView
   let inBrowserOrWebView = typeof window === 'object'
   // return inBrowserOrWebView ? h5Base : nativeBase
-  return inBrowserOrWebView ? './weex.html?page=./dist/web/' : 'http://192.168.51.175:12580/dist/weex/'
+  return inBrowserOrWebView ? './weex.html?page=./dist/web/' : `http://${ip}:12580/dist/weex/`
 }
 
-function pushByUrl (vm, url, params) {
+function pushByUrl(vm, url, params) {
   navigator.push({
     url: url,
     animated: 'true'
@@ -40,7 +42,7 @@ function pushByUrl (vm, url, params) {
   })
 }
 
-function push (vm, route, params) {
+function push(vm, route, params) {
   navigator.push({
     url: `${getBaseUrl(vm)}${route}.js?${qs.stringify(params)}`,
     animated: 'true'
@@ -49,7 +51,7 @@ function push (vm, route, params) {
   })
 }
 
-function pop (vm) {
+function pop(vm) {
   navigator.pop({
     animated: 'true'
   }, event => {

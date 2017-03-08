@@ -62,6 +62,7 @@ function getBaseConfig () {
         'router': path.resolve(__dirname, './src/router/'),
         'store': path.resolve(__dirname, './src/store/'),
         'views': path.resolve(__dirname, './src/views/'),
+        'config': path.resolve(__dirname, './config'),
         'utils': path.resolve(__dirname, './src/utils/')
       }
     },

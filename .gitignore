@@ -1,6 +1,6 @@
 node_modules
 dist
 config.js
-*log
 .idea
 src/entry
+.DS_Store

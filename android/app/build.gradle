@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 apply plugin: 'me.tatarka.retrolambda'
 
 android {
-    compileSdkVersion 24
+    compileSdkVersion 25
     buildToolsVersion '25.0.2'
     defaultConfig {
         applicationId "com.siyuan.weex"
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
@@ -27,7 +27,7 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
 
     compile 'com.android.support:recyclerview-v7:24.1.1'
-    compile 'com.android.support:support-v4:24.1.1'
+    compile 'com.android.support:support-v4:25.2.0'
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.android.support:design:23.1.1'
 

@@ -11,7 +11,7 @@ let stream = weex.requireModule('stream')
 // http base url
 const baseUrl = 'http://api.shuidichou.com/'
 
-function get (url, params) {
+function get(url, params) {
   return new Promise((resolve, reject) => {
     console.log('request:', `${baseUrl + url}?${qs.stringify(params)}`)
     stream.fetch({
@@ -31,7 +31,7 @@ function get (url, params) {
   })
 }
 
-function post (url, body) {
+function post(url, body) {
   return new Promise((resolve, reject) => {
     stream.fetch({
       method: 'POST',
