@@ -1,45 +1,52 @@
 # weex-frame
 
-> weex-frame
+> 基于weex集成的android、ios、h5框架~
 
-## getting start
+# 项目结构
 
-```bash
-npm install
+```
+weex-frame
+├── android (android项目)
+│       
+├── ios （ios项目代码）
+│
+├── src （weex模块）
+│      ├── api (api模块)
+│      ├── components（组件模块） 
+│      ├── constants（常量配置）   
+│      ├── utils （工具模块）   
+│      └── views（视图模块）  
+│
+└── dist （build输出模块）
+       ├── weex (native使用jsbundle)
+       └── web（web使用jsbundle） 
 ```
 
-## file structure
+# 获取项目
 
-* `src/*`: all source code
-* `App.js`: entrance of the Weex page
-* `dist/*`: where places generated code
-* `assets/*`: some assets for Web preview
-* `index.html`: a page with Web preview and qrcode of Weex js bundle
-* `weex.html`: Web render
-* `.babelrc`: babel config (preset-2015 by default)
-* `.eslintrc`: eslint config (standard by default)
+1. git clone git@github.com:OsMartian/small-frame.git
+2. cd weex-frame
+3. npm install
 
-## dev 快速启动脚本
+# npm 指令
 
-1. 进入项目根目录
+1. npm run build
+2. npm run dev
+3. nom run serve
+
+# 启动项目
+
+1. cd weex-frame
 2. ./start
+3. h5 打开 [http://localhost:12580/weex.html](http://localhost:12580/weex.html)
 
-## npm 指令
+## android 启动
 
-```bash
-# build both two js bundles for Weex and Web
-npm run build
+1. 打开andorid studio
+2. File -> New -> Import Project -> weex-frame/android -> 启动
 
-# build the two js bundles and watch file changes
-npm run dev
+## iOS 启动
 
-# start a Web server at 8080 port
-npm run serve
-
-# start weex-devtool for debugging with native
-npm run debug
-```
-
-## notes
-
-You can config more babel, ESLint and PostCSS plugins in `webpack.config.js`.
+1. cd ios
+2. pod install (未安装pod，请先安装)
+3. open WeexFrame.xcworkspace
