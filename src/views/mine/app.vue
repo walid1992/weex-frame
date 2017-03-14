@@ -9,7 +9,6 @@
   export default {
     methods: {
       jumpA (event) {
-        console.log('jumpA')
         navigator.push(this, route.demoA)
       },
       jumpList (event) {
