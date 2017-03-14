@@ -8,7 +8,7 @@ package com.siyuan.weex.weex.constants;
 
 public class Constants {
 
-    public static final String INDEX_URL = "http://172.31.252.84:12580/dist/weex/entry.js";
+    public static final String INDEX_URL = "http://172.31.252.87:12580/dist/weex/entry.js";
 
     public static final String BUNDLE_URL = "http://h5.m.taobao.com?_wx_tpl=http://g.tbcdn.cn/weex/weex-tc/0.1.2/build/TC__Home.js";
     public static final String WEEX_SAMPLES_KEY = "?weex-samples";
