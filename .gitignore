@@ -4,3 +4,4 @@ config.js
 .idea
 src/entry
 .DS_Store
+npm-debug.log
