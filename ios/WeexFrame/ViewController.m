@@ -41,7 +41,7 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button setTitle:@"刷新" forState:UIControlStateNormal];
     [button sizeToFit];
-    button.frame = CGRectMake(300, 0, 100, 100);
+    button.frame = CGRectMake(320, 20, 50, 50);
     [button addTarget:self action:@selector(render) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
