@@ -24,7 +24,7 @@ weex-frame
 
 # 获取项目
 
-1. git clone git@github.com:OsMartian/small-frame.git
+1. git clone https://github.com/osmartian/weex-frame.git
 2. cd weex-frame
 3. npm install
 
