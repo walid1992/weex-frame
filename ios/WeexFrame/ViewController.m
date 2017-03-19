@@ -38,6 +38,13 @@
         statusBar.backgroundColor = [UIColor colorWithRed:1.00 green:0.40 blue:0.00 alpha:1.0];
     }
     
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button setTitle:@"刷新" forState:UIControlStateNormal];
+    [button sizeToFit];
+    button.frame = CGRectMake(320, 20, 50, 50);
+    [button addTarget:self action:@selector(render) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
     [self render];
 }
 

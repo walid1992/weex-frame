@@ -1,15 +1,39 @@
-<template>
-  <div class="wrapper">
-    <text class="weex" @click="jumpA">Hello Weex !</text>
-    <text class="vue" @click="jumpList">Hello Vue !</text>
-  </div>
-</template>
+<style src="./style.css" scoped></style>
+
+<template src="./template.html"></template>
 
 <script>
   import navigator from 'utils/modules/navigator'
   import route from 'constants/route'
 
   export default {
+    data(){
+      return {
+        personName: '张小凡',
+        workPosition: 'web前端工程师',
+        workDepartment: '思源总部/互联集团/应用引擎部',
+        personInfoList: [{
+          iconUrl: 'https://gitlab.com/toonteam/weex/raw/f9492284d15c3d9ec79b72608768d20cf450cae9/src/views/mine/imgs/workbench_friends.png',
+          name: '个人动态'
+        }, {
+          iconUrl: 'https://gitlab.com/toonteam/weex/raw/f9492284d15c3d9ec79b72608768d20cf450cae9/src/views/mine/imgs/person-data.png',
+          name: '个人资料'
+        }, {
+          iconUrl: 'https://gitlab.com/toonteam/weex/raw/f9492284d15c3d9ec79b72608768d20cf450cae9/src/views/mine/imgs/workbench_card_setting.png',
+          name: '名片设置'
+        }],
+        groupInfoList: [{
+          iconUrl: 'https://gitlab.com/toonteam/weex/raw/f9492284d15c3d9ec79b72608768d20cf450cae9/src/views/mine/imgs/wallet_trade_data.png',
+          name: '我的公司'
+        }, {
+          iconUrl: 'https://gitlab.com/toonteam/weex/raw/f9492284d15c3d9ec79b72608768d20cf450cae9/src/views/mine/imgs/group_icon.png',
+          name: '群组'
+        }, {
+          iconUrl: 'https://gitlab.com/toonteam/weex/raw/f9492284d15c3d9ec79b72608768d20cf450cae9/src/views/mine/imgs/person-dynamic.png',
+          name: '审批'
+        }]
+      }
+    },
     methods: {
       jumpA (event) {
         navigator.push(this, route.demoA)
@@ -21,24 +45,4 @@
   }
 </script>
 
-<style scoped>
-  .wrapper {
-    width: 750px;
-    height: 1334px;
-    flex-direction: column;
-    justify-content: center;
-  }
 
-  .weex {
-    font-size: 60px;
-    text-align: center;
-    color: #1B90F7;
-  }
-
-  .vue {
-    font-size: 60px;
-    text-align: center;
-    margin-top: 30px;
-    color: #41B883;
-  }
-</style>

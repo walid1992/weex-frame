@@ -1,0 +1,45 @@
+<div class="root">
+  <image class="img-bg-mine" resize="cover"
+         src="https://gitlab.com/toonteam/weex/raw/ce0c5f60531f1a0d676dedfa1f81c7e67e3151ed/src/views/mine/imgs/bg_basic_info_default.png"></image>
+  <div class="div-content">
+    <div class="div-top-link">
+      <div class="div-card">
+        <text class="p-card">名片</text>
+        <image class="img-triangle"
+               src="https://gitlab.com/toonteam/weex/raw/f9492284d15c3d9ec79b72608768d20cf450cae9/src/views/mine/imgs/triangle.png"></image>
+      </div>
+      <text class="p-person-center">个人中心</text>
+    </div>
+    <div class="div-work-content">
+      <div class="div-person-info">
+        <div class="div-person-info-top">
+          <text class="p-person-name">{{personName}}</text>
+          <text class="p-work-position">{{workPosition}}</text>
+        </div>
+        <text class="p-work-department">{{workDepartment}}</text>
+      </div>
+      <div class="div-person-list">
+        <div v-for="item in personInfoList" class="div-list-item">
+          <image :src="item.iconUrl" class="img-item"></image>
+          <text class="p-item">{{item.name}}</text>
+        </div>
+      </div>
+      <div class="div-group-list">
+        <div v-for="item in groupInfoList" class="div-list-item div-group-item">
+          <image :src="item.iconUrl" class="img-item"></image>
+          <text class="p-item">{{item.name}}</text>
+        </div>
+      </div>
+      <div class="div-add-list">
+        <div class="div-list-item div-group-item">
+          <image
+              src="https://gitlab.com/toonteam/weex/raw/f9492284d15c3d9ec79b72608768d20cf450cae9/src/views/mine/imgs/beacon_add_key.png"
+              class="img-add-item"></image>
+          <text class="p-item">添加</text>
+        </div>
+      </div>
+    </div>
+  </div>
+  <image class="img-person"
+         src="https://gitlab.com/toonteam/weex/raw/44cab38bc97860112d963001ba9c9179c0365ee5/src/views/mine/imgs/person-img.jpg"></image>
+</div>

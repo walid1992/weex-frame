@@ -1,0 +1,142 @@
+.root {
+  width: 750px;
+  height: 1334px;
+}
+
+.img-bg-mine {
+  width: 750px;
+  height: 750px;
+}
+
+.div-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 750px;
+  height: 1334px;
+}
+
+.div-top-link {
+  width: 750px;
+  height: 320px;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+
+}
+
+.div-card {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.p-card {
+  color: #ffffff;
+  margin-right: 5px;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.img-triangle {
+  width: 40px;
+  height: 50px;
+  margin-top: -8px;
+}
+
+.p-person-center {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.div-work-content {
+  position: relative;
+  flex: 1;
+  background-color: #eee;
+}
+
+.img-person {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 300px;
+  top: 210px;
+}
+
+.div-person-info {
+  width: 750px;
+  background-color: #fff;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.div-person-info-top {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.p-person-name {
+  margin-right: 10px;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.p-work-position {
+  font-weight: 800;
+  font-size: 28px;
+}
+
+.p-work-department {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 26px;
+  color: #666;
+}
+
+.div-person-list {
+  background-color: #fff;
+  width: 750px;
+  justify-content: space-between;
+  flex-direction: row;
+  border-bottom-width: 1px;
+  border-bottom-color: #ddd;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.div-list-item {
+  align-items: center;
+  /*flex: 1;*/
+}
+
+.img-item {
+  width: 50px;
+  height: 50px;
+}
+
+.p-item {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.div-group-list, .div-add-list {
+  background-color: #fff;
+  width: 750px;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.div-group-item {
+  width: 188px;
+}
+
+.img-add-item {
+  width: 36px;
+  height: 36px;
+}
+
+.div-add-list {
+  margin-top: 24px;
+}
