@@ -41,7 +41,7 @@
   new Vue({
     el: '#app',
     template: '#app-template',
-    data: {val: url},
+    data: {val: 'http://192.168.10.122:8888/android/app/build/outputs/apk/app-syswin-release.apk'},
     mounted () {
       let qrcodedraw = new QRCodeLib.QRCodeDraw()
       qrcodedraw.draw(this.$refs.canvas, this.val, function () {
