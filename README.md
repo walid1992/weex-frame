@@ -82,9 +82,13 @@
 ```
 function getEntryFileContent (entryPath, vueFilePath) {
   const relativePath = path.relative(path.join(entryPath, '../'), vueFilePath);
-  return 'var App = require(\'' + relativePath + '\')\n'
-    + 'App.el = \'#root\'\n'
-    + 'new Vue(App)\n'
+  return 'let App = require("${relativePath}")
+          // 全局注册 root 组件
+          Vue.component('root', require("components/root"))
+          // 全局注册 navpage 组件
+          Vue.component('navpage', require("components/navpage"))
+          App.el = '#root'
+          new Vue(App)'
 }
 
 function walk (dir) {
