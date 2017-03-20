@@ -8,8 +8,7 @@ import qs from 'qs'
 import ip from 'config'
 let navigator = weex.requireModule('navigator')
 
-
-function getBaseUrl(vm) {
+function getBaseUrl() {
   // let bundleUrl = vm.$getConfig().bundleUrl
   // let isAndroidAssets = bundleUrl.indexOf('your_current_IP') >= 0 || bundleUrl.indexOf('file://assets/') >= 0
   // let isiOSAssets = bundleUrl.indexOf('file:///') >= 0 && bundleUrl.indexOf('WeexFrame.app') > 0
@@ -33,25 +32,30 @@ function getBaseUrl(vm) {
   return inBrowserOrWebView ? './weex.html?page=./dist/web/' : `http://${ip}:12580/dist/weex/`
 }
 
-function pushByUrl(vm, url, params) {
+function pushByUrl(url, params) {
   navigator.push({
-    url: url,
+    url: params ? `url?${qs.stringify(params)}` : url,
     animated: 'true'
   }, event => {
     console.log('callback: ', event)
   })
 }
 
-function push(vm, route, params) {
+function push(route, params) {
+  let url = params ? `${getBaseUrl()}${route}.js?${qs.stringify(params)}` : `${getBaseUrl()}${route}.js`
+  // if (route === 'web') {
+  //   window.location.href(url)
+  //   return
+  // }
   navigator.push({
-    url: `${getBaseUrl(vm)}${route}.js?${qs.stringify(params)}`,
+    url,
     animated: 'true'
   }, event => {
     console.log('callback: ', event)
   })
 }
 
-function pop(vm) {
+function pop() {
   navigator.pop({
     animated: 'true'
   }, event => {

@@ -1,5 +1,6 @@
 <template>
-  <div class="wrapper">
+  <div class="root">
+    <div v-if="isIOS" :style="{width: '750px', height: '40px', backgroundColor: backgroundColor}"></div>
     <navbar
         :dataRole="dataRole"
         :height="height"
@@ -14,45 +15,58 @@
         :rightItemColor="rightItemColor"
         @naviBarRightItemClick="naviBarRightItemClick"
         @naviBarLeftItemClick="naviBarLeftItemClick"></navbar>
-    <div class="wrapper" :style="{ marginTop: height }">
+    <div class="wrapper">
       <slot></slot>
     </div>
   </div>
 </template>
 
-<style>
+<style scoped>
+  .root {
+    width: 750px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
   .wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 750;
+    width: 750px;
   }
 </style>
 
 <script>
+  import instance from 'utils/weex/instance'
+
   export default {
+    data () {
+      return {
+        isIOS: instance.isIOS()
+      }
+    },
+
     components: {
       navbar: require('./navbar.vue')
     },
+
     props: {
-      dataRole: {default: 'navbar'},
-      backgroundColor: {default: 'black'},
+      dataRole: {default: 'none'},
+      backgroundColor: {default: '#0099FF'},
       height: {default: 88},
       title: {default: ''},
-      titleColor: {default: 'black'},
+      titleColor: {default: 'white'},
       rightItemSrc: {default: ''},
       rightItemTitle: {default: ''},
-      rightItemColor: {default: 'black'},
+      rightItemColor: {default: 'white'},
       leftItemSrc: {default: ''},
       leftItemTitle: {default: ''},
-      leftItemColor: {default: 'black'}
+      leftItemColor: {default: 'white'}
     },
+
     methods: {
       naviBarRightItemClick (e) {
         this.$emit('naviBarRightItemClick', e)
       },
+
       naviBarLeftItemClick (e) {
         this.$emit('naviBarLeftItemClick', e)
       }

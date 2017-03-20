@@ -8,6 +8,5 @@ export default {
   home: 'views/home/app',
   launch: 'views/launch/app',
   mine: 'views/mine/app',
-  navpage: 'views/navpage/app',
   web: 'views/web/app'
 }

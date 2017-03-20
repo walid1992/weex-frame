@@ -16,7 +16,7 @@ fs.readFile(androidConfigFile, (err, data) => {
   if (err) {
     throw err
   }
-  data = data.toString().replace(/"http(.*)"/, `"http://${ip}:12580/dist/weex/entry.js"`)
+  data = data.toString().replace(/"http(.*)"/, `"http://${ip}:12580/dist/weex/App.js"`)
 
   fs.writeFile(androidConfigFile, data, function (err) {
     if (err) {
@@ -34,7 +34,7 @@ fs.readFile(iOSConfigFile, (err, data) => {
   if (err) {
     throw err
   }
-  data = data.toString().replace(/"http:(.*)"/, `"http://${ip}:12580/dist/weex/entry.js"`)
+  data = data.toString().replace(/"http:(.*)"/, `"http://${ip}:12580/dist/weex/App.js"`)
 
   fs.writeFile(iOSConfigFile, data, function (err) {
     if (err) {

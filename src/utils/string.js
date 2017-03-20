@@ -39,11 +39,10 @@ export function urlEncode (param, key, encode) {
 
 /**
  * 获取QueryString的数组
- * @param vm
  * @returns {Array|{index: number, input: string}}
  */
-export function getQueryString (vm) {
-  let result = vm.$getConfig().bundleUrl.match(new RegExp('[\?\&][^\?\&]+=[^\?\&]+', 'g'))
+export function getQueryString () {
+  let result = weex.config.bundleUrl.match(new RegExp('[\?\&][^\?\&]+=[^\?\&]+', 'g'))
   for (let i = 0; i < result.length; i++) {
     result[i] = result[i].substring(1)
   }
@@ -52,14 +51,13 @@ export function getQueryString (vm) {
 
 /**
  * 根据QueryString参数名称获取值
- * @param vm
  * @param name
  * @returns {string}
  */
-export function getQueryStringByName (vm, name) {
+export function getQueryStringByName (name) {
   name = name.replace(/[\[\]]/g, '\\$&')
   let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)')
-  let results = regex.exec(vm.$getConfig().bundleUrl)
+  let results = regex.exec(weex.config.bundleUrl)
   if (!results || !results[2]) {
     return ''
   }

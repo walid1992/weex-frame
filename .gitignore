@@ -3,5 +3,6 @@ dist
 config.js
 src/entry
 .idea
+/config.js
 .DS_Store
 npm-debug.log

@@ -1,7 +1,12 @@
+/**
+ * @author walid
+ * @date 2016/03/20
+ * @description weex 打包配置
+ */
+
 const path = require('path')
 const webpack = require('webpack')
 const cssnext = require('postcss-cssnext')
-// const fs = require('fs')
 const fs = require('fs-extra')
 
 const bannerPlugin = new webpack.BannerPlugin(
@@ -9,18 +14,35 @@ const bannerPlugin = new webpack.BannerPlugin(
   {raw: true}
 )
 
-function getEntryFileContent (entryPath, vueFilePath) {
+function getEntryFileContent(entryPath, vueFilePath) {
   const relativePath = path.relative(path.join(entryPath, '../'), vueFilePath);
-  return 'var App = require(\'' + relativePath + '\')\n'
-    + 'App.el = \'#root\'\n'
-    + 'new Vue(App)\n'
+  return `
+/**
+ * @author walid
+ * @date 2016/03/20
+ * @description 程序入口启动配置
+ */
+
+let App = require("${relativePath}")
+
+// 全局注册 root 组件
+Vue.component('root', require("components/root"))
+// 全局注册 navpage 组件
+Vue.component('navpage', require("components/navpage"))
+// 安装全局配置module
+// weex.registerModule('api', require('utils/api'))
+// weex.registerModule('route', require('constants/route'))
+
+App.el = '#root'
+new Vue(App)
+`
 }
 
 const entry = {
-  entry: path.resolve('./src/entry.js')
+  // entry: path.resolve('./src/entry.js')
 }
 
-function walk (dir) {
+function walk(dir) {
   dir = dir || '.'
   let directory = path.join(__dirname, './src', dir)
   let entryDirectory = path.join(__dirname, './src/entry');
@@ -45,7 +67,7 @@ function walk (dir) {
 
 walk()
 
-function getBaseConfig () {
+function getBaseConfig() {
   return {
     entry: entry,
     output: {

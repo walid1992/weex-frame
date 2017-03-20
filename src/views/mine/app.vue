@@ -34,12 +34,12 @@
         }]
       }
     },
+
     methods: {
-      jumpA (event) {
-        navigator.push(this, route.demoA)
-      },
-      jumpList (event) {
-        navigator.push(this, route.demoList)
+      toBlog(event) {
+        navigator.push(route.web, {
+          url: 'http://www.jianshu.com/u/a279a2f8ed63'
+        })
       }
     }
   }

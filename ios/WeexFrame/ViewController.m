@@ -28,7 +28,10 @@
     
     // [_instance fireGlobalEvent:@"" params:@{}];
     // Do any additional setup after loading the view, typically from a nib.
-    _weexHeight = self.view.frame.size.height - 20;
+    // walid update 高度适配问题
+    // _weexHeight = self.view.frame.size.height - 20;
+    _weexHeight = self.view.frame.size.height;
+
     [self.navigationController.navigationBar setHidden:YES];
     
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
@@ -37,14 +40,6 @@
     if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
         statusBar.backgroundColor = [UIColor colorWithRed:1.00 green:0.40 blue:0.00 alpha:1.0];
     }
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button setTitle:@"刷新" forState:UIControlStateNormal];
-    [button sizeToFit];
-    button.frame = CGRectMake(320, 20, 50, 50);
-    [button addTarget:self action:@selector(render) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-    
     [self render];
 }
 
@@ -58,7 +53,9 @@
     _instance = [[WXSDKInstance alloc] init];
     _instance.viewController = self;
     CGFloat width = self.view.frame.size.width;
-    _instance.frame = CGRectMake(self.view.frame.size.width-width, 20, width, _weexHeight);
+    // walid update 高度适配问题
+    // _instance.frame = CGRectMake(self.view.frame.size.width-width, 20, width, _weexHeight);
+    _instance.frame = CGRectMake(self.view.frame.size.width-width, 0, width, _weexHeight);
     
     __weak typeof(self) weakSelf = self;
     _instance.onCreate = ^(UIView *view) {
@@ -66,6 +63,13 @@
         weakSelf.weexView = view;
         [weakSelf.view addSubview:weakSelf.weexView];
         UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, weakSelf.weexView);
+        
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [button setTitle:@"刷新" forState:UIControlStateNormal];
+        [button sizeToFit];
+        button.frame = CGRectMake(320, 500, 50, 50);
+        [button addTarget:weakSelf action:@selector(render) forControlEvents:UIControlEventTouchUpInside];
+        [weakSelf.view addSubview:button];
     };
     _instance.onFailed = ^(NSError *error) {
         NSLog(@"failed %@",error);

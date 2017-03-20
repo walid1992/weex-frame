@@ -11,6 +11,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack --watch",
+    "dev:android": "android/buildDebug.sh",
     "serve": "npm run init && serve -p 12580",
     "init": "node build/init.js",
     "debug": "weex-devtool"
@@ -20,7 +21,7 @@
     "vue-router": "^2.1.1",
     "vuex": "^2.1.1",
     "vuex-router-sync": "^4.0.1",
-    "weex-vue-render": "^0.1.4"
+    "weex-vue-render": "^0.1.9"
   },
   "devDependencies": {
     "babel-core": "^6.20.0",
@@ -40,7 +41,7 @@
     "vue-template-compiler": "^2.1.8",
     "webpack": "^1.14.0",
     "weex-devtool": "^0.2.64",
-    "weex-loader": "^0.4.1",
-    "weex-vue-loader": "^0.2.5"
+    "weex-loader": "^0.4.4",
+    "weex-vue-loader": "^0.2.12"
   }
 }
