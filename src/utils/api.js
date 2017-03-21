@@ -67,7 +67,6 @@ function del(url) {
       }
     }, progress => {
       console.log('get in progress:' + progress.length);
-      me.deleteResult = "bytes received:" + progress.length;
     });
   })
 }
@@ -90,7 +89,6 @@ function put(url, body) {
       }
     }, progress => {
       console.log('get in progress:' + progress.length);
-      me.putResult = "bytes received:" + progress.length;
     });
   })
 }
