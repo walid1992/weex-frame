@@ -231,7 +231,7 @@ weex-frame
 </osc-navpage>
 ```
 
-### osc-root
+### [osc-root详细示例](/doc/components/os-root.md)
 
 > 界面根view，适配iOS顶部20px问题
 
