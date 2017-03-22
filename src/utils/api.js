@@ -37,7 +37,10 @@ function post(url, body) {
       method: 'POST',
       url: baseUrl + url,
       type: 'json',
-      body: body
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
     }, res => {
       if (res.ok && res.data && res.data.code == 0) {
         resolve(res.res)
@@ -50,6 +53,46 @@ function post(url, body) {
   })
 }
 
+function del(url) {
+  return new Promise((resolve, reject) => {
+    stream.fetch({
+      method: 'DELETE',
+      url: baseUrl + url,
+      type: 'json'
+    }, res => {
+      if (res.ok && res.data && res.data.code == 0) {
+        resolve(res.res)
+      } else {
+        reject(res.res)
+      }
+    }, progress => {
+      console.log('get in progress:' + progress.length);
+    });
+  })
+}
+
+function put(url, body) {
+  return new Promise((resolve, reject) => {
+    stream.fetch({
+      method: 'PUT',
+      url: baseUrl + url,
+      type: 'json',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    }, res => {
+      if (res.ok && res.data && res.data.code == 0) {
+        resolve(res.res)
+      } else {
+        reject(res.res)
+      }
+    }, progress => {
+      console.log('get in progress:' + progress.length);
+    });
+  })
+}
+
 export default {
-  get, post
+  get, post, del, put
 }
