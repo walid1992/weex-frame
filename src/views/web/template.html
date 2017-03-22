@@ -1,8 +1,8 @@
-<navpage
+<osc-navpage
     :title="title"
     leftItemSrc="https://gitlab.com/toonteam/weex/raw/ce656f79084ed9db357f8abd76c6e6c82dc5a28d/src/views/person-info/imgs/back.png"
     rightItemSrc="http://gtms02.alicdn.com/tps/i2/TB1ED7iMpXXXXXEXXXXWA_BHXXX-48-48.png"
     @naviBarLeftItemClick="onBack"
     @naviBarRightItemClick="onReload">
   <web class='web' ref='webview' :src='url' @pagestart='start' @pagefinish='finish'></web>
-</navpage>
+</osc-navpage>

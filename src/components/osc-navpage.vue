@@ -1,7 +1,7 @@
 <template>
   <div class="root">
     <div v-if="isIOS" :style="{width: '750px', height: '40px', backgroundColor: backgroundColor}"></div>
-    <navbar
+    <osc-navbar
         :dataRole="dataRole"
         :height="height"
         :backgroundColor="backgroundColor"
@@ -14,7 +14,7 @@
         :rightItemTitle="rightItemTitle"
         :rightItemColor="rightItemColor"
         @naviBarRightItemClick="naviBarRightItemClick"
-        @naviBarLeftItemClick="naviBarLeftItemClick"></navbar>
+        @naviBarLeftItemClick="naviBarLeftItemClick"></osc-navbar>
     <div class="wrapper">
       <slot></slot>
     </div>
@@ -42,10 +42,6 @@
       return {
         isIOS: instance.isIOS()
       }
-    },
-
-    components: {
-      navbar: require('./navbar.vue')
     },
 
     props: {

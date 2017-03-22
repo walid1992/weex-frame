@@ -10,7 +10,7 @@
   export default {
     data() {
       return {
-        title: '思源 - WebView',
+        title: 'OsMartian - WebView',
         canGoBack: false,
         url: getQueryStringByName('url') || 'https://weex-project.io/cn/'
       }
@@ -32,7 +32,7 @@
       finish (event) {
         console.log('event', event)
         this.canGoBack = event.canGoBack
-        this.title = event.title || '思源 - WebView'
+        this.title = event.title || 'OsMartian - WebView'
       }
     }
   }

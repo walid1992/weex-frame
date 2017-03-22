@@ -25,11 +25,13 @@ function getEntryFileContent(entryPath, vueFilePath) {
 
 const App = require("${relativePath}")
 
-// 全局注册 root 组件
-Vue.component('root', require("components/root"))
-// 全局注册 navpage 组件
-Vue.component('navpage', require("components/navpage"))
-// 安装全局配置module
+// 注册全局 component
+Vue.component('osc-root', require("components/osc-root"))
+Vue.component('osc-navpage', require("components/osc-navpage"))
+Vue.component('osc-navbar', require("components/osc-navbar"))
+Vue.component('osc-tabbar', require("components/osc-tabbar"))
+
+// 注册全局 module
 // weex.registerModule('api', require('utils/api'))
 // weex.registerModule('route', require('constants/route'))
 

@@ -9,6 +9,6 @@
 #ifndef AppDefine_h
 #define AppDefine_h
 
-#define HOME_URL [NSString stringWithFormat:@"http://192.168.10.122:12580/dist/weex/App.js"]
+#define HOME_URL [NSString stringWithFormat:@"http://172.31.242.8:12580/dist/weex/App.js"]
 
 #endif /* AppDefine_h */

@@ -65,7 +65,7 @@
       }
     },
     components: {
-      tabitem: require('./tabitem.vue')
+      tabitem: require('./osc-tabitem.vue')
     },
     created () {
       this.select(this.selectedIndex)

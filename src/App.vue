@@ -1,6 +1,6 @@
 <template>
   <div style="flex-direction: column;">
-    <tabbar :tabItems="tabItems" @tabBarOnClick="tabBarOnClick"></tabbar>
+    <osc-tabbar :tabItems="tabItems" @tabBarOnClick="tabBarOnClick"></osc-tabbar>
   </div>
 </template>
 
@@ -45,9 +45,7 @@
         ]
       }
     },
-    components: {
-      tabbar: require('components/tabbar.vue')
-    },
+
     methods: {
       tabBarOnClick (e) {
         console.log('tabBarOnClick', e.index)

@@ -66,8 +66,8 @@ function del(url) {
         reject(res.res)
       }
     }, progress => {
-      console.log('get in progress:' + progress.length);
-    });
+      console.log('get in progress:' + progress.length)
+    })
   })
 }
 
@@ -88,8 +88,8 @@ function put(url, body) {
         reject(res.res)
       }
     }, progress => {
-      console.log('get in progress:' + progress.length);
-    });
+      console.log('get in progress:' + progress.length)
+    })
   })
 }
 
