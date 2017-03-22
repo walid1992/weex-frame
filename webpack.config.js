@@ -23,7 +23,7 @@ function getEntryFileContent(entryPath, vueFilePath) {
  * @description 程序入口启动配置
  */
 
-let App = require("${relativePath}")
+const App = require("${relativePath}")
 
 // 全局注册 root 组件
 Vue.component('root', require("components/root"))
