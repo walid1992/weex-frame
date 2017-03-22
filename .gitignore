@@ -1,6 +1,5 @@
 node_modules
 dist
-config.js
 src/entry
 .idea
 /config.js
