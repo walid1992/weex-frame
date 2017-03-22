@@ -1,6 +1,6 @@
 # weex-frame
 
-> 基于weex集成的android、ios、h5框架~
+> weex 基于vue2.0开发框架库，包括三端集成、组件库提供、weex api封装~
 
 # 工作原理
 
@@ -95,89 +95,16 @@ function getEntryFileContent (entryPath, vueFilePath) {
           new Vue(App)'
 }
 
-function walk (dir) {
-  dir = dir || '.'
-  let directory = path.join(__dirname, './src', dir)
-  let entryDirectory = path.join(__dirname, './src/entry');
-  fs.readdirSync(directory)
-    .forEach(file => {
-      let fullpath = path.join(directory, file)
-      let stat = fs.statSync(fullpath)
-      let extname = path.extname(fullpath)
-      if (stat.isFile() && extname === '.vue') {
-        let entryFile = path.join(entryDirectory, dir, path.basename(file, extname) + '.js')
-        fs.outputFileSync(entryFile, getEntryFileContent(entryFile, fullpath))
-        let name = path.join(dir, path.basename(file, extname))
-        entry[name] = entryFile + '?entry=true'
-      } else if (stat.isDirectory()) {
-        let subdir = path.join(dir, file)
-        walk(subdir)
-      }
-    })
-}
+...
 
-walk()
 ```
 
 2、通过weex-loader打包生成native jsbundle
 3、 通过weex-vue-loader打包生成web jsbundle
 
 ```
-function getBaseConfig () {
-  return {
-    entry: entry,
-    output: {
-      path: 'dist'
-    },
-    resolve: {
-      extensions: ['', '.js', '.vue'],
-      fallback: [path.join(__dirname, './node_modules')],
-      alias: {
-        'assets': path.resolve(__dirname, './src/assets/'),
-        'components': path.resolve(__dirname, './src/components/'),
-        'constants': path.resolve(__dirname, './src/constants/'),
-        'api': path.resolve(__dirname, './src/api/'),
-        'router': path.resolve(__dirname, './src/router/'),
-        'store': path.resolve(__dirname, './src/store/'),
-        'views': path.resolve(__dirname, './src/views/'),
-        'config': path.resolve(__dirname, './config'),
-        'utils': path.resolve(__dirname, './src/utils/')
-      }
-    },
-    module: {
-      preLoaders: [
-        {
-          test: /\.vue$/,
-          loader: 'eslint',
-          exclude: /node_modules/
-        },
-        {
-          test: /\.js$/,
-          loader: 'eslint',
-          exclude: /node_modules/
-        }
-      ],
-      loaders: [
-        {
-          test: /\.js$/,
-          loader: 'babel',
-          exclude: /node_modules/
-        }, {
-          test: /\.vue(\?[^?]+)?$/,
-          loaders: []
-        }
-      ]
-    },
-    vue: {
-      postcss: [cssnext({
-        features: {
-          autoprefixer: false
-        }
-      })]
-    },
-    plugins: [bannerPlugin]
-  }
-}
+
+...
 
 const webConfig = getBaseConfig()
 webConfig.output.filename = 'web/[name].js'
