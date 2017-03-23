@@ -30,6 +30,8 @@ Vue.component('osc-root', require("components/osc-root"))
 Vue.component('osc-navpage', require("components/osc-navpage"))
 Vue.component('osc-navbar', require("components/osc-navbar"))
 Vue.component('osc-tabbar', require("components/osc-tabbar"))
+Vue.component('osc-list', require("components/osc-list"))
+Vue.component('osc-scroller', require("components/osc-scroller"))
 
 // 注册全局 module
 // weex.registerModule('api', require('utils/api'))

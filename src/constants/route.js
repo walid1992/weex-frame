@@ -8,5 +8,8 @@ export default {
   home: 'views/home/app',
   launch: 'views/launch/app',
   mine: 'views/mine/app',
-  web: 'views/web/app'
+  web: 'views/web/app',
+  // sample 示例
+  list: 'views/list/app',
+  scroller: 'views/scroller/app'
 }
