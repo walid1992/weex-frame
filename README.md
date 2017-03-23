@@ -196,6 +196,12 @@ weex-frame
 1. 打开andorid studio
 2. File -> New -> Import Project -> weex-frame/android -> 启动
 
+或者：
+
+```
+npm run dev:android
+```
+
 ### iOS 启动
 
 1. cd ios
