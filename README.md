@@ -184,6 +184,14 @@ weex-frame
 
 > 底部tabbaritem元素
 
+### osc-list
+
+> list组件封装上拉刷新 上拉加载
+
+### osc-scroller
+
+> scroller组件封装上拉刷新 上拉加载
+
 ## 项目启动
 
 1. git clone git@github.com:osmartian/weex-frame.git
