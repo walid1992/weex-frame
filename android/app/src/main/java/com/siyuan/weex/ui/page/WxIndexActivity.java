@@ -1,6 +1,7 @@
 package com.siyuan.weex.ui.page;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -9,6 +10,7 @@ import com.siyuan.weex.R;
 import com.siyuan.weex.weex.constants.Constants;
 import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.common.WXRenderStrategy;
+import com.taobao.weex.utils.WXFileUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -32,8 +34,17 @@ public class WxIndexActivity extends WXBaseActivity {
         mWXSDKInstance = new WXSDKInstance(this);
         mWXSDKInstance.registerRenderListener(this);
         Map<String, Object> options = new HashMap<>();
-        options.put(WXSDKInstance.BUNDLE_URL, Constants.INDEX_URL);
-        mWXSDKInstance.renderByUrl("WxIndex", Constants.INDEX_URL, options, null, WXRenderStrategy.APPEND_ASYNC);
+        // 判断加载本地还是serve
+        String indexUrl = Constants.INDEX_URL;
+        if (indexUrl.startsWith("file://assets/")) {
+            options.put(WXSDKInstance.BUNDLE_URL, indexUrl);
+            String jsPath = indexUrl.replace("file://assets/", "");
+            Log.e("TAG", jsPath);
+            mWXSDKInstance.render("WxIndex", WXFileUtils.loadAsset(jsPath, WxIndexActivity.this), options, null, WXRenderStrategy.APPEND_ASYNC);
+        } else {
+            options.put(WXSDKInstance.BUNDLE_URL, indexUrl);
+            mWXSDKInstance.renderByUrl("WxIndex", indexUrl, options, null, WXRenderStrategy.APPEND_ASYNC);
+        }
     }
 
     @Override

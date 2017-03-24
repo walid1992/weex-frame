@@ -9,11 +9,13 @@
     "vue"
   ],
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack --watch",
-    "dev:android": "android/buildDebug.sh",
-    "serve": "npm run init && serve -p 12580",
     "init": "node build/init.js",
+    "dev": "webpack --watch",
+    "dev:android": "npm run init && android/buildDebug.sh",
+    "dev:android-local": "npm run init local && npm run copy && android/buildDebug.sh",
+    "copy": "rm -rf android/app/src/main/assets/* && cp -vrf dist/weex/* android/app/src/main/assets/&& rm -rf ios/assets/* && cp -vrf dist/weex/* ios/assets/",
+    "serve": "node build/ip.js && serve -p 12580",
+    "build": "webpack",
     "debug": "weex-devtool"
   },
   "dependencies": {

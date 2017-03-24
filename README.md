@@ -207,7 +207,10 @@ weex-frame
 或者：
 
 ```
+// 设置 android 从服务器端去读数据项目
 npm run dev:android
+// 设置 android 从本地去读数据项目（copy jsbundle 至assets）
+npm run dev:android-local
 ```
 
 ### iOS 启动
