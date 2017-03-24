@@ -9,7 +9,7 @@ package com.siyuan.weex.weex.constants;
 
 public class IpConfig {
 
-    public static final String INDEX_URL = "file://assets/App.js";
+    public static final String INDEX_URL = "http://172.31.243.44:12580/dist/weex/App.js";
 
 }
 

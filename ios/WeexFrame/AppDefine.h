@@ -6,9 +6,11 @@
 //  Copyright © 2016年 Weex. All rights reserved.
 //
 
+#import "IpDefine.h"
+
 #ifndef AppDefine_h
 #define AppDefine_h
 
-#define HOME_URL [NSString stringWithFormat:@"http://172.31.243.28:12580/dist/weex/App.js"]
+#define HOME_URL INDEX_URL
 
 #endif /* AppDefine_h */
