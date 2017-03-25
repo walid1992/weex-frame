@@ -1,6 +1,6 @@
 # weex-frame
 
-> weex 基于vue2.0开发框架库，包括三端集成、组件库提供、weex api封装~
+> weex 基于vue2.0开发框架，包括三端集成、组件库提供、weex api封装~
 
 # 工作原理
 
