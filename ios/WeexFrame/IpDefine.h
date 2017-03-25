@@ -11,6 +11,6 @@
 #ifndef IpDefine_h
 #define IpDefine_h
 
-#define INDEX_URL [NSString stringWithFormat:@"http://172.31.243.44:12580/dist/weex/App.js"]
+#define INDEX_URL [NSString stringWithFormat:@"http://192.168.10.122:12580/dist/weex/App.js"]
 
 #endif /* IpDefine_h */
