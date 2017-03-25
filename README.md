@@ -1,4 +1,4 @@
-[![GitHub release](https://img.shields.io/github/release/osmartian/martian-cli.svg)](https://github.com/osmartian/martian-cli/releases)  [![GitHub issues](https://img.shields.io/github/issues/osmartian/martian-cli.svg)](https://github.com/osmartian/martian-cli/issues)
+[![GitHub release](https://img.shields.io/github/release/osmartian/weex-frame.svg)](https://github.com/osmartian/weex-frame/releases)  [![GitHub issues](https://img.shields.io/github/issues/osmartian/weex-frame.svg)](https://github.com/osmartian/weex-frame/issues)
 ![Node Version](https://img.shields.io/node/v/martian-cli.svg "Node Version")
 
 
