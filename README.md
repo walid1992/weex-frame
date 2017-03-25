@@ -1,3 +1,7 @@
+[![GitHub release](https://img.shields.io/github/release/osmartian/martian-cli.svg)](https://github.com/osmartian/martian-cli/releases)  [![GitHub issues](https://img.shields.io/github/issues/osmartian/martian-cli.svg)](https://github.com/osmartian/martian-cli/issues)
+![Node Version](https://img.shields.io/node/v/martian-cli.svg "Node Version")
+
+
 # weex-frame
 
 > weex 基于vue2.0开发框架，包括三端集成、组件库提供、weex api封装~
