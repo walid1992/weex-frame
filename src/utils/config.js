@@ -4,9 +4,13 @@
  * @Describe :
  */
 
-export default {
-  init() {
-    // weex.registerModule('api', require('utils/api'))
-    // weex.registerModule('route', require('constants/route'))
-  }
+import navigator from 'utils/modules/navigator'
+import route from 'constants/route'
+
+export default function plugin(Vue) {
+  console.log('plugin')
+  // 路由配置
+  Vue.$navigator = Vue.prototype.$navigator = navigator
+  // 路由名称
+  Vue.$route = Vue.prototype.$route = route
 }

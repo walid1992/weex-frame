@@ -23,24 +23,39 @@ function getEntryFileContent(entryPath, vueFilePath) {
  * @description 程序入口启动配置
  */
 
-const App = require("${relativePath}")
+const App = require('${relativePath}')
 
 // 注册全局 component
-Vue.component('osc-root', require("components/osc-root"))
-Vue.component('osc-navpage', require("components/osc-navpage"))
-Vue.component('osc-navbar', require("components/osc-navbar"))
-Vue.component('osc-tabbar', require("components/osc-tabbar"))
-Vue.component('osc-list', require("components/osc-list"))
-Vue.component('osc-scroller', require("components/osc-scroller"))
+Vue.component('osc-root', require('components/osc-root'))
+Vue.component('osc-navpage', require('components/osc-navpage'))
+Vue.component('osc-navbar', require('components/osc-navbar'))
+Vue.component('osc-tabbar', require('components/osc-tabbar'))
+Vue.component('osc-list', require('components/osc-list'))
+Vue.component('osc-scroller', require('components/osc-scroller'))
+
+// Vue.use(require('utils/config'))
 
 // 注册全局 module
 // weex.registerModule('api', require('utils/api'))
 // weex.registerModule('route', require('constants/route'))
 
-App.el = '#root'
-new Vue(App)
+// register global mixins.
+// Vue.mixin(require('mixins'))
+
+// App.el = '#root'
+// new Vue(App)
+
+new Vue(Vue.util.extend({ el: '#root' }, App))
 `
 }
+
+// new Vue({
+//   el: '#root',
+//   template: '<App/>',
+//   components: {
+//     App
+//   }
+// })
 
 const entry = {
   // entry: path.resolve('./src/entry.js')
@@ -73,7 +88,7 @@ walk()
 
 function getBaseConfig() {
   return {
-    entry: entry,
+    entry,
     output: {
       path: 'dist'
     },
@@ -87,6 +102,7 @@ function getBaseConfig() {
         'api': path.resolve(__dirname, './src/api/'),
         'router': path.resolve(__dirname, './src/router/'),
         'store': path.resolve(__dirname, './src/store/'),
+        'mixins': path.resolve(__dirname, './src/mixins/'),
         'views': path.resolve(__dirname, './src/views/'),
         'config': path.resolve(__dirname, './config'),
         'utils': path.resolve(__dirname, './src/utils/')

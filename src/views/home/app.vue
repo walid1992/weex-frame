@@ -28,7 +28,6 @@
 
     methods: {
       toDetail(infoUuid) {
-        console.log('infoUuid', infoUuid)
         navigator.push(route.web, {
           url: `http://www.shuidichou.com/cf/dream/contribute/${infoUuid}`
         })
