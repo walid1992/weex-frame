@@ -17,6 +17,7 @@
 		0E93F47B1E691E89009FFDEC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E93F4751E691E89009FFDEC /* ViewController.m */; };
 		0E93F47C1E691E89009FFDEC /* WXEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E93F4771E691E89009FFDEC /* WXEventModule.m */; };
 		0E93F47D1E691E89009FFDEC /* WXImgLoaderDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E93F4791E691E89009FFDEC /* WXImgLoaderDefaultImpl.m */; };
+		4AEEC7801E89843000033E2D /* bundlejs in Resources */ = {isa = PBXBuildFile; fileRef = 4AEEC77F1E89843000033E2D /* bundlejs */; };
 		637BF30F000BF9BDDFF26E37 /* libPods-WeexFrameUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BC34A7DEE22B45618F61F0 /* libPods-WeexFrameUITests.a */; };
 		B479F239B2682F42104F9E7B /* libPods-WeexFrame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDA8879EBDD53B0AFEC0321 /* libPods-WeexFrame.a */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		0E93F4781E691E89009FFDEC /* WXImgLoaderDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXImgLoaderDefaultImpl.h; sourceTree = "<group>"; };
 		0E93F4791E691E89009FFDEC /* WXImgLoaderDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXImgLoaderDefaultImpl.m; sourceTree = "<group>"; };
 		2EDA8879EBDD53B0AFEC0321 /* libPods-WeexFrame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeexFrame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AEEC77F1E89843000033E2D /* bundlejs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundlejs; sourceTree = "<group>"; };
 		524C569D3E6AC74034584D2D /* Pods-WeexFrame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeexFrame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeexFrame/Pods-WeexFrame.debug.xcconfig"; sourceTree = "<group>"; };
 		A6DBAE03C82A6D51129C806A /* Pods-WeexFrameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeexFrameUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeexFrameUITests/Pods-WeexFrameUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8BC34A7DEE22B45618F61F0 /* libPods-WeexFrameUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeexFrameUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +100,7 @@
 		0E93F4321E691E3C009FFDEC = {
 			isa = PBXGroup;
 			children = (
+				4AEEC77E1E89840000033E2D /* Resource */,
 				0E93F43D1E691E3C009FFDEC /* WeexFrame */,
 				0E93F4571E691E3C009FFDEC /* WeexFrameTests */,
 				0E93F4621E691E3C009FFDEC /* WeexFrameUITests */,
@@ -162,6 +165,14 @@
 				0E93F4651E691E3C009FFDEC /* Info.plist */,
 			);
 			path = WeexFrameUITests;
+			sourceTree = "<group>";
+		};
+		4AEEC77E1E89840000033E2D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4AEEC77F1E89843000033E2D /* bundlejs */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 		4DA993CBBED7A0E7E13B787F /* Frameworks */ = {
@@ -299,6 +310,7 @@
 				0E93F44E1E691E3C009FFDEC /* LaunchScreen.storyboard in Resources */,
 				0E93F44B1E691E3C009FFDEC /* Assets.xcassets in Resources */,
 				0E93F4491E691E3C009FFDEC /* Main.storyboard in Resources */,
+				4AEEC7801E89843000033E2D /* bundlejs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

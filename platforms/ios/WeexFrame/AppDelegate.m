@@ -41,7 +41,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     ViewController * viewController = [[ViewController alloc] init];
-    viewController.url = [NSURL URLWithString:HOME_URL];
+    // viewController.url = [NSURL URLWithString:HOME_URL];
+    
+    UIAlertView *alert1 = [[UIAlertView alloc] initWithTitle:@"警告" message:BUNDLE_URL delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+    alert1.alertViewStyle = UIAlertViewStyleLoginAndPasswordInput;
+    [alert1 show];
+    
+    viewController.url = [NSURL URLWithString:BUNDLE_URL];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:viewController];
     [self.window makeKeyAndVisible];
     

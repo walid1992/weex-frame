@@ -12,5 +12,6 @@
 #define AppDefine_h
 
 #define HOME_URL INDEX_URL
+#define BUNDLE_URL [NSString stringWithFormat:@"file://%@/bundlejs/weex/App.js",[NSBundle mainBundle].bundlePath]
 
 #endif /* AppDefine_h */

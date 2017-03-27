@@ -85,14 +85,36 @@
     
     // 加载serve
     NSLog(@"url %@",self.url);
-    [_instance renderWithURL:self.url options:@{@"bundleUrl":[self.url absoluteString]} data:nil];
+    //[_instance renderWithURL:self.url options:@{@"bundleUrl":[self.url absoluteString]} data:nil];
     
-    NSURL *pathUrl = [[NSBundle mainBundle]URLForResource:@"App" withExtension:@"js"];
-    NSLog(@"url=>%@", pathUrl);
-    // 加载本地
-    //    NSString *url = [NSString stringWithFormat:@"file://%@/index.js",[NSBundle mainBundle].bundlePath];
-    //    [_instance renderWithURL:[NSURL URLWithString:url] options:@{@"bundleUrl":url} data:nil];
+    NSURL *URL = [self testURL: [self.url absoluteString]];
+    NSString *randomURL = [NSString stringWithFormat:@"%@%@random=%d",URL.absoluteString,URL.query?@"&":@"?",arc4random()];
+    [_instance renderWithURL:[NSURL URLWithString:randomURL] options:@{@"bundleUrl":URL.absoluteString} data:nil];
 }
+
+#pragma mark - load local device bundle
+- (NSURL*)testURL:(NSString*)url
+{
+    NSRange range = [url rangeOfString:@"_wx_tpl"];
+    if (range.location != NSNotFound) {
+        NSString *tmp = [url substringFromIndex:range.location];
+        NSUInteger start = [tmp rangeOfString:@"="].location;
+        NSUInteger end = [tmp rangeOfString:@"&"].location;
+        ++start;
+        if (end == NSNotFound) {
+            end = [tmp length] - start;
+        }
+        else {
+            end = end - start;
+        }
+        NSRange subRange;
+        subRange.location = start;
+        subRange.length = end;
+        url = [tmp substringWithRange:subRange];
+    }
+    return [NSURL URLWithString:url];
+}
+
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
