@@ -18,7 +18,7 @@ function getBaseUrl() {
   if (isAndroidAssets) {
     nativeBase = 'file://assets/dist/weex/'
   } else if (isiOSAssets) {
-    nativeBase = bundleUrl.substring(0, bundleUrl.lastIndexOf('/') + 1)
+    nativeBase = bundleUrl.substring(0, bundleUrl.lastIndexOf('weex/') + 5)
   } else {
     let host = `${ip}:12580`
     let matches = /\/\/([^\/]+?)\//.exec(bundleUrl)
