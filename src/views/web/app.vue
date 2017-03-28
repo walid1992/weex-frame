@@ -4,34 +4,35 @@
 
 <script>
   import {getQueryStringByName} from 'utils/string'
+  import navigator from 'utils/modules/navigator'
   let webview = weex.requireModule('webview')
 
   export default {
     data() {
       return {
-        url: 'https://weex-project.io/cn/'
-      }
-    },
-
-    mounted () {
-      let url = getQueryStringByName(this, 'url')
-      console.log('getQueryStringByName', url)
-      if (url) {
-        this.url = url
+        title: 'OsMartian - WebView',
+        canGoBack: false,
+        url: getQueryStringByName('url') || 'https://weex-project.io/cn/'
       }
     },
 
     methods: {
-      loadUrl (event) {
-      },
-      reload (event) {
+      onReload (event) {
         webview.reload(this.$refs.webview)
       },
+
+      onBack(){
+        this.canGoBack ? webview.goBack(this.$refs.webview) : navigator.pop()
+      },
+
       start (event) {
         console.log('pagestart', event)
       },
+
       finish (event) {
-        console.log('pagefinish', event)
+        console.log('event', event)
+        this.canGoBack = event.canGoBack
+        this.title = event.title || 'OsMartian - WebView'
       }
     }
   }

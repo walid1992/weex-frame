@@ -9,7 +9,7 @@
   export default {
     methods: {
       toLaunch (event) {
-        navigator.push(this, route.web, {
+        navigator.push(route.web, {
           url: 'http://www.shuidichou.com/cf/dream/edit-basic-info'
         })
       }

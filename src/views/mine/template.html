@@ -1,4 +1,4 @@
-<div class="root">
+<osc-root>
   <image class="img-bg-mine" resize="cover"
          src="https://gitlab.com/toonteam/weex/raw/ce0c5f60531f1a0d676dedfa1f81c7e67e3151ed/src/views/mine/imgs/bg_basic_info_default.png"></image>
   <div class="div-content">
@@ -19,7 +19,7 @@
         <text class="p-work-department">{{workDepartment}}</text>
       </div>
       <div class="div-person-list">
-        <div v-for="item in personInfoList" class="div-list-item">
+        <div v-for="item in personInfoList" class="div-list-item" @click="toBlog">
           <image :src="item.iconUrl" class="img-item"></image>
           <text class="p-item">{{item.name}}</text>
         </div>
@@ -31,6 +31,12 @@
         </div>
       </div>
       <div class="div-add-list">
+        <div class="div-list-item div-group-item" @click="toBlog">
+          <image
+              src="https://gitlab.com/toonteam/weex/raw/283827bfcf4aac59021a2c4c0572e27b98546627/src/views/mine/imgs/apply-blog.png"
+              class="img-add-item"></image>
+          <text class="p-item">博客</text>
+        </div>
         <div class="div-list-item div-group-item">
           <image
               src="https://gitlab.com/toonteam/weex/raw/f9492284d15c3d9ec79b72608768d20cf450cae9/src/views/mine/imgs/beacon_add_key.png"
@@ -42,4 +48,4 @@
   </div>
   <image class="img-person"
          src="https://gitlab.com/toonteam/weex/raw/44cab38bc97860112d963001ba9c9179c0365ee5/src/views/mine/imgs/person-img.jpg"></image>
-</div>
+</osc-root>

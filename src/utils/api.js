@@ -20,7 +20,7 @@ function get(url, params) {
       type: 'json'
     }, res => {
       console.log('GET res :' + res)
-      if (res.ok && res.data && res.data.code == 0) {
+      if (res.ok && res.data && res.data.code === 0) {
         resolve(res.data)
       } else {
         reject(res.data)
@@ -66,8 +66,8 @@ function del(url) {
         reject(res.data)
       }
     }, progress => {
-      console.log('get in progress:' + progress.length);
-    });
+      console.log('get in progress:' + progress.length)
+    })
   })
 }
 
@@ -88,8 +88,8 @@ function put(url, body) {
         reject(res.data)
       }
     }, progress => {
-      console.log('get in progress:' + progress.length);
-    });
+      console.log('get in progress:' + progress.length)
+    })
   })
 }
 

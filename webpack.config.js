@@ -1,7 +1,12 @@
+/**
+ * @author walid
+ * @date 2016/03/20
+ * @description weex 打包配置
+ */
+
 const path = require('path')
 const webpack = require('webpack')
 const cssnext = require('postcss-cssnext')
-// const fs = require('fs')
 const fs = require('fs-extra')
 
 const bannerPlugin = new webpack.BannerPlugin(
@@ -9,18 +14,54 @@ const bannerPlugin = new webpack.BannerPlugin(
   {raw: true}
 )
 
-function getEntryFileContent (entryPath, vueFilePath) {
+function getEntryFileContent(entryPath, vueFilePath) {
   const relativePath = path.relative(path.join(entryPath, '../'), vueFilePath);
-  return 'var App = require(\'' + relativePath + '\')\n'
-    + 'App.el = \'#root\'\n'
-    + 'new Vue(App)\n'
+  return `
+/**
+ * @author walid
+ * @date 2016/03/20
+ * @description 程序入口启动配置
+ */
+
+const App = require('${relativePath}')
+
+// 注册全局 component
+Vue.component('osc-root', require('components/osc-root'))
+Vue.component('osc-navpage', require('components/osc-navpage'))
+Vue.component('osc-navbar', require('components/osc-navbar'))
+Vue.component('osc-tabbar', require('components/osc-tabbar'))
+Vue.component('osc-list', require('components/osc-list'))
+Vue.component('osc-scroller', require('components/osc-scroller'))
+
+// Vue.use(require('utils/config'))
+
+// 注册全局 module
+// weex.registerModule('api', require('utils/api'))
+// weex.registerModule('route', require('constants/route'))
+
+// register global mixins.
+// Vue.mixin(require('mixins'))
+
+// App.el = '#root'
+// new Vue(App)
+
+new Vue(Vue.util.extend({ el: '#root' }, App))
+`
 }
+
+// new Vue({
+//   el: '#root',
+//   template: '<App/>',
+//   components: {
+//     App
+//   }
+// })
 
 const entry = {
-  entry: path.resolve('./src/entry.js')
+  // entry: path.resolve('./src/entry.js')
 }
 
-function walk (dir) {
+function walk(dir) {
   dir = dir || '.'
   let directory = path.join(__dirname, './src', dir)
   let entryDirectory = path.join(__dirname, './src/entry');
@@ -45,9 +86,9 @@ function walk (dir) {
 
 walk()
 
-function getBaseConfig () {
+function getBaseConfig() {
   return {
-    entry: entry,
+    entry,
     output: {
       path: 'dist'
     },
@@ -61,6 +102,7 @@ function getBaseConfig () {
         'api': path.resolve(__dirname, './src/api/'),
         'router': path.resolve(__dirname, './src/router/'),
         'store': path.resolve(__dirname, './src/store/'),
+        'mixins': path.resolve(__dirname, './src/mixins/'),
         'views': path.resolve(__dirname, './src/views/'),
         'config': path.resolve(__dirname, './config'),
         'utils': path.resolve(__dirname, './src/utils/')

@@ -13,6 +13,7 @@
         feeds: []
       }
     },
+
     mounted () {
       dreamApi.dreamFeeds({
         anchorId: -1,
@@ -24,10 +25,10 @@
         console.log('请求失败~')
       })
     },
+
     methods: {
       toDetail(infoUuid) {
-        console.log('infoUuid', infoUuid)
-        navigator.push(this, route.web, {
+        navigator.push(route.web, {
           url: `http://www.shuidichou.com/cf/dream/contribute/${infoUuid}`
         })
       }

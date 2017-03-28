@@ -1,6 +1,10 @@
+[![GitHub release](https://img.shields.io/github/release/osmartian/weex-frame.svg)](https://github.com/osmartian/weex-frame/releases)  [![GitHub issues](https://img.shields.io/github/issues/osmartian/weex-frame.svg)](https://github.com/osmartian/weex-frame/issues)
+![Node Version](https://img.shields.io/node/v/martian-cli.svg "Node Version")
+
+
 # weex-frame
 
-> 基于weex集成的android、ios、h5框架~
+> weex 基于vue2.0开发框架，包括三端集成、组件库提供、weex api封装~
 
 # 工作原理
 
@@ -32,9 +36,17 @@
 
 关于android、ios、h5平台的集成与打包问题，在项目中都以解决~
 
+##  集成 weexpack 工具
+
+可以使用weexpack相关功能~
+
 ##  集成eslint代码检查
 
 代码检查是必要的操作，为了能够拥有vue开发的体验，将eslint集成进来~
+
+##  提供开源组件库OSC
+
+weex-frame提供了，开源组件库OSC，降低开发者入门门槛~
 
 **注：**
 
@@ -82,94 +94,25 @@
 ```
 function getEntryFileContent (entryPath, vueFilePath) {
   const relativePath = path.relative(path.join(entryPath, '../'), vueFilePath);
-  return 'var App = require(\'' + relativePath + '\')\n'
-    + 'App.el = \'#root\'\n'
-    + 'new Vue(App)\n'
+  return 'let App = require("${relativePath}")
+          // 全局注册 root 组件
+          Vue.component('root', require("components/root"))
+          // 全局注册 navpage 组件
+          Vue.component('navpage', require("components/navpage"))
+          App.el = '#root'
+          new Vue(App)'
 }
 
-function walk (dir) {
-  dir = dir || '.'
-  let directory = path.join(__dirname, './src', dir)
-  let entryDirectory = path.join(__dirname, './src/entry');
-  fs.readdirSync(directory)
-    .forEach(file => {
-      let fullpath = path.join(directory, file)
-      let stat = fs.statSync(fullpath)
-      let extname = path.extname(fullpath)
-      if (stat.isFile() && extname === '.vue') {
-        let entryFile = path.join(entryDirectory, dir, path.basename(file, extname) + '.js')
-        fs.outputFileSync(entryFile, getEntryFileContent(entryFile, fullpath))
-        let name = path.join(dir, path.basename(file, extname))
-        entry[name] = entryFile + '?entry=true'
-      } else if (stat.isDirectory()) {
-        let subdir = path.join(dir, file)
-        walk(subdir)
-      }
-    })
-}
+...
 
-walk()
 ```
 
 2、通过weex-loader打包生成native jsbundle
 3、 通过weex-vue-loader打包生成web jsbundle
 
 ```
-function getBaseConfig () {
-  return {
-    entry: entry,
-    output: {
-      path: 'dist'
-    },
-    resolve: {
-      extensions: ['', '.js', '.vue'],
-      fallback: [path.join(__dirname, './node_modules')],
-      alias: {
-        'assets': path.resolve(__dirname, './src/assets/'),
-        'components': path.resolve(__dirname, './src/components/'),
-        'constants': path.resolve(__dirname, './src/constants/'),
-        'api': path.resolve(__dirname, './src/api/'),
-        'router': path.resolve(__dirname, './src/router/'),
-        'store': path.resolve(__dirname, './src/store/'),
-        'views': path.resolve(__dirname, './src/views/'),
-        'config': path.resolve(__dirname, './config'),
-        'utils': path.resolve(__dirname, './src/utils/')
-      }
-    },
-    module: {
-      preLoaders: [
-        {
-          test: /\.vue$/,
-          loader: 'eslint',
-          exclude: /node_modules/
-        },
-        {
-          test: /\.js$/,
-          loader: 'eslint',
-          exclude: /node_modules/
-        }
-      ],
-      loaders: [
-        {
-          test: /\.js$/,
-          loader: 'babel',
-          exclude: /node_modules/
-        }, {
-          test: /\.vue(\?[^?]+)?$/,
-          loaders: []
-        }
-      ]
-    },
-    vue: {
-      postcss: [cssnext({
-        features: {
-          autoprefixer: false
-        }
-      })]
-    },
-    plugins: [bannerPlugin]
-  }
-}
+
+...
 
 const webConfig = getBaseConfig()
 webConfig.output.filename = 'web/[name].js'
@@ -180,13 +123,14 @@ weexConfig.output.filename = 'weex/[name].js'
 weexConfig.module.loaders[1].loaders.push('weex')
 ```
 
-# 项目结构
+## 项目结构
 
 ```
 weex-frame
-├── android (android项目)
-│       
-├── ios （ios项目代码）
+├── platforms (平台项目)
+│      │
+│      ├── android 
+│      └── ios
 │
 ├── src （weex模块）
 │      ├── api (api模块)
@@ -200,43 +144,120 @@ weex-frame
        └── web（web使用jsbundle） 
 ```
 
-# npm 指令
+## 组件库介绍
 
-1. npm run build
-2. npm run dev
-3. nom run serve
+### osc-navbar 
 
-# 项目启动
+> 三端导航条
+
+### osc-navpage
+
+> 三端导航页，适配iOS顶部20px问题
+
+**代码示例：**
+
+```
+<osc-navpage
+    :title="title"
+    leftItemSrc="https://gitlab.com/toonteam/weex/raw/ce656f79084ed9db357f8abd76c6e6c82dc5a28d/src/views/person-info/imgs/back.png"
+    rightItemSrc="http://gtms02.alicdn.com/tps/i2/TB1ED7iMpXXXXXEXXXXWA_BHXXX-48-48.png"
+    @naviBarLeftItemClick="onBack"
+    @naviBarRightItemClick="onReload">
+  <web class='web' ref='webview' :src='url' @pagestart='start' @pagefinish='finish'></web>
+</osc-navpage>
+```
+
+### [osc-root详细示例](/doc/components/osc-root.md)
+
+> 界面根view，适配iOS顶部20px问题
+
+代码示例：
+
+```
+<osc-root>
+  <text>OsMartian Root</text>
+</osc-root>
+```
+
+### osc-tabbar
+
+> 底部tabbar
+
+**代码示例：**
+
+```
+<osc-tabbar :tabItems="tabItems" @tabBarOnClick="tabBarOnClick"></osc-tabbar>
+```
+
+### osc-tabitem
+
+> 底部tabbaritem元素
+
+### osc-list
+
+> list组件封装上拉刷新 上拉加载
+
+### osc-scroller
+
+> scroller组件封装上拉刷新 上拉加载
+
+## 项目启动
 
 1. git clone git@github.com:osmartian/weex-frame.git
 2. cd weex-frame
-3. npm install
-4. 执行 ./start
+3. 安装weexpack
 
-## android 启动
+```
+npm install -g weexpack
+```
+
+4. npm install
+5. 执行 ./start
+6. 设置调试环境
+
+```
+// 调试本地serve
+npm run init serve
+// 调试assets或者jsbundle文件
+npm run init local
+```
+
+### android 启动
 
 1. 打开andorid studio
 2. File -> New -> Import Project -> weex-frame/android -> 启动
 
-## iOS 启动
+或者：
+
+```
+weexpack run android
+```
+
+### iOS 启动
 
 1. cd ios
 2. pod install (未安装pod，请先安装)
 3. open WeexFrame.xcworkspace
 
-## h5 启动方式
+或者：
+
+```
+weexpack run ios
+```
+
+### h5 启动方式
 
  打开 [http://localhost:12580/weex.html](http://localhost:12580/weex.html)
 
-# 项目示例
+## 项目示例
 
-## h5 端示例
+### h5 端示例
 
 ![h5我的页面](http://upload-images.jianshu.io/upload_images/2843033-2c404d16e05b8f0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)
 
 ![h5发起页面](http://upload-images.jianshu.io/upload_images/2843033-8eda0114ba0ca246.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)
 
-## android 端示例
+### android 端示例
 
 ![android首页](http://upload-images.jianshu.io/upload_images/2843033-26182ae64ca5171a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)
 
@@ -244,7 +265,7 @@ weex-frame
 
 ![android发起页面](http://upload-images.jianshu.io/upload_images/2843033-d92f0ba3f5af4372.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)
 
-## iOS 端示例
+### iOS 端示例
 
 ![iOS首页](http://upload-images.jianshu.io/upload_images/2843033-120c80bc608d0471.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)
 

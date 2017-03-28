@@ -6,52 +6,64 @@
 
 import qs from 'qs'
 import ip from 'config'
+import instance from 'utils/weex/instance'
+import route from 'constants/route'
 let navigator = weex.requireModule('navigator')
 
-
-function getBaseUrl(vm) {
-  // let bundleUrl = vm.$getConfig().bundleUrl
-  // let isAndroidAssets = bundleUrl.indexOf('your_current_IP') >= 0 || bundleUrl.indexOf('file://assets/') >= 0
-  // let isiOSAssets = bundleUrl.indexOf('file:///') >= 0 && bundleUrl.indexOf('WeexFrame.app') > 0
-  // let nativeBase = ''
-  // if (isAndroidAssets) {
-  //   nativeBase = 'file://assets/'
-  // } else if (isiOSAssets) {
-  //   nativeBase = bundleUrl.substring(0, bundleUrl.lastIndexOf('/') + 1)
-  // } else {
-  //   let host = 'localhost:12580'
-  //   let matches = /\/\/([^\/]+?)\//.exec(bundleUrl)
-  //   if (matches && matches.length >= 2) {
-  //     host = matches[1]
-  //   }
-  //   nativeBase = `http://${host}/dist/weex/`
-  // }
-  // let h5Base = './weex.html?page=./dist/web/'
+function getBaseUrl() {
+  let bundleUrl = weex.config.bundleUrl
+  let isAndroidAssets = bundleUrl.indexOf('your_current_IP') >= 0 || bundleUrl.indexOf('file://assets/') >= 0
+  let isiOSAssets = bundleUrl.indexOf('file:///') >= 0 && bundleUrl.indexOf('WeexFrame.app') > 0
+  let nativeBase = ''
+  if (isAndroidAssets) {
+    nativeBase = 'file://assets/dist/weex/'
+  } else if (isiOSAssets) {
+    nativeBase = bundleUrl.substring(0, bundleUrl.lastIndexOf('weex/') + 5)
+  } else {
+    let host = `${ip}:12580`
+    let matches = /\/\/([^\/]+?)\//.exec(bundleUrl)
+    if (matches && matches.length >= 2) {
+      host = matches[1]
+    }
+    nativeBase = `http://${host}/dist/weex/`
+  }
+  let h5Base = './weex.html?page=./dist/web/'
   // // in Browser or WebView
   let inBrowserOrWebView = typeof window === 'object'
-  // return inBrowserOrWebView ? h5Base : nativeBase
-  return inBrowserOrWebView ? './weex.html?page=./dist/web/' : `http://${ip}:12580/dist/weex/`
+  return inBrowserOrWebView ? h5Base : nativeBase
+  // return inBrowserOrWebView ? './weex.html?page=./dist/web/' : `http://${ip}:12580/dist/weex/`
 }
 
-function pushByUrl(vm, url, params) {
+function pushWeb(url, params) {
+  if (instance.isWeb()) {
+    pushByUrl(url, params)
+    return
+  }
+  params = params ? params : {}
+  params.url = url
+  push(route.web, params)
+}
+
+function pushByUrl(url, params) {
   navigator.push({
-    url: url,
+    url: params ? `url?${qs.stringify(params)}` : url,
     animated: 'true'
   }, event => {
     console.log('callback: ', event)
   })
 }
 
-function push(vm, route, params) {
+function push(route, params) {
+  let url = params ? `${getBaseUrl()}${route}.js?${qs.stringify(params)}` : `${getBaseUrl()}${route}.js`
   navigator.push({
-    url: `${getBaseUrl(vm)}${route}.js?${qs.stringify(params)}`,
+    url,
     animated: 'true'
   }, event => {
     console.log('callback: ', event)
   })
 }
 
-function pop(vm) {
+function pop() {
   navigator.pop({
     animated: 'true'
   }, event => {
@@ -60,5 +72,5 @@ function pop(vm) {
 }
 
 export default {
-  push, pushByUrl, pop, getBaseUrl
+  push, pushByUrl, getBaseUrl, pushWeb, pop
 }
