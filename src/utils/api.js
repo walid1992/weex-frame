@@ -43,9 +43,9 @@ function post(url, body) {
       body: JSON.stringify(body)
     }, res => {
       if (res.ok && res.data && res.data.code === 0) {
-        resolve(res.res)
+        resolve(res.data)
       } else {
-        reject(res.res)
+        reject(res.data)
       }
     }, progress => {
       console.log('get in progress:' + progress.length)
@@ -61,9 +61,9 @@ function del(url) {
       type: 'json'
     }, res => {
       if (res.ok && res.data && res.data.code === 0) {
-        resolve(res.res)
+        resolve(res.data)
       } else {
-        reject(res.res)
+        reject(res.data)
       }
     }, progress => {
       console.log('get in progress:' + progress.length)
@@ -83,9 +83,9 @@ function put(url, body) {
       body: JSON.stringify(body)
     }, res => {
       if (res.ok && res.data && res.data.code === 0) {
-        resolve(res.res)
+        resolve(res.data)
       } else {
-        reject(res.res)
+        reject(res.data)
       }
     }, progress => {
       console.log('get in progress:' + progress.length)
