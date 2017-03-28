@@ -225,7 +225,7 @@ npm run init local
 ### android 启动
 
 1. 打开andorid studio
-2. File -> New -> Import Project -> weex-frame/android -> 启动
+2. File -> New -> Import Project -> weex-frame/platforms/android -> 启动
 
 或者：
 
@@ -235,7 +235,7 @@ weexpack run android
 
 ### iOS 启动
 
-1. cd ios
+1. cd weex-frame/platforms/android
 2. pod install (未安装pod，请先安装)
 3. open WeexFrame.xcworkspace
 
