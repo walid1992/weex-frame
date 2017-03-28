@@ -205,9 +205,15 @@ weex-frame
 
 1. git clone git@github.com:osmartian/weex-frame.git
 2. cd weex-frame
-3. npm install
-4. 执行 ./start
-5. 设置调试环境
+3. 安装weexpack
+
+```
+npm install -g weexpack
+```
+
+4. npm install
+5. 执行 ./start
+6. 设置调试环境
 
 ```
 // 调试本地serve
