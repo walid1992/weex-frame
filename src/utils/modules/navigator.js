@@ -20,7 +20,7 @@ function getBaseUrl() {
   } else if (isiOSAssets) {
     nativeBase = bundleUrl.substring(0, bundleUrl.lastIndexOf('weex/') + 5)
   } else {
-    let host = `${ip}:12580`
+    let host = `${ip}:8080`
     let matches = /\/\/([^\/]+?)\//.exec(bundleUrl)
     if (matches && matches.length >= 2) {
       host = matches[1]
@@ -31,7 +31,7 @@ function getBaseUrl() {
   // // in Browser or WebView
   let inBrowserOrWebView = typeof window === 'object'
   return inBrowserOrWebView ? h5Base : nativeBase
-  // return inBrowserOrWebView ? './web/index.html?page=./dist/web/' : `http://${ip}:12580/dist/weex/`
+  // return inBrowserOrWebView ? './web/index.html?page=./dist/web/' : `http://${ip}:8080/dist/weex/`
 }
 
 function pushWeb(url, params) {

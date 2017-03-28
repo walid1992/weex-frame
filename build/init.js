@@ -13,7 +13,7 @@ const argv = yargs.argv
 
 console.log('argv._[0]', argv._[0])
 
-let ipIndexUrl = `http://${ip}:12580/dist/weex/App.js`
+let ipIndexUrl = `http://${ip}:8080/dist/weex/App.js`
 let androidIndexUrl = argv._[0] === 'local' ? 'weex/App.js' : ipIndexUrl
 
 // android 主机地址操作
