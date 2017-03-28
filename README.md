@@ -36,6 +36,10 @@
 
 关于android、ios、h5平台的集成与打包问题，在项目中都以解决~
 
+##  集成 weexpack 工具
+
+可以使用weexpack相关功能~
+
 ##  集成eslint代码检查
 
 代码检查是必要的操作，为了能够拥有vue开发的体验，将eslint集成进来~
@@ -123,9 +127,10 @@ weexConfig.module.loaders[1].loaders.push('weex')
 
 ```
 weex-frame
-├── android (android项目)
-│       
-├── ios （ios项目代码）
+├── platforms (平台项目)
+│      │
+│      ├── android 
+│      └── ios
 │
 ├── src （weex模块）
 │      ├── api (api模块)
@@ -211,10 +216,7 @@ weex-frame
 或者：
 
 ```
-// 设置 android 从服务器端去读数据项目
-npm run dev:android
-// 设置 android 从本地去读数据项目（copy jsbundle 至assets）
-npm run dev:android-local
+weexpack run android
 ```
 
 ### iOS 启动
@@ -222,6 +224,12 @@ npm run dev:android-local
 1. cd ios
 2. pod install (未安装pod，请先安装)
 3. open WeexFrame.xcworkspace
+
+或者：
+
+```
+weexpack run ios
+```
 
 ### h5 启动方式
 
