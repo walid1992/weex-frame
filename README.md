@@ -57,19 +57,19 @@ weex-frame提供了，开源组件库OSC，降低开发者入门门槛~
 ## package.json依赖
 
 ```
-"dependencies": {
-    "vue": "^2.1.8",
-    "vue-router": "^2.1.1",
-    "vuex": "^2.1.1",
+  "dependencies": {
+    "vue": "^2.2.5",
+    "vue-router": "^2.3.0",
+    "vuex": "^2.2.1",
     "vuex-router-sync": "^4.0.1",
-    "weex-vue-render": "^0.1.4"
+    "weex-vue-render": "^0.1.9"
   },
   "devDependencies": {
     "babel-core": "^6.20.0",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.9",
     "babel-preset-es2015": "^6.18.0",
-    "css-loader": "^0.26.1",
+    "css-loader": "^0.26.4",
     "eslint": "^3.15.0",
     "eslint-config-standard": "^6.2.1",
     "eslint-loader": "^1.6.1",
@@ -78,12 +78,11 @@ weex-frame提供了，开源组件库OSC，降低开发者入门门槛~
     "eslint-plugin-standard": "^2.0.1",
     "postcss-cssnext": "^2.9.0",
     "serve": "^1.4.0",
-    "vue-loader": "^10.0.2",
-    "vue-template-compiler": "^2.1.8",
+    "vue-loader": "^10.3.0",
+    "vue-template-compiler": "^2.2.5",
     "webpack": "^1.14.0",
     "weex-devtool": "^0.2.64",
-    "weex-loader": "^0.4.1",
-    "weex-vue-loader": "^0.2.5"
+    "weex-loader": "^0.4.4"
   }
 ```
 
