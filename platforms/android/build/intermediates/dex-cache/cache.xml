@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.1.1_c1927165b58e1aeba32f40013e1e176f8c4f4dcd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.1/2287494d4f5f9f3a9a2bb6980e3f32053721b315/core-3.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/core-3.2.1_c8ec05f88363c083a409dd0652ed2e688458a510.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.10.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d323cf4983bdfce7136a1ce5e32710e1b36b20fe">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-0.10.0_3f9e9ce565eac0b9665061d8a3de164f0fd1d539.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/android/weexplugin/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="4380920339da6432983f39c738858bc0aef8cf0e">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/android-weexplugin-unspecified_1a2385da30b427043a6a4a7cd609490968fa8613.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/2.0.1/516c03b21d50a644d538de0f0369c620989cd8f0/jsr305-2.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="516c03b21d50a644d538de0f0369c620989cd8f0">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/jsr305-2.0.1_c7f5c5f739ad9d01c6ad09b4eabc3620e4392ab7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.1.1_ad96f6ae0722d5dddef1fb0e2c452f79c4f001d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.10.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="857099e23430445aeb65cf703d5adf646ff280f1">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-0.10.0_4aee52b14d6127273225f1196292824235a1c57b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_e83cf4529a5e18a61f6bc14e25c6b904f8c85820.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.1.1_aa6046b56c73a0b70c566430f18aab31b0f15e80.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_674752a53bc105b1e78a021c86f38cc671f64e10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_8e61510ea7ee9acf0c236184c42acd945edb5a48.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.10.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d323cf4983bdfce7136a1ce5e32710e1b36b20fe">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-0.10.0_7bef9e5945b3bef76ce57b77ef57ae89a7d29522.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.10.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="6e1ed00013584399dbe27d45ac1fd6a9828c9fca">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-0.10.0_d25ee84b08163df997966c45cc35ace812a4e62a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/com.taobao.android/weex_sdk/0.10.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5c661d2cd2b4e0f3236d37b1e2b84b2b3a0a19f5">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/com.taobao.android-weex_sdk-0.10.0_a77c8175e52580120b77c988edb1c50578424537.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/android/appframework/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="c8c7f2148be85c4e35f1ff0080ec62cbefaafdac">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/android-appframework-unspecified_31fa5e5fef4788f8d08ef8f6b708f2053613b400.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_cb43de6f6877362e92885a8925943f001704710c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.10.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="65f0c887ee1f57cd0ea65b228e39b7f35372b798">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-0.10.0_84ee2fc3b48c00036e1c7fd3e975d41b1a3af8eb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/com.taobao.android/weex_inspector/0.10.0.5/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="575d72d4a489260763ca62b2b54450fdec3bebd1">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/com.taobao.android-weex_inspector-0.10.0.5_ae73e721be95a9725ca9789cb19e479eea6a6afe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.1.1_f34306713911a21e062c45a2de1727a661816591.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/android/weexplugin/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="4380920339da6432983f39c738858bc0aef8cf0e">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/android-weexplugin-unspecified_ac3129f2cff6cfe63c67fa6c85660ed20002abee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/library-2.4.0_63fd64ce1837098021243e8f735914947930f346.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/jacoco/jacocoagent.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="fdca30f45b60c6ba724c26a9ce127975e26d4bcb">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/jacocoagent_673bd5b1c286efe456e5716e4ba14a9c68620e7f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/jacoco/jacocoagent.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="fdca30f45b60c6ba724c26a9ce127975e26d4bcb">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/jacocoagent_466a02e30e8894f09938f699a9fff9870cc8ea7b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_629cf658c263524f1b7c4bed936a92e55d46ed90.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.3.0/2e7bc7033dc2c8423e661224171b3133fb155b28/okhttp-2.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="2e7bc7033dc2c8423e661224171b3133fb155b28">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/okhttp-2.3.0_1482560c8b570c4b5663808c2a920dc3cce359e1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_4dd8580e3d022a2a220b8d1e25d6dbe935b5f646.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_84a8628ce39a0a5668598bd1808fd6f18c7745d3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/android/appframework/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="c8c7f2148be85c4e35f1ff0080ec62cbefaafdac">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/android-appframework-unspecified_c3954e2738b5f675ad7ce036c5bc1740b40db4e6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_f74b065735c674e30bdbeb6ee7477c0074eaaca0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.10.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="857099e23430445aeb65cf703d5adf646ff280f1">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-0.10.0_d0bc93d113df71ce268e65e6a7d146578e218478.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.10.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5e88a2a26ac71cd7f8fd8bd9f9381fa06d1a47a3">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-0.10.0_38433100b7b7e0408668a2f4d3cd203ab4f31aca.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/com.taobao.android/weex_sdk/0.10.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5c661d2cd2b4e0f3236d37b1e2b84b2b3a0a19f5">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/com.taobao.android-weex_sdk-0.10.0_a3cb196228215df956d23ff03547390072c7dc96.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.3.0/1b355f73402020c5a0dcca58affc3ec3dfeabac1/okio-1.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1b355f73402020c5a0dcca58affc3ec3dfeabac1">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/okio-1.3.0_f5b07e702eaca530c5f6033fa24de47801002dc0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.10.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="6e1ed00013584399dbe27d45ac1fd6a9828c9fca">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-0.10.0_6be77ab5c3781a957007435174c65a0187c3e322.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="0e1f104cf60bfe34147ef670229f2635789c79a4">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/com.journeyapps-zxing-android-embedded-3.4.0_a2ab7364b564241d823fd521e9c5e597a1548d02.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-ws/2.3.0/7896d229b6aa7884552ab9c23de54c7eb0de8203/okhttp-ws-2.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="7896d229b6aa7884552ab9c23de54c7eb0de8203">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-2.3.0_1e7fef5b92d6fb3de3648fb8e14b35410c4c2971.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.10.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5e88a2a26ac71cd7f8fd8bd9f9381fa06d1a47a3">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-0.10.0_050fdd23e74c876094f9a936a91286809f2d4b40.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/com.taobao.android/weex_inspector/0.10.0.5/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="575d72d4a489260763ca62b2b54450fdec3bebd1">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/com.taobao.android-weex_inspector-0.10.0.5_4997d2cab98493a0646798862c574e136b7a2e92.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="0e1f104cf60bfe34147ef670229f2635789c79a4">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/com.journeyapps-zxing-android-embedded-3.4.0_62cd906d3ab0c1fe97d26fabbec8df6ddfae1542.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.1.4/129874135e6081269ace2312092031558865de12/bolts-android-1.1.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="129874135e6081269ace2312092031558865de12">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4_4194b20679c5943fb4751053a6756ffcfc32cf54.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.10.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="65f0c887ee1f57cd0ea65b228e39b7f35372b798">
+        <dex dex="/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-0.10.0_82a1a0c4fb9a693d69f33e04dce109671e0f31e8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/walid/.gradle/caches/modules-2/files-2.1/com.alibaba/fastjson/1.1.46.android/108717c93f7aec31fb86db57cb4ad1e26034c638/fastjson-1.1.46.android.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="108717c93f7aec31fb86db57cb4ad1e26034c638">
+        <dex dex="/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/pre-dexed/debug/fastjson-1.1.46.android_3cb49d26285c8a8c10309e9d53d63f867cd221a3.jar" />
+    </item>
+
+</items>

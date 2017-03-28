@@ -1,0 +1,98 @@
+[
+    {
+        "outputFile": "/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 55,
+                    "endOffset": 106
+                },
+                "from": {
+                    "file": "/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-port/values-port.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 229,
+                        "endColumn": 55,
+                        "endOffset": 280
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/budao/weex-pack/generator/platforms/templates/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 55,
+                    "endOffset": 106
+                },
+                "from": {
+                    "file": "/Users/budao/weex-pack/generator/platforms/templates/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-port/values-port.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 229,
+                        "endColumn": 55,
+                        "endOffset": 280
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/budao/app-framework-android/bin/templates/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 55,
+                    "endOffset": 106
+                },
+                "from": {
+                    "file": "/Users/budao/app-framework-android/bin/templates/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-port/values-port.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 229,
+                        "endColumn": 55,
+                        "endOffset": 280
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 55,
+                    "endOffset": 106
+                },
+                "from": {
+                    "file": "/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-port/values-port.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 229,
+                        "endColumn": 55,
+                        "endOffset": 280
+                    }
+                }
+            }
+        ]
+    }
+]

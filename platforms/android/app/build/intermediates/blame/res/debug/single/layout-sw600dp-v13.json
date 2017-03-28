@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/budao/weex-pack/generator/platforms/templates/android/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/Users/budao/weex-pack/generator/platforms/templates/android/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout-sw600dp/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/budao/app-framework-android/bin/templates/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/Users/budao/app-framework-android/bin/templates/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout-sw600dp/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/Users/walid/Desktop/dev/weex/weex-frame/platforms/android/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout-sw600dp/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/Users/walid/Desktop/dev/weex/weexpack-sample/platforms/android/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout-sw600dp/design_layout_snackbar.xml"
+    }
+]

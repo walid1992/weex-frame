@@ -16,7 +16,7 @@ function getBaseUrl() {
   let isiOSAssets = bundleUrl.indexOf('file:///') >= 0 && bundleUrl.indexOf('WeexFrame.app') > 0
   let nativeBase = ''
   if (isAndroidAssets) {
-    nativeBase = 'file://assets/'
+    nativeBase = 'file://assets/dist/weex/'
   } else if (isiOSAssets) {
     nativeBase = bundleUrl.substring(0, bundleUrl.lastIndexOf('/') + 1)
   } else {
