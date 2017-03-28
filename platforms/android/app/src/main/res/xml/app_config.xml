@@ -5,7 +5,7 @@
     <name>Hello</name>
     <preference name="loglevel" value="DEBUG" />
     <preference name="launch_locally" value="true"/>
-    <preference name="launch_url" value="http://127.0.0.1:8080/dist/index.js"/>
+    <preference name="launch_url" value="http://172.31.241.187:12580/dist/weex/App.js"/>
     <preference name="local_url" value="file://assets/dist/weex/App.js"/>
 
 </widget>

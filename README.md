@@ -207,6 +207,14 @@ weex-frame
 2. cd weex-frame
 3. npm install
 4. 执行 ./start
+5. 设置调试环境
+
+```
+// 调试本地serve
+npm run init serve
+// 调试assets或者jsbundle文件
+npm run init local
+```
 
 ### android 启动
 

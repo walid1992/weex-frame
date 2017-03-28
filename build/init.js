@@ -14,34 +14,28 @@ const argv = yargs.argv
 console.log('argv._[0]', argv._[0])
 
 let ipIndexUrl = `http://${ip}:12580/dist/weex/App.js`
-let androidIndexUrl = argv._[0] === 'local' ? 'file://assets/App.js' : ipIndexUrl
+let androidIndexUrl = argv._[0] === 'local' ? 'weex/App.js' : ipIndexUrl
 
 // android 主机地址操作
-let androidConfigFile = path.join(__dirname, '../android/app/src/main/java/com/siyuan/weex/weex/constants/IpConfig.java')
+let androidConfigFile = path.join(__dirname, '../android.config.json')
 
-let androidIpConfig =
+let androidConfig =
   `
-package com.siyuan.weex.weex.constants;
-
-/**
- * @Author : walid
- * @Data : 2017-02-20  15:44
- * @Describe : IpConfig 地址配置
- */
-
-public class IpConfig {
-
-    public static final String INDEX_URL = "${androidIndexUrl}";
-
+{
+  "AppName": "WeexApp",
+  "AppId": "com.alibaba.weex",
+  "SplashText": "HelloWeex",
+  "WeexBundle": "${androidIndexUrl}"
 }
 
 `
-// fs.writeFile(androidConfigFile, androidIpConfig, function (err) {
-//   if (err) {
-//     throw err
-//   }
-//   console.log('android写入INDEX_URL成功')
-// })
+
+fs.writeFile(androidConfigFile, androidConfig, function (err) {
+  if (err) {
+    throw err
+  }
+  console.log('android写入INDEX_URL成功')
+})
 
 // iOS 主机地址操作
 let iOSConfigFile = path.join(__dirname, '../platforms/ios/WeexFrame/IpDefine.h')
