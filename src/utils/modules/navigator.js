@@ -31,7 +31,6 @@ function getBaseUrl() {
   // // in Browser or WebView
   let inBrowserOrWebView = typeof window === 'object'
   return inBrowserOrWebView ? h5Base : nativeBase
-  // return inBrowserOrWebView ? './web/index.html?page=./dist/web/' : `http://${ip}:8080/dist/weex/`
 }
 
 function pushWeb(url, params) {
