@@ -27,11 +27,11 @@ function getBaseUrl() {
     }
     nativeBase = `http://${host}/dist/weex/`
   }
-  let h5Base = './weex.html?page=./dist/web/'
+  let h5Base = './web/index.html?page=./dist/web/'
   // // in Browser or WebView
   let inBrowserOrWebView = typeof window === 'object'
   return inBrowserOrWebView ? h5Base : nativeBase
-  // return inBrowserOrWebView ? './weex.html?page=./dist/web/' : `http://${ip}:12580/dist/weex/`
+  // return inBrowserOrWebView ? './web/index.html?page=./dist/web/' : `http://${ip}:12580/dist/weex/`
 }
 
 function pushWeb(url, params) {

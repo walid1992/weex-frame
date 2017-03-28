@@ -247,7 +247,13 @@ weexpack run ios
 
 ### h5 启动方式
 
- 打开 [http://localhost:12580/weex.html](http://localhost:12580/weex.html)
+打开 [http://localhost:8080/web/index.html](http://localhost:8080/web/index.html)
+ 
+或者：
+
+```
+weexpack run web
+```
 
 ## 项目示例
 
