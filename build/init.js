@@ -15,7 +15,6 @@ console.log('argv._[0]', argv._[0])
 
 let ipIndexUrl = `http://${ip}:12580/dist/weex/App.js`
 let androidIndexUrl = argv._[0] === 'local' ? 'file://assets/App.js' : ipIndexUrl
-let iosIndexUrl = argv._[0] === 'local' ? 'file://assets/App.js' : ipIndexUrl
 
 // android 主机地址操作
 let androidConfigFile = path.join(__dirname, '../android/app/src/main/java/com/siyuan/weex/weex/constants/IpConfig.java')
@@ -37,15 +36,16 @@ public class IpConfig {
 }
 
 `
-fs.writeFile(androidConfigFile, androidIpConfig, function (err) {
-  if (err) {
-    throw err
-  }
-  console.log('android写入INDEX_URL成功')
-})
+// fs.writeFile(androidConfigFile, androidIpConfig, function (err) {
+//   if (err) {
+//     throw err
+//   }
+//   console.log('android写入INDEX_URL成功')
+// })
 
 // iOS 主机地址操作
-let iOSConfigFile = path.join(__dirname, '../ios/WeexFrame/IpDefine.h')
+let iOSConfigFile = path.join(__dirname, '../platforms/ios/WeexFrame/IpDefine.h')
+let iosIndexDefine = argv._[0] === 'local' ? '[NSString stringWithFormat:@"file://%@/bundlejs/weex/App.js",[NSBundle mainBundle].bundlePath]' : `[NSString stringWithFormat:@"${ipIndexUrl}"]`
 
 let iOSIpconfig =
   `
@@ -61,7 +61,7 @@ let iOSIpconfig =
 #ifndef IpDefine_h
 #define IpDefine_h
 
-#define INDEX_URL [NSString stringWithFormat:@"${iosIndexUrl}"]
+#define INDEX_URL ${iosIndexDefine}
 
 #endif /* IpDefine_h */
 `
