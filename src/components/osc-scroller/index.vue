@@ -52,7 +52,7 @@
 </style>
 
 <script>
-  import toast from 'utils/modules/toast'
+  import model from 'utils/modules/model'
   import instance from 'utils/weex/instance'
 
   export default {
@@ -78,14 +78,14 @@
     mounted () {
       this.$on('refreshDone', (e) => {
         this.refreshDisplay = 'hide'
-        toast.show({
+        model.toast({
           message: '刷新数据成功~'
         })
       })
 
       this.$on('loadingDone', (e) => {
         this.loadingDisplay = 'hide'
-        toast.show({
+        model.toast({
           message: '刷新数据成功~'
         })
       })
@@ -98,7 +98,7 @@
         }
         this.$emit('refresh', e)
         this.refreshPause = true
-        this.refreshDisplay === 'show'
+        this.refreshDisplay = 'show'
         // 三秒之内只允许一次加载
         setTimeout(() => {
           this.refreshPause = false
@@ -108,7 +108,7 @@
           if (this.refreshDisplay = 'show') {
             this.refreshDisplay = 'hide'
             this.refreshPause = true
-            toast.show({
+            model.toast({
               message: '网络请求超时~'
             })
           }
@@ -131,7 +131,7 @@
           if (this.loadingDisplay === 'show') {
             this.loadingPause = true
             this.loadingDisplay = 'hide'
-            toast.show({
+            model.toast({
               message: '网络请求超时~'
             })
           }
