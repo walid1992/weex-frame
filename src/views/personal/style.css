@@ -1,0 +1,56 @@
+.div-scroller {
+    width: 750px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+}
+
+.div-scroll-inner {
+    background-color: #eff3f2;
+    bottom: 0;
+}
+
+.mine-personal-div {
+    position: relative;
+    height: 110px;
+    padding-top: 30px;
+    background-color: #ffffff;
+}
+
+.mine-personal-img {
+    position: absolute;
+    left: 35px;
+    width: 52px;
+    height: 52px;
+}
+
+.mine-personal-text {
+    position: absolute;
+    left: 115px;
+    margin-top: 4px;
+    font-size: 30px;
+}
+
+.mine-personal-go {
+    position: absolute;
+    right: 25px;
+    top: 35px;
+    width: 15px;
+    height: 24px;
+}
+
+.personal-logOut-wrap {
+    height: 100px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    line-height: 80px;
+    background-color: #ffffff;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.personal-logOut-text {
+    color: red;
+    font-size: 32px;
+}

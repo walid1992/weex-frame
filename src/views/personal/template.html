@@ -1,0 +1,23 @@
+<osc-navpage
+    class="personal-root"
+    title="个人中心"
+    height="100"
+    titleColor="#000"
+    backgroundColor="#eff3f2"
+    leftItemSrc="https://gitlab.com/toonteam/weex/raw/dev/src/views/personal/imgs/common_goback.png"
+    @naviBarLeftItemClick="naviBarLeftItemClick">
+  <scroller class="div-scroller">
+    <div class="div-scroll-inner">
+      <div class="cell" v-for="(item, index) in funcList">
+        <div class="mine-personal-div" :style="item.attr">
+          <image :src="item.iconUrl" class="mine-personal-img"></image>
+          <text class="mine-personal-text">{{ item.name }}</text>
+          <image :src="goIconUrl" class="mine-personal-go"></image>
+        </div>
+      </div>
+      <div class="personal-logOut-wrap">
+        <text class="personal-logOut-text">退出登录</text>
+      </div>
+    </div>
+  </scroller>
+</osc-navpage>

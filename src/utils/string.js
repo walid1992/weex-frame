@@ -5,7 +5,7 @@
  */
 
 /* eslint linebreak-style: [0] */
-export function trim (str, isGlobal) {
+export function trim(str, isGlobal) {
   let result = str.replace(/(^\s+)|(\s+$)/g, '')
   if (isGlobal) {
     result = result.replace(/\s/g, '')
@@ -20,7 +20,7 @@ export function trim (str, isGlobal) {
  *
  * return URL参数字符串
  */
-export function urlEncode (param, key, encode) {
+export function urlEncode(param, key, encode) {
   if (param == null) {
     return ''
   }
@@ -41,7 +41,7 @@ export function urlEncode (param, key, encode) {
  * 获取QueryString的数组
  * @returns {Array|{index: number, input: string}}
  */
-export function getQueryString () {
+export function getQueryString() {
   let result = weex.config.bundleUrl.match(new RegExp('[\?\&][^\?\&]+=[^\?\&]+', 'g'))
   for (let i = 0; i < result.length; i++) {
     result[i] = result[i].substring(1)
@@ -54,13 +54,15 @@ export function getQueryString () {
  * @param name
  * @returns {string}
  */
-export function getQueryStringByName (name) {
+export function getQueryStringByName(name) {
   name = name.replace(/[\[\]]/g, '\\$&')
   let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)')
   let results = regex.exec(weex.config.bundleUrl)
   if (!results || !results[2]) {
+    console.log('empty')
     return ''
   }
+  console.log(name, decodeURIComponent(results[2].replace(/\+/g, ' ')))
   return decodeURIComponent(results[2].replace(/\+/g, ' '))
 }
 
@@ -69,8 +71,8 @@ export function getQueryStringByName (name) {
  * @param index
  * @returns {*}
  */
-export function getQueryStringByIndex (index) {
-  if (index == null) {
+export function getQueryStringByIndex(index) {
+  if (!index) {
     return ''
   }
   let queryStringList = getQueryString()

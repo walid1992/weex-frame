@@ -1,8 +1,8 @@
 
 {
   "AppName": "WeexApp",
-  "AppId": "com.alibaba.weex",
+  "AppId": "com.syswin.weex",
   "SplashText": "HelloWeex",
-  "WeexBundle": "http://172.31.241.187:12580/dist/weex/App.js"
+  "WeexBundle": "http://192.168.10.122:8080/dist/weex/App.js"
 }
 

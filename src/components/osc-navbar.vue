@@ -1,7 +1,9 @@
 <template>
-  <div :dataRole="dataRole" class="root" :style="{ height: height, backgroundColor: backgroundColor}">
+  <div :dataRole="dataRole" class="root" :style="{ height: height + 'px', backgroundColor: backgroundColor}">
     <div class="div-wrap">
-      <text v-if="!leftItemSrc" class="text" naviItemPosition="left" :style="{ color: leftItemColor}" @click="onClickLeft">{{leftItemTitle}}
+      <text v-if="!leftItemSrc" class="text" naviItemPosition="left" :style="{ color: leftItemColor}"
+            @click="onClickLeft">{{leftItemTitle}}
+
       </text>
       <image v-if="leftItemSrc" class="img" naviItemPosition="left" :src="leftItemSrc" @click="onClickLeft"></image>
     </div>
@@ -9,7 +11,8 @@
       <text naviItemPosition="center" class="title" :style="{ color: titleColor}">{{title}}</text>
     </div>
     <div class="div-wrap">
-      <text v-if="!rightItemSrc" class="text" naviItemPosition="right" :style="{ color: rightItemColor }" @click="onClickRight">{{rightItemTitle}}
+      <text v-if="!rightItemSrc" class="text" naviItemPosition="right" :style="{ color: rightItemColor }"
+            @click="onClickRight">{{rightItemTitle}}
       </text>
       <image v-if="rightItemSrc" class="img" naviItemPosition="right" :src="rightItemSrc" @click="onClickRight"></image>
     </div>
@@ -79,6 +82,7 @@
         this.$emit('naviBarRightItemClick')
       },
       onClickLeft (e) {
+        console.log('height', this.height)
         this.$emit('naviBarLeftItemClick')
       }
     }

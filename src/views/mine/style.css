@@ -1,6 +1,10 @@
+.mine-root{
+  width: 750px;
+  height: 1334px;
+}
 .img-bg-mine {
   width: 750px;
-  height: 750px;
+  height: 1334px;
 }
 
 .div-content {
@@ -9,6 +13,7 @@
   left: 0;
   width: 750px;
   height: 1334px;
+  flex-direction: column;
 }
 
 .div-top-link {
@@ -45,7 +50,6 @@
 }
 
 .div-work-content {
-  position: relative;
   flex: 1;
   background-color: #eee;
 }
@@ -95,6 +99,7 @@
   flex-direction: row;
   border-bottom-width: 1px;
   border-bottom-color: #ddd;
+  border-bottom-style: solid;
   padding-top: 20px;
   padding-right: 50px;
   padding-left: 50px;

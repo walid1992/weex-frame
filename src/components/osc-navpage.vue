@@ -1,6 +1,6 @@
 <template>
   <div class="root">
-    <div v-if="isIOS" :style="{width: '750px', height: '40px', backgroundColor: backgroundColor}"></div>
+    <div v-if="ios" :style="{width: '750px', height: '40px', backgroundColor: backgroundColor}"></div>
     <osc-navbar
         :dataRole="dataRole"
         :height="height"
@@ -15,7 +15,7 @@
         :rightItemColor="rightItemColor"
         @naviBarRightItemClick="naviBarRightItemClick"
         @naviBarLeftItemClick="naviBarLeftItemClick"></osc-navbar>
-    <div class="wrapper">
+    <div class="wrapper" :style="{top: ios ? (40 + height) : height}">
       <slot></slot>
     </div>
   </div>
@@ -31,18 +31,17 @@
 
   .wrapper {
     width: 750px;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
   }
 </style>
 
 <script>
-  import instance from 'utils/weex/instance'
+  import mixins from 'mixins'
 
   export default {
-    data () {
-      return {
-        isIOS: instance.isIOS()
-      }
-    },
+    mixins: [mixins],
 
     props: {
       dataRole: {default: 'none'},

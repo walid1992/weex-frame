@@ -3,14 +3,18 @@
 <template src="./template.html"></template>
 
 <script>
-  import navigator from 'utils/modules/navigator'
-  import route from 'constants/route'
+  import mixins from 'mixins'
 
   export default {
+    mixins: [mixins],
+
     methods: {
       toLaunch (event) {
-        navigator.push(route.web, {
-          url: 'http://www.shuidichou.com/cf/dream/edit-basic-info'
+        this.push({
+          route: this.route.web,
+          query: {
+            url: 'http://www.jianshu.com/u/a279a2f8ed63'
+          }
         })
       }
     }

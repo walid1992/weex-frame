@@ -23,13 +23,12 @@ let androidConfig =
   `
 {
   "AppName": "WeexApp",
-  "AppId": "com.alibaba.weex",
+  "AppId": "com.syswin.weex",
   "SplashText": "HelloWeex",
   "WeexBundle": "${androidIndexUrl}"
 }
 
 `
-
 fs.writeFile(androidConfigFile, androidConfig, function (err) {
   if (err) {
     throw err

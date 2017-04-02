@@ -8,6 +8,10 @@ function isIOS() {
   return weex.config.env ? weex.config.env.platform === 'iOS' : false
 }
 
+function isWeb() {
+  return weex.config.platform === 'Web'
+}
+
 function getDeviceInfo() {
   let env = weex.config.env
   let deviceWidth = env.deviceWidth
@@ -19,5 +23,5 @@ function getDeviceInfo() {
 }
 
 export default {
-  isIOS, getDeviceInfo
+  isIOS, isWeb, getDeviceInfo
 }

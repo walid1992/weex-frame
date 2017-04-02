@@ -7,7 +7,7 @@
 import qs from 'qs'
 import ip from 'config'
 import instance from 'utils/weex/instance'
-import route from 'constants/route'
+import route from 'router/route'
 let navigator = weex.requireModule('navigator')
 
 function getBaseUrl() {
@@ -27,33 +27,34 @@ function getBaseUrl() {
     }
     nativeBase = `http://${host}/dist/weex/`
   }
-  let h5Base = '?page=./dist/web/'
+  let h5Base = '?page=../dist/web/'
   // // in Browser or WebView
   let inBrowserOrWebView = typeof window === 'object'
   return inBrowserOrWebView ? h5Base : nativeBase
 }
 
-function pushWeb(url, params) {
+function pushWeb(url, query) {
   if (instance.isWeb()) {
-    pushByUrl(url, params)
+    pushByUrl(url, query)
     return
   }
-  params = params ? params : {}
-  params.url = url
-  push(route.web, params)
+  query = query ? query : {}
+  query.url = url
+  push(route.web, query)
 }
 
-function pushByUrl(url, params) {
+function pushByUrl(url, query) {
   navigator.push({
-    url: params ? `url?${qs.stringify(params)}` : url,
+    url: query ? `url?${qs.stringify(query)}` : url,
     animated: 'true'
   }, event => {
     console.log('callback: ', event)
   })
 }
 
-function push(route, params) {
-  let url = params ? `${getBaseUrl()}${route}.js?${qs.stringify(params)}` : `${getBaseUrl()}${route}.js`
+function push(route, query = {}) {
+  query.title = route.title
+  let url = query ? `${getBaseUrl()}${route.jsPath}.js?${qs.stringify(query)}` : `${getBaseUrl()}${route}.js`
   navigator.push({
     url,
     animated: 'true'

@@ -1,4 +1,4 @@
-<osc-root>
+<osc-root class="mine-root">
   <image class="img-bg-mine" resize="cover"
          src="https://gitlab.com/toonteam/weex/raw/ce0c5f60531f1a0d676dedfa1f81c7e67e3151ed/src/views/mine/imgs/bg_basic_info_default.png"></image>
   <div class="div-content">
@@ -8,7 +8,7 @@
         <image class="img-triangle"
                src="https://gitlab.com/toonteam/weex/raw/f9492284d15c3d9ec79b72608768d20cf450cae9/src/views/mine/imgs/triangle.png"></image>
       </div>
-      <text class="p-person-center">个人中心</text>
+      <text class="p-person-center" @click="toPersonal">个人中心</text>
     </div>
     <div class="div-work-content">
       <div class="div-person-info">
@@ -19,7 +19,7 @@
         <text class="p-work-department">{{workDepartment}}</text>
       </div>
       <div class="div-person-list">
-        <div v-for="item in personInfoList" class="div-list-item" @click="toBlog">
+        <div v-for="(item, index) in personInfoList" class="div-list-item" @click="onPersonList(index)">
           <image :src="item.iconUrl" class="img-item"></image>
           <text class="p-item">{{item.name}}</text>
         </div>

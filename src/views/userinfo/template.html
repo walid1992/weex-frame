@@ -1,0 +1,35 @@
+<osc-navpage
+    class="root"
+    :title="title"
+    titleColor="white"
+    leftItemSrc="https://gitlab.com/toonteam/weex/raw/ce656f79084ed9db357f8abd76c6e6c82dc5a28d/src/views/person-info/imgs/back.png"
+    @naviBarLeftItemClick="naviBarLeftItemClick">
+    <div class="div-main-info">
+      <div class="div-main-info-content">
+        <image class="img-person"
+               src="https://gitlab.com/toonteam/weex/raw/44cab38bc97860112d963001ba9c9179c0365ee5/src/views/mine/imgs/person-img.jpg"></image>
+        <div class="div-main-word">
+          <div class="div-person-job">
+            <text class="p-person-name">{{personName}}</text>
+            <text class="p-work-position">{{workPosition}}</text>
+          </div>
+          <text class="p-work-department">{{workDepartment}}</text>
+        </div>
+      </div>
+    </div>
+    <div class="div-qr-code">
+      <text class="div-qr-code-name">二维码</text>
+      <image class="img-qr-code-icon"
+             src="https://gitlab.com/toonteam/weex/raw/c165921d7852798ac887d7d9a37d60daacef0f06/src/views/person-info/imgs/move_btn.png"></image>
+    </div>
+    <div class="div-social-info">
+      <text class="p-social-word">社交信息</text>
+      <div class="list">
+        <div v-for="item in socialInfo" :key="item.name" class="cell-list-item">
+          <text class="p-list-name">{{item.tag}}</text>
+          <text class="p-list-content">{{item.data}}</text>
+        </div>
+      </div>
+    </div>
+    <text v-for="item in scrollList" class="scroller-item">scroller{{item}}</text>
+</osc-navpage>

@@ -91,13 +91,23 @@
     },
 
     methods: {
+      onReset() {
+        setTimeout(() => {
+          this.refreshPause = false
+          this.refreshDisplay = 'hide'
+          this.loadingPause = false
+          this.loadingDisplay = 'hide'
+        }, 1000)
+      },
+
       onRefresh (e) {
+        this.refreshDisplay = 'show'
         if (this.refreshPause) {
+          this.onReset()
           return
         }
-        this.$emit('refresh', e)
         this.refreshPause = true
-        this.refreshDisplay = 'show'
+        this.$emit('refresh', e)
         // 三秒之内只允许一次加载
         setTimeout(() => {
           this.refreshPause = false
@@ -105,8 +115,7 @@
         // 十秒超时
         setTimeout(() => {
           if (this.refreshDisplay === 'show') {
-            this.refreshDisplay = 'hide'
-            this.refreshPause = true
+            this.onReset()
             model.toast({
               message: '网络请求超时~'
             })
@@ -115,12 +124,13 @@
       },
 
       onLoading (e) {
+        this.loadingDisplay = 'show'
         if (this.loadingPause) {
+          this.onReset()
           return
         }
-        this.$emit('loading', e)
         this.loadingPause = true
-        this.loadingDisplay = 'show'
+        this.$emit('loading', e)
         // 三秒之内只允许一次加载
         setTimeout(() => {
           this.loadingPause = false
@@ -128,8 +138,7 @@
         // 十秒超时
         setTimeout(() => {
           if (this.loadingDisplay === 'show') {
-            this.loadingPause = true
-            this.loadingDisplay = 'hide'
+            this.onReset()
             model.toast({
               message: '网络请求超时~'
             })

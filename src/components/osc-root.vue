@@ -1,7 +1,7 @@
 <template>
   <div class="root">
     <div v-if="isIOS" :style="{width: '750px', height: '40px', backgroundColor: backgroundColor}"></div>
-    <div class="wrapper">
+    <div class="wrapper" :style="{width: '750px', height: isIOS ? '1294px' : '1334px', backgroundColor: backgroundColor}">
       <slot></slot>
     </div>
   </div>

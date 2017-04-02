@@ -5,32 +5,41 @@
  */
 
 import navigator from 'utils/modules/navigator'
-import routeName from 'constants/route'
+import model from 'utils/modules/model'
+import route from 'router/route'
+import imgUrl from 'constants/imgurl'
 
 export default {
   data() {
     return {
-      $navigator: navigator,
-      routeName,
-      rpx: 1,
+      model,
+      route,
+      imgUrl,
       android: weex.config.env && weex.config.env.platform.toLowerCase() === 'android',
       ios: weex.config.env && weex.config.env.platform.toLowerCase() === 'ios',
-      web: weex.config.platform.toLowerCase() === 'web'
+      web: weex.config.platform && weex.config.platform.toLowerCase() === 'web'
     }
   },
 
   created() {
-    let env = weex.config.env
-    if (env) {
-      let rWidth = env.deviceWidth
-      env.deviceWidth > 828 && (rWidth = env.deviceWidth / 3 * 2)
-      this.rpx = 750 / rWidth
-    }
+
   },
 
   methods: {
-    test() {
-      console.log('test')
+    push({route, params, query}) {
+      if (route === this.route.web) {
+        navigator.pushWeb(query.url)
+        return
+      }
+      if (this.web) {
+        this.$router.push({
+          path: route.path,
+          params: params,
+          query: query
+        })
+        return
+      }
+      navigator.push(route, query)
     }
   }
 }

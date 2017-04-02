@@ -4,8 +4,6 @@
 
 <script>
   import dreamApi from 'api/dream'
-  import navigator from 'utils/modules/navigator'
-  import route from 'constants/route'
 
   export default {
     data () {
@@ -28,8 +26,11 @@
 
     methods: {
       toDetail(infoUuid) {
-        navigator.push(route.web, {
-          url: `http://www.shuidichou.com/cf/dream/contribute/${infoUuid}`
+        this.push({
+          route: this.route.web,
+          query: {
+            url: `http://www.shuidichou.com/cf/dream/contribute/${infoUuid}`
+          }
         })
       }
     }

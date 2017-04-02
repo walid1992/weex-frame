@@ -8,4 +8,5 @@ const fs = require('fs')
 const path = require('path')
 const ip = require('ip').address()
 
+fs.writeFileSync(path.resolve('assets/config.js'), `const CURRENT_IP = \'${ip}\'`)
 fs.writeFileSync(path.resolve('config.js'), `export default \'${ip}\'`)
