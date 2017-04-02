@@ -28,9 +28,10 @@
 
 像前面说的那样weex和vue一直在努力的进行生态互通，而且weex实现web标准化是早晚的问题，所以也建议开发者不要在用.we做后缀来开发了
 
-## 多页模式（抛弃vue-router）
+## native端多页模式、web端采用单页模式
 
-单页形态对于原生可能体验不够好，目前在 native App 里单页模式不太合适
+* 单页形态对于原生可能体验不够好，所以android与ios端采用多页模式
+* web端沿用spa模式标准
 
 ## 集成三端（android、ios、h5平台）
 
@@ -114,7 +115,13 @@ function getEntryFileContent (entryPath, vueFilePath) {
 ...
 
 const webConfig = getBaseConfig()
-webConfig.output.filename = 'web/[name].js'
+webConfig.entry = {
+  entry: path.resolve('./src/entry.js')
+}
+webConfig.output = {
+  path: 'dist/web',
+  filename: '[name].js'
+}
 webConfig.module.loaders[1].loaders.push('vue')
 
 const weexConfig = getBaseConfig()
