@@ -1,10 +1,16 @@
 [![GitHub release](https://img.shields.io/github/release/osmartian/weex-frame.svg)](https://github.com/osmartian/weex-frame/releases)  [![GitHub issues](https://img.shields.io/github/issues/osmartian/weex-frame.svg)](https://github.com/osmartian/weex-frame/issues)
 ![Node Version](https://img.shields.io/node/v/martian-cli.svg "Node Version")
 
-
 # weex-frame
 
 > weex 基于vue2.0开发框架，包括三端集成、组件库提供、weex api封装~
+
+目前 Weex 官网域名统计如下：
+
+    https://weex.apache.org : Apache 官网地址，部署于 apache 仓库，国内访问速度较慢。
+    https://weex-project.io : Weex 官网中国镜像，部署于阿里云，国内访问速度较快。
+
+大家可根据实际需求选择访问。
 
 # 工作原理
 
