@@ -15,7 +15,8 @@ const bannerPlugin = new webpack.BannerPlugin(
 )
 
 function getEntryFileContent(entryPath, vueFilePath) {
-  const relativePath = path.relative(path.join(entryPath, '../'), vueFilePath);
+  let relativePath = path.relative(path.join(entryPath, '../'), vueFilePath);
+  // relativePath = relativePath.replace(/\/ig/, '/')
   return `
 /**
  * @author walid
