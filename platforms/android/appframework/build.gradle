@@ -4,7 +4,7 @@ buildscript {
     jcenter()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:2.2.2'
+    classpath 'com.android.tools.build:gradle:2.3.1'
   }
 }
 apply plugin: 'com.android.library'
@@ -15,7 +15,7 @@ repositories {
 
 android {
   compileSdkVersion 23
-  buildToolsVersion "23.0.2"
+  buildToolsVersion '25.0.0'
   resourcePrefix "appframework"
 
   defaultConfig {
@@ -41,7 +41,7 @@ dependencies {
   compile fileTree(include: ['*.jar'], dir: 'libs')
   provided 'com.android.support:support-v4:23.1.1'
   provided 'com.android.support:appcompat-v7:23.1.1'
-  provided 'com.taobao.android:weex_sdk:0.10.0'
+  provided 'com.taobao.android:weex_sdk:0.11.0'
   provided 'com.google.code.findbugs:jsr305:2.0.1'
   compile 'com.squareup.picasso:picasso:2.5.2'
   compile 'com.facebook.fresco:fresco:0.10.0'

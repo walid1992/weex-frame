@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "com.alibaba.weex"
@@ -82,7 +82,7 @@ dependencies {
     androidTestCompile 'com.android.support.test:runner:0.5'
     /*source dependency*/
     // compile project(':weex_sdk')
-    compile 'com.taobao.android:weex_sdk:0.10.0'
+    compile 'com.taobao.android:weex_sdk:0.11.0'
     compile project(':appframework')
     compile project(':weexplugin')
     compile 'com.google.code.findbugs:jsr305:2.0.1'
