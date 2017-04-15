@@ -14,7 +14,7 @@
 
 # 工作原理
 
-先简单熟悉一下weex的工作原理，这里引用一下weex官网上的一直图片，[详细信息见官网](https://weex.apache.org/cn/guide/intro/how-it-works.html)
+先简单熟悉一下weex的工作原理，这里引用一下weex官网上的一张图片，[详细信息见官网](https://weex.apache.org/cn/guide/intro/how-it-works.html)
 
 ![Weex工作原理](http://upload-images.jianshu.io/upload_images/2843033-a11114f55ceb7478.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/640)
 
