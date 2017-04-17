@@ -42,5 +42,3 @@ new Vue({
     App
   }
 })
-
-router.push('/')
