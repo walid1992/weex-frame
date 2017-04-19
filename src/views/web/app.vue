@@ -3,17 +3,22 @@
 <template src="./template.html"></template>
 
 <script>
-  import {getQueryStringByName} from 'utils/string'
-  import navigator from 'utils/modules/navigator'
+  import mixins from 'mixins'
   let webview = weex.requireModule('webview')
 
   export default {
+    mixins: [mixins],
+
     data() {
       return {
         title: 'OsMartian - WebView',
         canGoBack: false,
-        url: getQueryStringByName('url') || 'https://weex-project.io/cn/'
+        url: 'https://weex-project.io/cn/'
       }
+    },
+
+    mounted() {
+      this.url = this.getQuery('url') || 'https://weex-project.io/cn/'
     },
 
     methods: {
@@ -22,7 +27,7 @@
       },
 
       onBack(){
-        this.canGoBack ? webview.goBack(this.$refs.webview) : navigator.pop()
+        this.canGoBack ? webview.goBack(this.$refs.webview) : this.router.pop()
       },
 
       start (event) {

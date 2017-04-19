@@ -52,7 +52,6 @@
 
 <script>
   import model from 'utils/modules/model'
-  import instance from 'utils/weex/instance'
 
   export default {
     data() {

@@ -3,8 +3,11 @@
 <template src="./template.html"></template>
 
 <script>
-  import navigator from 'utils/modules/navigator'
+  import mixins from 'mixins'
+
   export default {
+    mixins: [mixins],
+
     data (){
       return {
         title: '个人资料',
@@ -22,7 +25,7 @@
     },
     methods: {
       naviBarLeftItemClick(){
-        navigator.pop()
+        this.router.pop()
       }
     }
   }

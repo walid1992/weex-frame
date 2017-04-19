@@ -4,8 +4,11 @@
 
 <script>
   import dreamApi from 'api/dream'
+  import mixins from 'mixins'
 
   export default {
+    mixins: [mixins],
+
     data () {
       return {
         feeds: []
@@ -26,8 +29,8 @@
 
     methods: {
       toDetail(infoUuid) {
-        this.push({
-          route: this.route.web,
+        this.router.push({
+          page: this.routerPage.web,
           query: {
             url: `http://www.shuidichou.com/cf/dream/contribute/${infoUuid}`
           }

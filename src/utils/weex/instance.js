@@ -9,7 +9,7 @@ function isIOS() {
 }
 
 function isWeb() {
-  return weex.config.platform === 'Web'
+  return weex.config.env.platform === 'Web'
 }
 
 function getDeviceInfo() {

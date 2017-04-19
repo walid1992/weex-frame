@@ -6,40 +6,64 @@
 
 import navigator from 'utils/modules/navigator'
 import model from 'utils/modules/model'
-import route from 'router/route'
+import routerPage from 'router/page'
 import imgUrl from 'constants/imgurl'
+import {getQueryStringByName} from 'utils/string'
 
 export default {
   data() {
     return {
       model,
-      route,
+      routerPage,
+      router: {},
       imgUrl,
-      android: weex.config.env && weex.config.env.platform.toLowerCase() === 'android',
-      ios: weex.config.env && weex.config.env.platform.toLowerCase() === 'ios',
-      web: weex.config.platform && weex.config.platform.toLowerCase() === 'web'
+      platform: weex.config.env.platform.toLowerCase()
     }
   },
 
   created() {
-
-  },
-
-  methods: {
-    push({route, params, query}) {
-      if (route === this.route.web) {
-        navigator.pushWeb(query.url)
-        return
-      }
-      if (this.web) {
-        this.$router.push({
-          path: route.path,
+    let self = this
+    this.router.push = function ({page, params, query}) {
+      if (self.platform === 'web') {
+        if (page === self.routerPage.web) {
+          navigator.pushByUrl(query.url)
+          return
+        }
+        self.$router.push({
+          path: page.path,
           params: params,
           query: query
         })
         return
       }
-      navigator.push(route, query)
+      navigator.push(page, query)
+    }
+
+    this.router.replace = function ({page, params, query}) {
+      if (self.platform === 'web') {
+        self.$router.replace({
+          path: page.path,
+          params: params,
+          query: query
+        })
+        return
+      }
+      navigator.push(page, query)
+      navigator.pop()
+    }
+
+    this.router.pop = function () {
+      if (self.platform === 'web') {
+        self.$router.back()
+        return
+      }
+      navigator.pop()
+    }
+  },
+
+  methods: {
+    getQuery(key) {
+      return this.platform === 'web' ? this.$route.query[key] : getQueryStringByName(key)
     }
   }
 }

@@ -7,7 +7,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import map from './map'
-import route from './route'
+import route from './page'
 
 // Object.values(route)
 Vue.use(VueRouter)

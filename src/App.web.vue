@@ -16,9 +16,6 @@
 
 <script>
   export default {
-    data() {
-      return {}
-    },
     created () {
       // 当App.vue首次加载进度条开始
       this.$Progress.start()

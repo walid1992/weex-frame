@@ -10,8 +10,8 @@
 
     methods: {
       toLaunch (event) {
-        this.push({
-          route: this.route.web,
+        this.router.push({
+          page: this.routerPage.web,
           query: {
             url: 'http://www.jianshu.com/u/a279a2f8ed63'
           }

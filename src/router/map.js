@@ -4,7 +4,7 @@
  * @description 路由配置页
  */
 
-import route from './route'
+import route from './page'
 
 export default [
   {

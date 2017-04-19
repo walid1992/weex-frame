@@ -7,7 +7,7 @@
 import qs from 'qs'
 import ip from 'config'
 import instance from 'utils/weex/instance'
-import route from 'router/route'
+import routePage from 'router/page'
 let navigator = weex.requireModule('navigator')
 
 function getBaseUrl() {
@@ -35,26 +35,26 @@ function getBaseUrl() {
 
 function pushWeb(url, query) {
   if (instance.isWeb()) {
-    pushByUrl(url, query)
+    window.location.href = url
     return
   }
   query = query ? query : {}
   query.url = url
-  push(route.web, query)
+  push(routePage.web, query)
 }
 
 function pushByUrl(url, query) {
   navigator.push({
-    url: query ? `url?${qs.stringify(query)}` : url,
+    url: query ? `${url}?${qs.stringify(query)}` : url,
     animated: 'true'
   }, event => {
     console.log('callback: ', event)
   })
 }
 
-function push(route, query = {}) {
-  query.title = route.title
-  let url = query ? `${getBaseUrl()}${route.jsPath}.js?${qs.stringify(query)}` : `${getBaseUrl()}${route}.js`
+function push(routePage, query = {}) {
+  query.title = routePage.title
+  let url = query ? `${getBaseUrl()}${routePage.jsPath}.js?${qs.stringify(query)}` : `${getBaseUrl()}${routePage}.js`
   navigator.push({
     url,
     animated: 'true'

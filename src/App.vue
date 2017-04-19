@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import route from 'router/route'
+  import route from 'router/page'
   import navigator from 'utils/modules/navigator'
 
   export default {

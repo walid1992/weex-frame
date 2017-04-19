@@ -3,14 +3,15 @@
 <template src="./template.html"></template>
 
 <script>
-  import navigator from 'utils/modules/navigator'
-  import route from 'router/route'
+  import mixins from 'mixins'
 
   export default {
+    mixins: [mixins],
+
     data() {
       return {
         funcList: [{
-          iconUrl: 'https://gitlab.com/toonteam/weex/raw/dev/src/views/personal/imgs/icon_my_company.png',
+          iconUrl: 'https://github.com/osmartian/weex-frame/blob/master/src/views/personal/imgs/icon_my_company.png?raw=true',
           name: '公司管理',
           attr: {
             marginTop: '17px',
@@ -23,7 +24,7 @@
             borderStyle: 'solid'
           }
         }, {
-          iconUrl: 'https://gitlab.com/toonteam/weex/raw/dev/src/views/personal/imgs/icon_my_wallet.png',
+          iconUrl: 'https://github.com/osmartian/weex-frame/blob/master/src/views/personal/imgs/icon_my_wallet.png?raw=true',
           name: '钱包',
           attr: {
             marginTop: '17px',
@@ -36,7 +37,7 @@
             borderStyle: 'solid'
           }
         }, {
-          iconUrl: 'https://gitlab.com/toonteam/weex/raw/dev/src/views/personal/imgs/icon_my_collection.png',
+          iconUrl: 'https://github.com/osmartian/weex-frame/blob/master/src/views/personal/imgs/icon_my_collection.png?raw=true',
           name: '收藏',
           attr: {
             marginTop: '',
@@ -49,7 +50,7 @@
             borderStyle: 'solid'
           }
         }, {
-          iconUrl: 'https://gitlab.com/toonteam/weex/raw/dev/src/views/personal/imgs/icon_my_door_guard.png',
+          iconUrl: 'https://github.com/osmartian/weex-frame/blob/master/src/views/personal/imgs/icon_my_door_guard.png?raw=true',
           name: '门禁',
           attr: {
             marginTop: '',
@@ -62,7 +63,7 @@
             borderStyle: 'solid'
           }
         }, {
-          iconUrl: 'https://gitlab.com/toonteam/weex/raw/dev/src/views/personal/imgs/icon_my_beacon.png',
+          iconUrl: 'https://github.com/osmartian/weex-frame/blob/master/src/views/personal/imgs/icon_my_beacon.png?raw=true',
           name: '闪通',
           attr: {
             marginTop: '',
@@ -75,7 +76,7 @@
             borderStyle: 'solid'
           }
         }, {
-          iconUrl: 'https://gitlab.com/toonteam/weex/raw/dev/src/views/personal/imgs/icon_my_skin.png',
+          iconUrl: 'https://github.com/osmartian/weex-frame/blob/master/src/views/personal/imgs/icon_my_skin.png?raw=true',
           name: '更换皮肤',
           attr: {
             marginTop: '',
@@ -88,7 +89,7 @@
             borderStyle: 'solid'
           }
         }, {
-          iconUrl: 'https://gitlab.com/toonteam/weex/raw/dev/src/views/personal/imgs/icon_my_consult.png',
+          iconUrl: 'https://github.com/osmartian/weex-frame/blob/master/src/views/personal/imgs/icon_my_consult.png?raw=true',
           name: '常用信息管理',
           attr: {
             marginTop: '',
@@ -101,7 +102,7 @@
             borderStyle: 'solid'
           }
         }, {
-          iconUrl: 'https://gitlab.com/toonteam/weex/raw/dev/src/views/personal/imgs/icon_my_address.png',
+          iconUrl: 'https://github.com/osmartian/weex-frame/blob/master/src/views/personal/imgs/icon_my_address.png?raw=true',
           name: '常用地址管理',
           attr: {
             marginTop: '',
@@ -114,7 +115,7 @@
             borderStyle: 'solid'
           }
         }, {
-          iconUrl: 'https://gitlab.com/toonteam/weex/raw/dev/src/views/personal/imgs/icon_my_feedback.png',
+          iconUrl: 'https://github.com/osmartian/weex-frame/blob/master/src/views/personal/imgs/icon_my_feedback.png?raw=true',
           name: '帮助与反馈',
           attr: {
             marginTop: '',
@@ -127,7 +128,7 @@
             borderStyle: 'solid'
           }
         }, {
-          iconUrl: 'https://gitlab.com/toonteam/weex/raw/dev/src/views/personal/imgs/icon_my_account.png',
+          iconUrl: 'https://github.com/osmartian/weex-frame/blob/master/src/views/personal/imgs/icon_my_account.png?raw=true',
           name: '账户设置',
           attr: {
             marginTop: '17px',
@@ -140,7 +141,7 @@
             borderStyle: 'solid'
           }
         }, {
-          iconUrl: 'https://gitlab.com/toonteam/weex/raw/dev/src/views/personal/imgs/icon_my_common.png',
+          iconUrl: 'https://github.com/osmartian/weex-frame/blob/master/src/views/personal/imgs/icon_my_common.png?raw=true',
           name: '通用设置',
           attr: {
             marginTop: '',
@@ -153,15 +154,17 @@
             borderStyle: 'solid'
           }
         }],
-        goIconUrl: 'https://gitlab.com/toonteam/weex/raw/dev/src/views/personal/imgs/jump_arrow_next.png'
+        goIconUrl: 'https://github.com/osmartian/weex-frame/blob/master/src/views/personal/imgs/jump_arrow_next.png?raw=true'
       }
     },
     methods: {
       toMine (event) {
-        navigator.push(route.mine)
+        this.router.push({
+          page: this.routerPage.mine
+        })
       },
       naviBarLeftItemClick(){
-        navigator.pop()
+        this.router.pop()
       }
     }
   }

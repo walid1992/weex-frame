@@ -1,7 +1,7 @@
 <template>
   <div class="root">
-    <div v-if="isIOS" :style="{width: '750px', height: '40px', backgroundColor: backgroundColor}"></div>
-    <div class="wrapper" :style="{width: '750px', height: isIOS ? '1294px' : '1334px', backgroundColor: backgroundColor}">
+    <div v-if="ios" :style="{width: '750px', height: '40px', backgroundColor: backgroundColor}"></div>
+    <div class="wrapper" :style="{width: '750px', height: ios ? '1294px' : '1334px', backgroundColor: backgroundColor}">
       <slot></slot>
     </div>
   </div>
@@ -21,12 +21,10 @@
 </style>
 
 <script>
-  import instance from 'utils/weex/instance'
-
   export default {
     data () {
       return {
-        isIOS: instance.isIOS()
+        ios: weex.config.env.platform === 'ios'
       }
     },
 

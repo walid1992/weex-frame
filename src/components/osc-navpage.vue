@@ -1,6 +1,6 @@
 <template>
   <div class="root">
-    <div v-if="ios" :style="{width: '750px', height: '40px', backgroundColor: backgroundColor}"></div>
+    <div v-if="platform === 'ios'" :style="{width: '750px', height: '40px', backgroundColor: backgroundColor}"></div>
     <osc-navbar
         :dataRole="dataRole"
         :height="height"
@@ -15,7 +15,7 @@
         :rightItemColor="rightItemColor"
         @naviBarRightItemClick="naviBarRightItemClick"
         @naviBarLeftItemClick="naviBarLeftItemClick"></osc-navbar>
-    <div class="wrapper" :style="{top: ios ? (40 + height) : height}">
+    <div class="wrapper" :style="{top: platform === 'ios' ? (40 + height) : height}">
       <slot></slot>
     </div>
   </div>
