@@ -5,3 +5,4 @@ src/entry
 /config.js
 .DS_Store
 npm-debug.log
+package-lock.json
