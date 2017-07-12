@@ -19,8 +19,6 @@
   "dependencies": {
     "vue": "^2.1.8",
     "vue-router": "^2.1.1",
-    "vuex": "^2.1.1",
-    "vuex-router-sync": "^4.0.1",
     "weex-vue-render": "^0.11.9"
   },
   "devDependencies": {
@@ -36,6 +34,7 @@
     "eslint-plugin-promise": "^3.4.2",
     "eslint-plugin-standard": "^2.0.1",
     "postcss-cssnext": "^2.9.0",
+    "qs": "^6.5.0",
     "serve": "^1.4.0",
     "vue-loader": "^10.3.0",
     "vue-progressbar": "^0.7.1",

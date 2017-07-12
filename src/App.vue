@@ -13,6 +13,16 @@
       return {
         tabItems: [
           {
+            index: 2,
+            title: '我的',
+            titleColor: '#000000',
+            icon: '',
+            image: 'http://gtms03.alicdn.com/tps/i3/TB1LEn9MpXXXXaUXpXX9t7RGVXX-46-46.png',
+            selectedImage: 'http://gtms02.alicdn.com/tps/i2/TB1qysbMpXXXXcnXXXX9t7RGVXX-46-46.png',
+            src: `${navigator.getBaseUrl()}${route.mine.jsPath}.js`,
+            visibility: 'hidden'
+          },
+          {
             index: 0,
             title: '动态',
             titleColor: '#000000',
@@ -30,16 +40,6 @@
             image: 'http://gtms03.alicdn.com/tps/i3/TB1LEn9MpXXXXaUXpXX9t7RGVXX-46-46.png',
             selectedImage: 'http://gtms02.alicdn.com/tps/i2/TB1qysbMpXXXXcnXXXX9t7RGVXX-46-46.png',
             src: `${navigator.getBaseUrl()}${route.launch.jsPath}.js`,
-            visibility: 'hidden'
-          },
-          {
-            index: 2,
-            title: '我的',
-            titleColor: '#000000',
-            icon: '',
-            image: 'http://gtms03.alicdn.com/tps/i3/TB1LEn9MpXXXXaUXpXX9t7RGVXX-46-46.png',
-            selectedImage: 'http://gtms02.alicdn.com/tps/i2/TB1qysbMpXXXXcnXXXX9t7RGVXX-46-46.png',
-            src: `${navigator.getBaseUrl()}${route.mine.jsPath}.js`,
             visibility: 'hidden'
           }
         ]
