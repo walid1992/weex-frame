@@ -2,9 +2,10 @@ package com.alibaba.weex.commons.util;
 
 import android.content.Context;
 
-
 /**
- * Created by budao on 2016/10/12.
+ * Author   : budao
+ * Date     : 2017-09-18  13:16
+ * Describe :
  */
 public class AppConfig {
   private static final String TAG = "AppConfig";

@@ -1,1 +1,1 @@
-const CURRENT_IP = '172.31.244.229'
+const CURRENT_IP = '172.31.243.121'

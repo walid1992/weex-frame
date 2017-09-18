@@ -3,5 +3,6 @@
   "AppName": "WeexApp",
   "AppId": "com.syswin.weex",
   "SplashText": "HelloWeex",
-  "WeexBundle": "http://172.31.244.32:8080/dist/weex/App.js"
+  "WeexBundle": "http://172.31.243.121:8080/dist/weex/App.js"
 }
+

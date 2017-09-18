@@ -13,7 +13,7 @@
       return {
         tabItems: [
           {
-            index: 2,
+            index: 0,
             title: '我的',
             titleColor: '#000000',
             icon: '',
@@ -23,7 +23,7 @@
             visibility: 'hidden'
           },
           {
-            index: 0,
+            index: 1,
             title: '动态',
             titleColor: '#000000',
             icon: '',
@@ -33,7 +33,7 @@
             visibility: 'visible'
           },
           {
-            index: 1,
+            index: 2,
             title: '发起筹款',
             titleColor: '#000000',
             icon: '',
