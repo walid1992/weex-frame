@@ -51,9 +51,9 @@
 
 代码检查是必要的操作，为了能够拥有vue开发的体验，将eslint集成进来~
 
-##  提供开源组件库OSC
+<!-- ##  提供开源组件库OSC -->
 
-weex-frame提供了，开源组件库OSC，降低开发者入门门槛~
+<!-- weex-frame提供了，开源组件库OSC，降低开发者入门门槛~ -->
 
 **注：**
 
@@ -156,62 +156,62 @@ weex-frame
        └── web（web使用jsbundle） 
 ```
 
-## 组件库介绍
+<!-- ## 组件库介绍 -->
 
-### osc-navbar 
+<!-- ### osc-navbar  -->
 
-> 三端导航条
+<!-- > 三端导航条 -->
 
-### osc-navpage
+<!-- ### osc-navpage -->
 
-> 三端导航页，适配iOS顶部20px问题
+<!-- > 三端导航页，适配iOS顶部20px问题 -->
 
-**代码示例：**
+<!-- **代码示例：** -->
 
-```
-<osc-navpage
-    :title="title"
-    leftItemSrc="https://gitlab.com/toonteam/weex/raw/ce656f79084ed9db357f8abd76c6e6c82dc5a28d/src/views/person-info/imgs/back.png"
-    rightItemSrc="http://gtms02.alicdn.com/tps/i2/TB1ED7iMpXXXXXEXXXXWA_BHXXX-48-48.png"
-    @naviBarLeftItemClick="onBack"
-    @naviBarRightItemClick="onReload">
-  <web class='web' ref='webview' :src='url' @pagestart='start' @pagefinish='finish'></web>
-</osc-navpage>
-```
+<!-- ``` -->
+<!-- <osc-navpage -->
+    <!-- :title="title" -->
+    <!-- leftItemSrc="https://gitlab.com/toonteam/weex/raw/ce656f79084ed9db357f8abd76c6e6c82dc5a28d/src/views/person-info/imgs/back.png" -->
+    <!-- rightItemSrc="http://gtms02.alicdn.com/tps/i2/TB1ED7iMpXXXXXEXXXXWA_BHXXX-48-48.png" -->
+    <!-- @naviBarLeftItemClick="onBack" -->
+    <!-- @naviBarRightItemClick="onReload"> -->
+  <!-- <web class='web' ref='webview' :src='url' @pagestart='start' @pagefinish='finish'></web> -->
+<!-- </osc-navpage> -->
+<!-- ``` -->
 
-### [osc-root详细示例](/doc/components/osc-root.md)
+<!-- ### [osc-root详细示例](/doc/components/osc-root.md) -->
 
-> 界面根view，适配iOS顶部20px问题
+<!-- > 界面根view，适配iOS顶部20px问题 -->
 
-代码示例：
+<!-- 代码示例： -->
 
-```
-<osc-root>
-  <text>OsMartian Root</text>
-</osc-root>
-```
+<!-- ``` -->
+<!-- <osc-root> -->
+  <!-- <text>OsMartian Root</text> -->
+<!-- </osc-root> -->
+<!-- ``` -->
 
-### osc-tabbar
+<!-- ### osc-tabbar -->
 
-> 底部tabbar
+<!-- > 底部tabbar -->
 
-**代码示例：**
+<!-- **代码示例：** -->
 
-```
-<osc-tabbar :tabItems="tabItems" @tabBarOnClick="tabBarOnClick"></osc-tabbar>
-```
+<!-- ``` -->
+<!-- <osc-tabbar :tabItems="tabItems" @tabBarOnClick="tabBarOnClick"></osc-tabbar> -->
+<!-- ``` -->
 
-### osc-tabitem
+<!-- ### osc-tabitem -->
 
-> 底部tabbaritem元素
+<!-- > 底部tabbaritem元素 -->
 
-### osc-list
+<!-- ### osc-list -->
 
-> list组件封装上拉刷新 上拉加载
+<!-- > list组件封装上拉刷新 上拉加载 -->
 
-### osc-scroller
+<!-- ### osc-scroller -->
 
-> scroller组件封装上拉刷新 上拉加载
+<!-- > scroller组件封装上拉刷新 上拉加载 -->
 
 ## 项目启动
 
